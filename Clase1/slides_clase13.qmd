@@ -348,6 +348,38 @@ d2
 d - as.Date(d2)
 ```
 
+## Factor
+
+Las funciones as.________, convierten un tipo de dato a otro
+
+```{r}
+#| echo: true
+x <-c(5,3,9,3,5,3,8,9,3,8,9)
+y <- as.factor(x)
+y
+```
+--
+
+::: {.columns}
+
+::: {.column widt=50%}
+```{r}
+#| echo: true
+as.numeric(y)
+as.numeric(as.character(y))
+```
+:::
+
+::: {.column widt=50%}
+
+
+```{r}
+#| echo: true
+levels(y)
+```
+:::
+:::
+
 # 4. Estructura de datos {background-color='darkgreen'}
 
 ## Vectores {.smaller}
@@ -495,38 +527,6 @@ v
 #| echo: true
 attributes(v)
 ```
-
-## Factor
-
-Las funciones as.________, convierten un tipo de dato a otro
-
-```{r}
-#| echo: true
-x <-c(5,3,9,3,5,3,8,9,3,8,9)
-y <- as.factor(x)
-y
-```
---
-
-::: {.columns}
-
-::: {.column widt=50%}
-```{r}
-#| echo: true
-as.numeric(y)
-as.numeric(as.character(y))
-```
-:::
-
-::: {.column widt=50%}
-
-
-```{r}
-#| echo: true
-levels(y)
-```
-:::
-:::
 
 ## List: es un tipo de vector
 
