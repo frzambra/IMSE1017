@@ -29,6 +29,8 @@ I) Unidad 1: Manejo de  datos SIG  con R.
 
 ## Talleres
 
+1) [Taller 1: Tipos, estructuras e indexación](Talleres/taller1.html)
+
 ## Material
 
 - R
