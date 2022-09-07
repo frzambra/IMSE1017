@@ -26,7 +26,10 @@ I) Unidad 1: Manejo de  datos SIG  con R.
     2) [Introducción a `R` para análisis espacial](Clase1/slides_clase12.html)   
     3) [`R`: Tipos y estructuras de datos](Clase1/slides_clase13.html)   
     4) [Manipulación de datos](Clase2/slides_clase21.html)
-
+    5) [Introducción al análisis espacial con R](Clase3/slides_clase31.html)
+    6) [Datos Espaciales en R](Clase3/slides_clase32.html)
+    
+    
 ## Talleres
 
 1) [Taller 1: Tipos y estructuras de datos en R](Talleres/taller1.html)
