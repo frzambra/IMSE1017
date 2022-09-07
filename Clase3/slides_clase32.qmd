@@ -167,7 +167,9 @@ wst
 
   - 4D : `XYZM`
 
-## Simple Feature `{sf}`: __Tipos de geometrías__ {.smaller}
+## Simple Feature `{sf}` {.smaller}
+
+__Tipos de geometrías__
 
 |Tipo                 | Descripción  |
 |---------------------|--------------|
@@ -363,12 +365,14 @@ plot(gc,col = 'gray',border='red',main = 'GEOMETRY')
 
 4. Similar es lo que pasa con `{stars}`, no obstante el futuro de `r-spatial` será con `{stars}`, `{terra}` y `{sf}`
 
-##  {terra} {.smalller}
+##  {terra}
 
 El paquete `{terra}` tiene funciones para crear, leer, manipular y guardar datos raster.
 
 Las clase definida por `{terra}` es `SpatRaster`
-  
+
+##  {terra} {.smalller}
+
 - representa un raster multi-capa
 - siempre almacena los parametros fundamentales que describen la geometria
   - número de columnas y filas
@@ -389,7 +393,7 @@ library(terra)
 El objeto `r` solo tiene el esqueleto del raster, pero aún no tiene valores
 
 ```{r}
-values(r) <- runif(ncell(r))
+values(r) <- 1:ncell(r)
 r
 
 ```

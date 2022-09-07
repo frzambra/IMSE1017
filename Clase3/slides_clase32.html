@@ -532,8 +532,9 @@
 </ul></li>
 </ul>
 </section>
-<section id="simple-feature-sf-tipos-de-geometrías" class="slide level2 smaller">
-<h2>Simple Feature <code>{sf}</code>: <strong>Tipos de geometrías</strong></h2>
+<section id="simple-feature-sf-1" class="slide level2 smaller">
+<h2>Simple Feature <code>{sf}</code></h2>
+<p><strong>Tipos de geometrías</strong></p>
 <table>
 <colgroup>
 <col style="width: 60%">
@@ -839,10 +840,13 @@ GEOGCRS["NAD27",
 <li><p>Similar es lo que pasa con <code>{stars}</code>, no obstante el futuro de <code>r-spatial</code> será con <code>{stars}</code>, <code>{terra}</code> y <code>{sf}</code></p></li>
 </ol>
 </section>
-<section id="terra" class="slide level2 smalller">
+<section id="terra" class="slide level2">
 <h2>{terra}</h2>
 <p>El paquete <code>{terra}</code> tiene funciones para crear, leer, manipular y guardar datos raster.</p>
 <p>Las clase definida por <code>{terra}</code> es <code>SpatRaster</code></p>
+</section>
+<section id="terra-1" class="slide level2 smalller">
+<h2>{terra}</h2>
 <ul>
 <li>representa un raster multi-capa</li>
 <li>siempre almacena los parametros fundamentales que describen la geometria
@@ -873,7 +877,7 @@ coord. ref. : lon/lat WGS 84 </code></pre>
 <h2>Crear un <code>SpatRaster</code></h2>
 <p>El objeto <code>r</code> solo tiene el esqueleto del raster, pero aún no tiene valores</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">values</span>(r) <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="fu">ncell</span>(r))</span>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">values</span>(r) <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncell</span>(r)</span>
 <span id="cb40-2"><a href="#cb40-2"></a>r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>class       : SpatRaster 
@@ -882,9 +886,9 @@ resolution  : 7, 4  (x, y)
 extent      : -150, -80, 20, 60  (xmin, xmax, ymin, ymax)
 coord. ref. : lon/lat WGS 84 
 source      : memory 
-name        :      lyr.1 
-min value   : 0.01339033 
-max value   : 0.99268406 </code></pre>
+name        : lyr.1 
+min value   :     1 
+max value   :   100 </code></pre>
 </div>
 </div>
 </section>
