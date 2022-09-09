@@ -27,6 +27,12 @@ format:
 
     - Datos raster
 
+- Cargar y guardar datos espaciales
+  
+    - Vectoriales
+    
+    - Rasters
+  
 :::
 
 ::: {.column width="50%" .fragment}
@@ -353,7 +359,7 @@ plot(gc,col = 'gray',border='red',main = 'GEOMETRY')
 
 ```
 
-# 3.  Datos espaciales raster {background-color='ocean'}
+# 3.  Datos espaciales raster {background-color='#EBF8B8'}
 
 ## ¿Con qué vamos a trabajas?
 
@@ -441,3 +447,146 @@ s
 ```{r,fig.height=6,fig.width=10}
 plot(s) 
 ```
+
+# 4. Leer y guardar datos espaciales en R {background-color='blue'}
+
+## Vectoriales
+
+Usando `{sf}`   
+  - leer: `st_read`, `read_sf`    
+  - guardar: `st_write`, `write_sf`   
+
+## Vectoriales
+
+```{r, error = TRUE}
+library(sf)
+filename <- system.file("shape/nc.shp", package="sf")
+nc <- st_read(filename)
+st_write(nc, "nc.shp")
+```
+
+---
+## Vectoriales
+
+```{r, error = TRUE}
+filename <- system.file("shape/nc.shp", package="sf")
+nc <- st_read(filename)
+st_write(nc, "nc.shp", delete_layer = TRUE)
+```
+
+## Vectoriales
+
+Drivers soportados por `GDAL`
+
+```{r }
+?st_drivers
+```
+
+Listar las capas presentes en un archivo
+
+```{r }
+st_layers(system.file("osm/overpass.osm", package="sf"))
+
+```
+
+## Vectoriales {.smaller}
+
+### CRUD (create, read, update, delete)
+
+`GDAL` proporciona CRUD (st_read,read_st,st_write,write_st)
+
+Los siguientes argumentos
+
+- `update=TRUE` actualiza si existe, por defecto es `TRUE`
+- `delete_layer=TRUE` abre el archivo y borra la capa, no genera error si el archivo o la capa no existen
+- `delete_dsn=TRUE` borra el archvivo si existe. Utilizar con cuidado!
+
+
+## Rasters
+
+Con `{terra}`   
+  - leer: `rast`    
+  - guardar: `writeRaster`    
+
+## Rasters
+
+### Leer
+
+La función `rast` se puede utilizar sobre un archvio de una capa o multi-capa
+
+```{r}
+library(terra)
+f <- system.file("external/rlogo.grd", package="raster")
+(r <- rast(f))
+```
+
+## Rasters
+
+### Leer
+
+```{r fig.height=5}
+plot(r)
+```
+
+## Rasters
+
+### Leer archivos locales
+
+Notar que `r` es un `SpatRaster` de tres capas (bandas). Podemos extraer sólo una banda.
+
+La segunda banda
+```{r }
+r2 <- r[[2]]
+r2
+```
+
+## Rasters
+
+### Leer archivos HTTP/FTP
+
+Terra usa `GDAL` que tiene soporte para Virtual File Systems.
+
+`/vsizip`, `/vsitar`, `/vsicurl`
+
+Por ejemplo, abrir el producto de precipitación mensual del mes de septiembre año 2021 del producto CHIRPS v2.0 que está almacenado en formato COG (cloud opimized geotiff)
+
+```{r}
+url <- 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/cogs/'
+name <- 'chirps-v2.0.2021.09.cog'
+```
+
+## Rasters
+
+### Leer archivos HTTP/FTP
+
+```{r fig.width=12}
+x <- rast(paste0('/vsicurl/',url,name))
+plot(x)
+```
+
+## Rasters
+
+### En Chile
+
+```{r fig.width=4,fig.height=6}
+x2 <- crop(x,ext(-75.6443953112, -55.61183, -66.95992, -17.5800118954))
+x3 <- app(x2, fun = function(x){ x[x<0] <- NA; return(x)})
+plot(x3)
+```
+
+## Rasters
+
+### Guardar
+
+Use la función `writeRaster` para guardar datos raster. 
+
+- Debe dar como argumento un objeto `SpatRaster` y un nombre de archivo.
+
+- El formato se identifica por la extensión.
+
+- `overwrite = TRUE` para sobrescribir el archivo
+
+```{r}
+x <- writeRaster(x3, filename = 'output.tif', overwrite=TRUE)
+```
+
