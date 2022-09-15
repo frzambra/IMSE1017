@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Francisco Zambrano">
+
+<title>Taller 2 (IMSE1017)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Taller2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Taller2_files/libs/quarto-html/quarto.js"></script>
+<script src="Taller2_files/libs/quarto-html/popper.min.js"></script>
+<script src="Taller2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Taller2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Taller2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Taller2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Taller2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Taller2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Taller2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Indice de contenidos</h2>
+   
+  <ul>
+  <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#objetivo-del-taller" id="toc-objetivo-del-taller" class="nav-link" data-scroll-target="#objetivo-del-taller">Objetivo del taller</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#qué-debe-entregar" id="toc-qué-debe-entregar" class="nav-link" data-scroll-target="#qué-debe-entregar">¿Qué debe entregar?</a></li>
+  <li><a href="#fecha-de-entrega" id="toc-fecha-de-entrega" class="nav-link" data-scroll-target="#fecha-de-entrega">Fecha de entrega</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
+  <ul class="collapse">
+  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1">Ejercicio 1</a></li>
+  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">Ejercicio 2</a></li>
+  <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">Ejercicio 3</a></li>
+  <li><a href="#ejercicio-4" id="toc-ejercicio-4" class="nav-link" data-scroll-target="#ejercicio-4">Ejercicio 4</a></li>
+  <li><a href="#ejercicio-5" id="toc-ejercicio-5" class="nav-link" data-scroll-target="#ejercicio-5">Ejercicio 5</a></li>
+  <li><a href="#ejercicio-6" id="toc-ejercicio-6" class="nav-link" data-scroll-target="#ejercicio-6">Ejercicio 6</a></li>
+  <li><a href="#ejercicio-7" id="toc-ejercicio-7" class="nav-link" data-scroll-target="#ejercicio-7">Ejercicio 7</a></li>
+  <li><a href="#ejercicio-8" id="toc-ejercicio-8" class="nav-link" data-scroll-target="#ejercicio-8">Ejercicio 8</a></li>
+  <li><a href="#ejercicio-9" id="toc-ejercicio-9" class="nav-link" data-scroll-target="#ejercicio-9">Ejercicio 9</a></li>
+  <li><a href="#ejercicio-10" id="toc-ejercicio-10" class="nav-link" data-scroll-target="#ejercicio-10">Ejercicio 10</a></li>
+  <li><a href="#ejercicio-11" id="toc-ejercicio-11" class="nav-link" data-scroll-target="#ejercicio-11">Ejercicio 11</a></li>
+  <li><a href="#ejercicio-12" id="toc-ejercicio-12" class="nav-link" data-scroll-target="#ejercicio-12">Ejercicio 12</a></li>
+  <li><a href="#ejercicio-13" id="toc-ejercicio-13" class="nav-link" data-scroll-target="#ejercicio-13">Ejercicio 13</a></li>
+  <li><a href="#ejercicio-14" id="toc-ejercicio-14" class="nav-link" data-scroll-target="#ejercicio-14">Ejercicio 14</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Taller 2 (IMSE1017)</h1>
+<p class="subtitle lead">Datos climáticos con R</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Francisco Zambrano </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="descripción" class="level2">
+<h2 class="anchored" data-anchor-id="descripción">Descripción</h2>
+<p>En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como <code>mtcars</code>, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas).</p>
+</section>
+<section id="objetivo-del-taller" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-del-taller">Objetivo del taller</h2>
+<p>Ser capaz de leer y hacer algunos análisis básicos con datos obtenidos desde una planilla excel.</p>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>En el campus virtual, en la sección <code>Actividades -&gt; Talleres -&gt; Taller2</code> se encuentra el archivo excel <code>data.xlsx</code>. Ésta planilla tiene cuatro hojas, debe trabajar con las dos primeras que corresponden radiación sola (hoja RS) y precipitación (PP).</p>
+</section>
+<section id="qué-debe-entregar" class="level2">
+<h2 class="anchored" data-anchor-id="qué-debe-entregar">¿Qué debe entregar?</h2>
+<p>Debeŕa utilizar RStudio para crear un script, en donde resolverá cada uno de los ejercicios. Debe utilizar los comentarios (<code>#</code>) para hacer una descripción del ejercicio e incorporar cualquier información que ayude a entender lo realizado. A modo de ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejercicio 1:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># comentario explicando lo que se hace</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  Aca va el script que resuelve el ejericio <span class="dv">1</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Debe guardar el script con el nombre <code>taller1_grupo{número_grupo}.R</code>. Los datos los debe guardar en formato <code>.csv</code>, con nombre data_RS.csv y <code>data_PP.csv</code>, de acuerdo a como se indica más adelante en los ejercicios. Los tres archivos los debe subir en el campus virtual en la sección <code>Actividades -&gt; Talleres -&gt; Taller2</code></p>
+</section>
+<section id="fecha-de-entrega" class="level2">
+<h2 class="anchored" data-anchor-id="fecha-de-entrega">Fecha de entrega</h2>
+<p>Viernes 30 de septiembre hasta las 8:00am</p>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<p>En la clase del día 9 de septimbre resolvió y envío los primero cinco ejercicios que acá se indican, desde el septimo en adelante lo debe completar</p>
+<section id="ejercicio-1" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h3>
+<p>Exportar la hoja <code>RS</code> de la planilla <code>data.xlsx</code> a un archivo separado por comas <code>(.csv)</code> en donde se tenga la radiación solar para diferentes estaciones a lo largo de Chile para los meses entre enero a diciembre</p>
+<p><strong>Respuesta:</strong> en la carpeta ‘data’ se almacenó el archivo <code>data_rs.csv</code>. Por lo que la ruta relativa al archivo es <code>ruta &lt;- 'data/data_rs.csv</code>.</p>
+</section>
+<section id="ejercicio-2" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h3>
+<p>Leer el archivo de radiación solar y cargarlo a un objeto en R con el nombre <code>data_rs</code>.</p>
+<p><strong>Respuesta:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Leer el archivo data_rs.csv con la función read.csv2. El archivo está guardado en la ruta 'data/data_rs.csv'. Se asignó al objeto data_rs en R.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data_rs <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">'data/data_rs.csv'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># el objeto data_rs ahora tiene los datos de radiación solar </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># función "head" para ver sólo las primeras 6 filas. </span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data_rs) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     ESTACIÓN             REGIÓN  ALT      LON      LAT RG_ENE
+1            ARICA CHACALLUTA ARICA Y PARINACOTA   58 -70.3333 -18.3333    540
+2       IQUIQUE DIEGO ARACENA           TARAPACA   52 -70.1833 -20.5333    610
+3               CALAMA EL LOA        ANTOFAGASTA 2270    -68.9 -22.4833    633
+4    ANTOFAGASTA CERRO MORENO        ANTOFAGASTA  135 -70.4333 -23.4333    384
+5 CALDERA DESIERTO DE ATACAMA            ATACAMA  204   -70.78   -27.27    541
+6           COPIAPO CHAMONATE            ATACAMA  291 -70.4167    -27.3    623
+  RG_FEB RG_MAR RG_ABR RG_MAY RG_JUN RG_JUL RG_AGO RG_SEP RG_OCT RG_NOV RG_DIC
+1    525    530    449    363    286    287    322    379    464    511    535
+2    571    555    465    368    298    304    347    417    513    564    604
+3    588    591    530    464    415    444    517    575    649    657    662
+4    429    529    564    592    580    588    551    495    442    376    365
+5    497    443    360    278    265    288    341    402    453    481    514
+6    597    476    362    294    256    289    358    453    551    589    623</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-3" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h3>
+<p>Crear un gráfico de tipo boxplot que muestre la variación de la distribución de los datos de radiación mensual entre las estaciones, desde enero a diciembre.</p>
+<p><strong>Respuesta:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># para graficar se utiliza la función boxplot, como argumento se ingresa los datos seleccionando las columnas entre las 6 a la 17 que corresponde a los meses entre enero a diciembre</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(data_rs[,<span class="dv">6</span><span class="sc">:</span><span class="dv">17</span>])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="ejercicio-4" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h3>
+<p>Seleccionar tres estaciones del total, para cada una de ellas realizar gráficos de linea que permita comparar la variación de la radiación entre las estaciones.</p>
+<p><strong>Respuesta:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># la función sample permite tomar una muestra aleatoria </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">987</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">23</span>, <span class="at">size =</span><span class="dv">3</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#guarda los datos de radiación solar de la primera estación de la</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#muestra anteriro cuya posición se encuentra en el vector númerico</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#"s". Selecciona las columnas 6:17 que corresponde a los meses entre</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#enero a diciembre. El valor devuelto corresponde a un data.frame,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">#por lo que se utiliza la función "as.numeric" para transformarlo en</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#un vector númerico y así poder graficarlo.</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>data_rs_estacion1 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data_rs[s[<span class="dv">1</span>],<span class="dv">6</span><span class="sc">:</span><span class="dv">17</span>])</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ahora lo mismo para la segunda y tercera estacion de la muestra</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>data_rs_estacion2 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data_rs[s[<span class="dv">2</span>],<span class="dv">6</span><span class="sc">:</span><span class="dv">17</span>])</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>data_rs_estacion3 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data_rs[s[<span class="dv">3</span>],<span class="dv">6</span><span class="sc">:</span><span class="dv">17</span>])</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># la función plot realiza la gráfica, el argumneto type ='l' indica # que se grafique como tipo linea, col = 'red', indica el color de </span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># la linea. xlab e ylab, sirven para cambiar el nombre del título de # los ejes. ylim le dice a R cuales son los límites del eje y.</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data_rs_estacion1,<span class="at">type =</span> <span class="st">'l'</span>,<span class="at">col =</span> <span class="st">'red'</span>,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">700</span>), <span class="at">xlab =</span> <span class="st">'meses'</span>,<span class="at">ylab =</span> <span class="st">'Radiación Solar'</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># la función "lines" permite que se cree un gráfico de lineas y se agregué al gráfico anterior. </span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(data_rs_estacion2,<span class="at">col =</span> <span class="st">'blue'</span>) </span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(data_rs_estacion3,<span class="at">col =</span> <span class="st">'green'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="ejercicio-5" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h3>
+<p>Seleccione las columnas que corresponde a los meses de enero, Julio y noviembre. Cree un gráfico en el que se visualice la variación de la radiación en esos meses, entre las estaciones. Modifique el límite del eje Y, de modo que las tres lineas estén dentro de los límites del gráfico.</p>
+<p>Explore la función legend (?legend) para poder incluir la leyenda indicando a que mes corresponde cada linea.</p>
+<p>El resultado debierá ser el siguiente:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Taller2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="ejercicio-6" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h3>
+<p>Seleccione las columnas que corresponden a latitud, longitud, y la radiación entre los meses de enero a diciembre. Guarde el resultado en un archivo <code>.csv</code>, con el nombre <code>data_rs_filtrada.csv</code>. Utilice la función <code>write.csv2</code>. Este archivo lo deberá subir al campus virtual.</p>
+</section>
+<section id="ejercicio-7" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-7">Ejercicio 7</h3>
+<p>Filtre las estaciones que corresponde a la región de Valparaiso.</p>
+<p><strong>Respuesta:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Método 1:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># se realiza la operación lógica == para preguntar a R, en que </span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># posición del vector data_rs$REGION es verdadero que está la región # de Valparaiso</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>ix <span class="ot">&lt;-</span> data_rs<span class="sc">$</span>REGIÓN <span class="sc">==</span> <span class="st">'VALPARAISO'</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>data_rs[ix,]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 ESTACIÓN     REGIÓN ALT      LON      LAT RG_ENE RG_FEB RG_MAR
+9                QUINTERO VALPARAISO   8   -71.55 -32.7833    548    467    408
+10 VALPARAISO PTA ANGELES VALPARAISO  41 -71.6333 -33.0167    539    486    380
+11         SANTO  DOMINGO VALPARAISO  71 -71.6333    -33.6    554    482    423
+   RG_ABR RG_MAY RG_JUN RG_JUL RG_AGO RG_SEP RG_OCT RG_NOV RG_DIC
+9     317    230    196    225    287    349    441    473    594
+10    325    229    193    203    300    343    468    481    539
+11    331    232    194    223    293    376    470    515    517</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Método 2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(data_rs,<span class="st">`</span><span class="at">REGIÓN</span><span class="st">`</span> <span class="sc">==</span> <span class="st">'VALPARAISO'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 ESTACIÓN     REGIÓN ALT      LON      LAT RG_ENE RG_FEB RG_MAR
+9                QUINTERO VALPARAISO   8   -71.55 -32.7833    548    467    408
+10 VALPARAISO PTA ANGELES VALPARAISO  41 -71.6333 -33.0167    539    486    380
+11         SANTO  DOMINGO VALPARAISO  71 -71.6333    -33.6    554    482    423
+   RG_ABR RG_MAY RG_JUN RG_JUL RG_AGO RG_SEP RG_OCT RG_NOV RG_DIC
+9     317    230    196    225    287    349    441    473    594
+10    325    229    193    203    300    343    468    481    539
+11    331    232    194    223    293    376    470    515    517</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-8" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-8">Ejercicio 8</h3>
+<p>Exportar la hoja <code>PP</code> de la planilla <code>data.xlsx</code> a un archivo separado por comas <code>(.csv)</code> <code>data_pp.csv</code> en donde se tenga la precipitación mensual para diferentes estaciones a lo largo de Chile para los meses entre enero a diciembre.</p>
+</section>
+<section id="ejercicio-9" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-9">Ejercicio 9</h3>
+<p>Leer el archivo de precipitación mensual y cargarlo a un objeto en R con el nombre <code>data_pp</code>.</p>
+</section>
+<section id="ejercicio-10" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-10">Ejercicio 10</h3>
+<p>Crear un gráfico de tipo boxplot que muestre la variación de la distribución de los datos de precipitación mensual entre las estaciones, desde enero a diciembre.</p>
+</section>
+<section id="ejercicio-11" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-11">Ejercicio 11</h3>
+<p>Seleccionar tres estaciones del total, para cada una de ellas realizar gráficos de linea que permita comparar la variación de la precipitación entre las estaciones.</p>
+</section>
+<section id="ejercicio-12" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-12">Ejercicio 12</h3>
+<p>Seleccione las columnas que corresponde a los meses de febrero, junio y octubre. Cree un gráfico en el que se visualice la variación de la precipitación en esos meses, entre las estaciones. Modifique el límite del eje Y, de modo que las tres lineas estén dentro de los límites del gráfico.</p>
+<p>Explore la función legend (?legend) para poder incluir la leyenda indicando a que mes corresponde cada linea.</p>
+<p>El resultado debierá ser el siguiente:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Taller2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="ejercicio-13" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-13">Ejercicio 13</h3>
+<p>Seleccione las columnas que corresponden a latitud, longitud, y la precipitación entre los meses de enero a diciembre. Guarde el resultado en un archivo <code>.csv</code>, con el nombre <code>data_pp_filtrada.csv</code>. Utilice la función <code>write.csv2</code>. Este archivo lo deberá subir al campus virtual.</p>
+</section>
+<section id="ejercicio-14" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-14">Ejercicio 14</h3>
+<p>Filtre las estaciones que corresponde a la región de Coquimbo.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
