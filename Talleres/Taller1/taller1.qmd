@@ -79,6 +79,7 @@ varD == varE
 # sin embargo los tipos de datos son diferentes, integer vs double
 typeof(varD) == typeof(varE)
 ```
+
 ### Ejercicio 3
 
 Comente la siguiente linea explicando por que devuelve el valor `TRUE`
@@ -172,7 +173,6 @@ length(exVec1)
 length(exVec2)
 ```
 
-
 2)  determinar la suma de elementos en el vector `exVec1` (ej., ver `?sum`)
 
 ```{r}
@@ -194,6 +194,7 @@ res1 <- mean(exVec2,na.rm = TRUE)
 a <- na.omit(exVec2)
 res2 <- sum(a)/length(a)
 ```
+
 5)  muestre que los calculos del punto 3 y 4 son los mismos equivalentes/identicos
 
 ```{r}
@@ -220,7 +221,7 @@ data(mtcars)
 
 Use funciones para mostrar :
 
-1) la estructura del set de datos
+1)  la estructura del set de datos
 
 ```{r}
 #| echo: true
@@ -345,7 +346,6 @@ mtcars[c(3,6),c(3,4,1)]
 
 3)  cambiar el valor de `wt` de la 2da fila a `NA`
 
-
 ```{r}
 #| echo: true
 
@@ -355,7 +355,6 @@ head(mtcars)
 mtcars[5:20,c('wt','disp')] <- NA
 mtcars
 ```
-
 
 Para los siguientes ejercicios deberá trabajar con la siguiente matriz:
 
@@ -398,5 +397,3 @@ Escriba una forma conveniente de obtener la siguiente matriz.
 #| eval: true
 matriz_prueba[,-c(2,6)]
 ```
-
-

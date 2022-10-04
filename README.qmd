@@ -35,6 +35,10 @@ I) Unidad 1: Manejo de  datos SIG  con R.
 1) [Taller 1: Tipos y estructuras de datos en R](Talleres/Taller1/taller1.html)
 2) [Taller 2: Datos climáticos R](Talleres/Taller2/Taller2.html)
 
+## Ejercicios
+
+1) [Ejercicios evaluación 1](Ejercicios/Ejercicios_eval1.html)
+
 ## Material
 
 - R
