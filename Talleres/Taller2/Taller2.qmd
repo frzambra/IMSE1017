@@ -20,7 +20,6 @@ En las primeras clases de la asignatura se ha empezado a trabajar con el softwar
 
 Ser capaz de leer y hacer algunos análisis básicos con datos obtenidos desde una planilla excel.
 
-
 ## Data
 
 En el campus virtual, en la sección `Actividades -> Talleres -> Taller2` se encuentra el archivo excel `data.xlsx`. Ésta planilla tiene cuatro hojas, debe trabajar con las dos primeras que corresponden radiación sola (hoja RS) y precipitación (PP).
@@ -59,7 +58,7 @@ Exportar la hoja `RS` de la planilla `data.xlsx` a un archivo separado por comas
 
 Leer el archivo de radiación solar y cargarlo a un objeto en R con el nombre `data_rs`.
 
-**Respuesta:** 
+**Respuesta:**
 
 ```{r}
 #| eval: true
@@ -76,7 +75,7 @@ head(data_rs)
 
 Crear un gráfico de tipo boxplot que muestre la variación de la distribución de los datos de radiación mensual entre las estaciones, desde enero a diciembre.
 
-**Respuesta:** 
+**Respuesta:**
 
 ```{r}
 #| eval: true
@@ -88,7 +87,7 @@ boxplot(data_rs[,6:17])
 
 Seleccionar tres estaciones del total, para cada una de ellas realizar gráficos de linea que permita comparar la variación de la radiación entre las estaciones.
 
-**Respuesta:** 
+**Respuesta:**
 
 ```{r}
 #| eval: true
@@ -147,7 +146,7 @@ Seleccione las columnas que corresponden a latitud, longitud, y la radiación en
 
 Filtre las estaciones que corresponde a la región de Valparaiso.
 
-**Respuesta:** 
+**Respuesta:**
 
 ```{r}
 #| eval: true
@@ -206,4 +205,3 @@ Seleccione las columnas que corresponden a latitud, longitud, y la precipitació
 ### Ejercicio 14
 
 Filtre las estaciones que corresponde a la región de Coquimbo.
-
