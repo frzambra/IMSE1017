@@ -62,7 +62,7 @@ Debe guardar el script con el nombre `taller3_grupo_{número_grupo}.R`. Los arch
 
 ## Fecha de entrega
 
-Viernes 20 de octubre hasta las 8:00am
+Viernes 21 de octubre hasta las 8:00am
 
 ## Ejercicios
 
