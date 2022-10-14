@@ -39,7 +39,6 @@ library(sf)
 library(terra)
 ```
 
-
 ## Data
 
 En el campus virtual, en la sección `Actividades -> Talleres -> Taller3` se encuentran archivos de tipo vectorial y raster con los que se trabajará.
@@ -79,33 +78,31 @@ set.seed(123)
 (data.frame(longitud = runif(10,-74,-70),latitud = runif(10,-50,-14)))
 ```
 
-Utilice las coordenadas anteriores para crear los siguientes tipos de objetos `sfg`:    
-  - `MULTIPOINT`    
-  - `LINESTRING`    
-  - `MULTILINESTRING`   
-  - `POLYGON`   
-  - `MULTIPOLYGON`    
-  - `GEOMETRY COLLECTION`
+Utilice las coordenadas anteriores para crear los siguientes tipos de objetos `sfg`:\
+- `MULTIPOINT`\
+- `LINESTRING`\
+- `MULTILINESTRING`\
+- `POLYGON`\
+- `MULTIPOLYGON`\
+- `GEOMETRY COLLECTION`
 
 ### Ejercicio 3
 
-Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc`, luego utilice la función `st_sf` para crear un objeto `sf`. 
+Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc`, luego utilice la función `st_sf` para crear un objeto `sf`.
 
 ### Ejercicio 4
 
-Con las coordenadas del ejercicio 3 cree un objeto de tipo punto `sfg` para cada fila. Convierta todos los puntos en un objeto `sfc` y luego en un `sf`. Agregue una columna como atributo con los nombres "Pocoyan", "Pichasca", "Chiguayante", "Paillaco", "Canela", "Estación Experimental Austral", "Recoleta", "El Romeral", "San Jorge Los Niches" y "Catemu". 
+Con las coordenadas del ejercicio 2 cree un objeto de tipo punto `sfg` para cada fila. Convierta todos los puntos en un objeto `sfc` y luego en un `sf`. Agregue una columna como atributo con los nombres "Pocoyan", "Pichasca", "Chiguayante", "Paillaco", "Canela", "Estación Experimental Austral", "Recoleta", "El Romeral", "San Jorge Los Niches" y "Catemu".
 
 ### Ejercicio 5
 
-Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:    
-    - Indique el Sistema de Referencia de Coordenadas     
-    - Indique el tipo de geometria que tiene almacenada   
-    - Extraiga la list-colum correspondiente a las geometrias
-    - Extraiga el data.frame (sin la geometria)
-    - Cuantas columnas tiene la tabla de atributos    
-    - Cuántas entidades espaciales tiene la capa vectorial.   
-    - Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'   
-    - Extraiga cinco entidades espaciales y haga un mapa de cada una    
+Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:\
+- Indique el Sistema de Referencia de Coordenadas\
+- Indique el tipo de geometria que tiene almacenada\
+- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
+- Cuántas entidades espaciales tiene la capa vectorial.\
+- Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'\
+- Extraiga cinco entidades espaciales y haga un mapa de cada una
 
 ```{r}
 #| echo: true
@@ -118,14 +115,10 @@ nc <- st_read(archivo)
 
 ### Ejercicio 6
 
-Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:    
-    - Indique el Sistema de Referencia de Coordenadas     
-    - Indique el tipo de geometria que tiene almacenada   
-    - Extraiga la list-colum correspondiente a las geometrias
-    - Extraiga el data.frame (sin la geometria)
-    - Cuantas columnas tiene la tabla de atributos    
-    - Cuántas entidades espaciales tiene la capa vectorial.   
-    - Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica    
-    - Extraiga cinco entidades espaciales y haga un mapa de cada una   
-
-
+Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:\
+- Indique el Sistema de Referencia de Coordenadas\
+- Indique el tipo de geometria que tiene almacenada\
+- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
+- Cuántas entidades espaciales tiene la capa vectorial.\
+- Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica\
+- Extraiga cinco entidades espaciales y haga un mapa de cada una
