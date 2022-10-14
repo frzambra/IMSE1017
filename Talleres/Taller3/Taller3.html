@@ -82,16 +82,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="Taller2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Taller2_files/libs/quarto-html/quarto.js"></script>
-<script src="Taller2_files/libs/quarto-html/popper.min.js"></script>
-<script src="Taller2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Taller2_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Taller2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Taller2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Taller2_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Taller2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Taller2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Taller3_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Taller3_files/libs/quarto-html/quarto.js"></script>
+<script src="Taller3_files/libs/quarto-html/popper.min.js"></script>
+<script src="Taller3_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Taller3_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Taller3_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Taller3_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Taller3_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Taller3_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Taller3_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -113,6 +113,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
   <ul class="collapse">
   <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1">Ejercicio 1</a></li>
+  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">Ejercicio 2</a></li>
+  <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">Ejercicio 3</a></li>
+  <li><a href="#ejercicio-4" id="toc-ejercicio-4" class="nav-link" data-scroll-target="#ejercicio-4">Ejercicio 4</a></li>
+  <li><a href="#ejercicio-5" id="toc-ejercicio-5" class="nav-link" data-scroll-target="#ejercicio-5">Ejercicio 5</a></li>
+  <li><a href="#ejercicio-6" id="toc-ejercicio-6" class="nav-link" data-scroll-target="#ejercicio-6">Ejercicio 6</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -167,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>En el campus virtual, en la sección <code>Actividades -&gt; Talleres -&gt; Taller2</code> se encuentra el archivo excel <code>data.xlsx</code>. Ésta planilla tiene cuatro hojas, debe trabajar con las dos primeras que corresponden radiación sola (hoja RS) y precipitación (PP).</p>
+<p>En el campus virtual, en la sección <code>Actividades -&gt; Talleres -&gt; Taller3</code> se encuentran archivos de tipo vectorial y raster con los que se trabajará.</p>
 </section>
 <section id="qué-debe-entregar" class="level2">
 <h2 class="anchored" data-anchor-id="qué-debe-entregar">¿Qué debe entregar?</h2>
@@ -190,6 +195,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
 <section id="ejercicio-1" class="level3">
 <h3 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h3>
+<p>Cree un objeto <code>sfg</code> de tipo punto de dos, tres y cuatro dimensiones. Utilicé las coordenadas de latitud -36.25 y longitud -72.65 una elevación de 200 metros y una direccción de 90°. Revise la estructura del objeto creado utilizando la función <code>str</code></p>
+</section>
+<section id="ejercicio-2" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>(<span class="fu">data.frame</span>(<span class="at">longitud =</span> <span class="fu">runif</span>(<span class="dv">10</span>,<span class="sc">-</span><span class="dv">74</span>,<span class="sc">-</span><span class="dv">70</span>),<span class="at">latitud =</span> <span class="fu">runif</span>(<span class="dv">10</span>,<span class="sc">-</span><span class="dv">50</span>,<span class="sc">-</span><span class="dv">14</span>)))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    longitud   latitud
+1  -72.84969 -15.55400
+2  -70.84678 -33.67997
+3  -72.36409 -25.60746
+4  -70.46793 -29.38520
+5  -70.23813 -46.29471
+6  -73.81777 -17.60630
+7  -71.88758 -41.14084
+8  -70.43032 -48.48586
+9  -71.79426 -38.19485
+10 -72.17354 -15.63787</code></pre>
+</div>
+</div>
+<p>Utilice las coordenadas anteriores para crear los siguientes tipos de objetos <code>sfg</code>:<br>
+- <code>MULTIPOINT</code><br>
+- <code>LINESTRING</code><br>
+- <code>MULTILINESTRING</code><br>
+- <code>POLYGON</code><br>
+- <code>MULTIPOLYGON</code><br>
+- <code>GEOMETRY COLLECTION</code></p>
+</section>
+<section id="ejercicio-3" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h3>
+<p>Utilice las función <code>st_sfc</code> para convertir los objetos <code>sfg</code> en tipo <code>sfc</code>, luego utilice la función <code>st_sf</code> para crear un objeto <code>sf</code>.</p>
+</section>
+<section id="ejercicio-4" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h3>
+<p>Con las coordenadas del ejercicio 3 cree un objeto de tipo punto <code>sfg</code> para cada fila. Convierta todos los puntos en un objeto <code>sfc</code> y luego en un <code>sf</code>. Agregue una columna como atributo con los nombres “Pocoyan”, “Pichasca”, “Chiguayante”, “Paillaco”, “Canela”, “Estación Experimental Austral”, “Recoleta”, “El Romeral”, “San Jorge Los Niches” y “Catemu”.</p>
+</section>
+<section id="ejercicio-5" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h3>
+<p>Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete <code>{sf}</code>. Realice lo siguiente:<br>
+- Indique el Sistema de Referencia de Coordenadas<br>
+- Indique el tipo de geometria que tiene almacenada<br>
+- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos<br>
+- Cuántas entidades espaciales tiene la capa vectorial.<br>
+- Cree un mapa en el que se pueda apreciar la variación respecto a la columnas ‘NAME’<br>
+- Extraiga cinco entidades espaciales y haga un mapa de cada una</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ruta donde está almacenado el archvio</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>archivo <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"shape/nc.shp"</span>, <span class="at">package=</span><span class="st">"sf"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># cargar en archvio y asignarlo al objeto nc en R</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>nc <span class="ot">&lt;-</span> <span class="fu">st_read</span>(archivo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ejercicio-6" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h3>
+<p>Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:<br>
+- Indique el Sistema de Referencia de Coordenadas<br>
+- Indique el tipo de geometria que tiene almacenada<br>
+- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos<br>
+- Cuántas entidades espaciales tiene la capa vectorial.<br>
+- Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica<br>
+- Extraiga cinco entidades espaciales y haga un mapa de cada una</p>
 </section>
 </section>
 

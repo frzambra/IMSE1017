@@ -1,0 +1,131 @@
+---
+title: "Taller 3 (IMSE1017)"
+subtitle: "Datos vectoriales y raster con {sf} y {terra}"
+author: 'Dr. Francisco Zambrano'
+format: 
+  html:
+    number-sections: false
+    echo: true
+    eval: false
+    table-of-contents: true
+lang: es
+editor: visual
+---
+
+## Descripción
+
+En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como `mtcars`, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas). En el segundo taller, trabajo con datos climáticos en donde tuvo que importar los datos, realizar diferentes tipos de indexaciones, algunas operaciones matemáticas, y exportar los datos a un archivo.
+
+## Objetivo del taller
+
+Trabajar con datos vectoriales y raster en R con los paquetes {sf} y {terra}
+
+## Paquetes R
+
+Hasta el momento hemos trabajado con los paquetes que vienen inculidos en R base. Ahora empezaremos a trabajar con paquetes adicionales que no vienen instalados por defecto en `R`, por lo que deberá instalarlos. Los paquetes con los que trabajaremos con `{sf}` y `{terra}`, los que permiten trabajar con datos espaciales vectoriales y rasters.
+
+Para instalar los paquetes debe realizar lo siguiente:
+
+```{r}
+#| echo: true
+
+# instala los paquetes
+install.packages(c('sf','terra'))
+
+# carga los paqutes en el entorno de R y permite utilizar 
+# las funciones adicionales que contienen
+
+library(sf)
+library(terra)
+```
+
+
+## Data
+
+En el campus virtual, en la sección `Actividades -> Talleres -> Taller3` se encuentran archivos de tipo vectorial y raster con los que se trabajará.
+
+## ¿Qué debe entregar?
+
+Debeŕa utilizar RStudio para crear un script, en donde resolverá cada uno de los ejercicios. Debe utilizar los comentarios (`#`) para hacer una descripción del ejercicio e incorporar cualquier información que ayude a entender lo realizado. A modo de ejemplo:
+
+```{r}
+#| eval: false
+# Ejercicio 1:
+# comentario explicando lo que se hace
+{
+  Aca va el script que resuelve el ejericio 1
+  
+}
+```
+
+Debe guardar el script con el nombre `taller3_grupo_{número_grupo}.R`. Los archivos los debe subir en el campus virtual en la sección `Actividades -> Talleres -> Taller2`
+
+## Fecha de entrega
+
+Viernes 20 de octubre hasta las 8:00am
+
+## Ejercicios
+
+### Ejercicio 1
+
+Cree un objeto `sfg` de tipo punto de dos, tres y cuatro dimensiones. Utilicé las coordenadas de latitud -36.25 y longitud -72.65 una elevación de 200 metros y una direccción de 90°. Revise la estructura del objeto creado utilizando la función `str`
+
+### Ejercicio 2
+
+```{r}
+#| echo: true
+#| eval: true
+set.seed(123)
+(data.frame(longitud = runif(10,-74,-70),latitud = runif(10,-50,-14)))
+```
+
+Utilice las coordenadas anteriores para crear los siguientes tipos de objetos `sfg`:    
+  - `MULTIPOINT`    
+  - `LINESTRING`    
+  - `MULTILINESTRING`   
+  - `POLYGON`   
+  - `MULTIPOLYGON`    
+  - `GEOMETRY COLLECTION`
+
+### Ejercicio 3
+
+Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc`, luego utilice la función `st_sf` para crear un objeto `sf`. 
+
+### Ejercicio 4
+
+Con las coordenadas del ejercicio 3 cree un objeto de tipo punto `sfg` para cada fila. Convierta todos los puntos en un objeto `sfc` y luego en un `sf`. Agregue una columna como atributo con los nombres "Pocoyan", "Pichasca", "Chiguayante", "Paillaco", "Canela", "Estación Experimental Austral", "Recoleta", "El Romeral", "San Jorge Los Niches" y "Catemu". 
+
+### Ejercicio 5
+
+Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:    
+    - Indique el Sistema de Referencia de Coordenadas     
+    - Indique el tipo de geometria que tiene almacenada   
+    - Extraiga la list-colum correspondiente a las geometrias
+    - Extraiga el data.frame (sin la geometria)
+    - Cuantas columnas tiene la tabla de atributos    
+    - Cuántas entidades espaciales tiene la capa vectorial.   
+    - Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'   
+    - Extraiga cinco entidades espaciales y haga un mapa de cada una    
+
+```{r}
+#| echo: true
+# ruta donde está almacenado el archvio
+archivo <- system.file("shape/nc.shp", package="sf")
+
+# cargar en archvio y asignarlo al objeto nc en R
+nc <- st_read(archivo)
+```
+
+### Ejercicio 6
+
+Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:    
+    - Indique el Sistema de Referencia de Coordenadas     
+    - Indique el tipo de geometria que tiene almacenada   
+    - Extraiga la list-colum correspondiente a las geometrias
+    - Extraiga el data.frame (sin la geometria)
+    - Cuantas columnas tiene la tabla de atributos    
+    - Cuántas entidades espaciales tiene la capa vectorial.   
+    - Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica    
+    - Extraiga cinco entidades espaciales y haga un mapa de cada una   
+
+
