@@ -118,7 +118,10 @@ nc <- st_read(archivo)
 Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:\
 - Indique el Sistema de Referencia de Coordenadas\
 - Indique el tipo de geometria que tiene almacenada\
-- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
+- Extraiga la list-colum correspondiente a las geometrias 
+- Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
 - Cuántas entidades espaciales tiene la capa vectorial.\
 - Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica\
 - Extraiga cinco entidades espaciales y haga un mapa de cada una
+- Indique el codigo EPSG de cada una de las capas vectoriales (canales, estaciones, comunas)
+- Transforme el sistema de referencia de coordenadas de las tres capas vectoriales a datum WGS84 coordenadas geográficas.

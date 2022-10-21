@@ -39,7 +39,6 @@ library(sf)
 library(terra)
 ```
 
-
 ## Data
 
 En el campus virtual, en la sección `Actividades -> Talleres -> Taller2` se encuentra el archivo excel `data.xlsx`. Ésta planilla tiene cuatro hojas, debe trabajar con las dos primeras que corresponden radiación sola (hoja RS) y precipitación (PP).
@@ -67,4 +66,3 @@ Viernes 20 de octubre hasta las 8:00am
 ## Ejercicios
 
 ### Ejercicio 1
-
