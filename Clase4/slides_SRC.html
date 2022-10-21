@@ -393,7 +393,7 @@
 
 </div>
 </section>
-<section id="qué-hemos-visto-hasta-el-momento" class="slide level2">
+<section id="qué-hemos-visto-hasta-el-momento" class="slide level2 smaller scrollable">
 <h2>¿Qué hemos visto hasta el momento?</h2>
 <ul>
 <li><p>Manejo de tipos y estructuras de datos con <img data-src="https://www.r-project.org/Rlogo.png" width="50"></p></li>
@@ -409,7 +409,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="contenidos-clase" class="slide level2">
+<section id="contenidos-clase" class="slide level2 smaller scrollable">
 <h2>Contenidos clase</h2>
 <ul>
 <li><p>Sistemas de Referencias de Coordenadas (SRC)</p>
@@ -419,7 +419,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="manejo-de-crs-en-r" class="slide level2">
+<section id="manejo-de-crs-en-r" class="slide level2 smaller scrollable">
 <h2>1. Manejo de CRS en R</h2>
 <ul>
 <li><code>Coordenadas geográficas</code>: esféricas</li>
@@ -437,7 +437,7 @@
 </ul>
 <p><code>{sf}</code> y <code>{terra}</code> usan EPSG y wkt (well-known text)</p>
 </section>
-<section id="datos-vectoriales-sf" class="slide level2">
+<section id="datos-vectoriales-sf" class="slide level2 smaller scrollable">
 <h2>2. Datos vectoriales: <code>{sf}</code></h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">st_crs</span>(<span class="dv">4326</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -474,7 +474,7 @@ GEOGCRS["WGS 84",
 </div>
 </div>
 </section>
-<section id="datos-vectoriales-sf-1" class="slide level2">
+<section id="datos-vectoriales-sf-1" class="slide level2 smaller scrollable">
 <h2>2. Datos vectoriales: <code>{sf}</code></h2>
 <p>Recomendación utilizar <code>EPSG (European Petroleum Survey Group)</code> y <code>wkt</code> para identificar el <code>CRS</code>, cuando sea posible. No se aconseja el uso de <code>proj4</code>.</p>
 <p>Transformar de un CRS a otro con <code>st_transform</code></p>
@@ -497,7 +497,7 @@ GEOGCRS["WGS 84",
 </div>
 </div>
 </section>
-<section id="datos-raster-terra" class="slide level2">
+<section id="datos-raster-terra" class="slide level2 smaller scrollable">
 <h2>3. Datos raster: <code>{terra}</code></h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>url <span class="ot">&lt;-</span> <span class="st">'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/cogs/'</span></span>
@@ -514,7 +514,7 @@ name        : chirps-v2.0.2021.09 </code></pre>
 </div>
 </div>
 </section>
-<section id="datos-raster-terra-1" class="slide level2">
+<section id="datos-raster-terra-1" class="slide level2 smaller scrollable">
 <h2>3. Datos raster: <code>{terra}</code></h2>
 <p>Para inspeccionar el SRC usamos la función <code>crs</code></p>
 <div class="cell">
@@ -537,7 +537,7 @@ name        : chirps-v2.0.2021.09 </code></pre>
 </div>
 </div>
 </section>
-<section id="datos-raster-terra-2" class="slide level2">
+<section id="datos-raster-terra-2" class="slide level2 smaller scrollable">
 <h2>3. Datos raster: <code>{terra}</code></h2>
 <p>Asignar un <code>CRS</code> a un raster. Utilice <code>crs</code></p>
 <div class="cell">
@@ -549,7 +549,7 @@ name        : chirps-v2.0.2021.09 </code></pre>
 </div>
 </div>
 </section>
-<section id="datos-raster-terra-3" class="slide level2">
+<section id="datos-raster-terra-3" class="slide level2 smaller scrollable">
 <h2>3. Datos raster: <code>{terra}</code></h2>
 <p>Asignar un <code>CRS</code> a un raster. Utilice <code>crs</code></p>
 <div class="cell">
@@ -558,7 +558,7 @@ name        : chirps-v2.0.2021.09 </code></pre>
 <span id="cb13-3"><a href="#cb13-3"></a><span class="fu">crs</span>(xx2) <span class="ot">&lt;-</span> <span class="st">"epsg:4326"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="datos-raster-terra-4" class="slide level2">
+<section id="datos-raster-terra-4" class="slide level2 smaller scrollable">
 <h2>3. Datos raster: <code>{terra}</code></h2>
 <p><strong>Reproyectar</strong></p>
 <ul>
@@ -583,7 +583,7 @@ max value   :  1600 </code></pre>
 </div>
 </div>
 </section>
-<section id="datos-raster-terra-5" class="slide level2">
+<section id="datos-raster-terra-5" class="slide level2 smaller scrollable">
 <h2>3. Datos raster: <code>{terra}</code></h2>
 <p><strong>Reproyectar</strong></p>
 <div class="cell">

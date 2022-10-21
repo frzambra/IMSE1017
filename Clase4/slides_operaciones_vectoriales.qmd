@@ -21,7 +21,7 @@ library(terra)
 library(spData)
 ```
 
-## Contenidos 
+## Contenidos {.smaller .scrollable}
 
 Operaciones geométricas con datos vectoriales:
 
@@ -32,7 +32,7 @@ Operaciones geométricas con datos vectoriales:
 5. Cortar y subconjunto
 6. Union
 
-## Simplificación {.smaller}
+## Simplificación {.smaller .scrollable}
 
 La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.
 
@@ -60,7 +60,7 @@ plot(seine_simp$geometry)
 :::
 :::
 
-## 1. Simplificación  {.smaller}
+## 1. Simplificación  {.smaller .scrollable}
 
 El objeto `seine_simp` resultante es una copia del `seine` original pero con menos vértices. Esto es evidente, siendo el resultado visualmente más simple y consumiendo menos memoria que el objeto original, como se verifica a continuación:
 
@@ -70,7 +70,7 @@ object.size(seine_simp)
 ```
 
 
-## 1. Simplificación  {.smaller}
+## 1. Simplificación  {.smaller .scrollable}
 
 La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.
 
@@ -99,7 +99,7 @@ object.size(us_states_simp1)
 :::
 :::
 
-## 2. Centroides  {.smaller}
+## 2. Centroides  {.smaller .scrollable}
 
 Las operaciones de centroide identifican el centro de los objetos geográficos.
 
@@ -110,7 +110,7 @@ nz_centroid = st_centroid(nz)
 seine_centroid = st_centroid(seine)
 ```
 
-## 2. Centroides  {.smaller}
+## 2. Centroides  {.smaller .scrollable}
 
 Las operaciones de centroide identifican el centro de los objetos geográficos.
 
@@ -118,7 +118,7 @@ Las operaciones de centroide identifican el centro de los objetos geográficos.
 plot(nz$geom)
 plot(nz_centroid$geom,add = TRUE,col='red')
 ```
-## 2. Centroides
+## 2. Centroides {.smaller .scrollable}
 
 Las operaciones de centroide identifican el centro de los objetos geográficos.
 ```{r}
@@ -126,7 +126,7 @@ plot(seine$geometry)
 plot(seine_centroid$geom,add = TRUE,col = 'red')
 ```
 
-## 2. Centroides  {.smaller}
+## 2. Centroides  {.smaller .scrollable}
 
 A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).
 
@@ -139,7 +139,7 @@ plot(nz$geom)
 plot(nz_pos$geom,add = TRUE,col = 'red')
 ```
 
-## 2. Centroides  {.smaller}
+## 2. Centroides  {.smaller .scrollable}
 
 A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).
 
@@ -151,7 +151,7 @@ plot(seine$geom)
 plot(seine_pos$geom,add = TRUE,col = 'red')
 ```
 
-## 3. Buffers  {.smaller}
+## 3. Buffers  {.smaller .scrollable}
 
 Los `buffer` (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.
 
@@ -161,7 +161,7 @@ plot(seine_buff_5km$geometry,col ='blue')
 plot(seine$geometry,add = TRUE)
 ```
 
-## 3. Buffers  {.smaller}
+## 3. Buffers  {.smaller .scrollable}
 
 Los `buffer` (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.
 
@@ -171,7 +171,7 @@ plot(seine_buff_50km$geometry,col ='blue')
 plot(seine$geometry,add = TRUE)
 ```
 
-## 4. Recortar (clipping) {.smaller}
+## 4. Recortar (clipping) {.smaller .scrollable}
 
 El recorte espacial es una forma de creación de subconjuntos espaciales que implica cambios en las columnas de geometría de al menos algunas de las entidades afectadas.
 

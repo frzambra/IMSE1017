@@ -21,7 +21,7 @@ library(sf)
 library(terra)
 ```
 
-## ¿Qué hemos visto hasta el momento?
+## ¿Qué hemos visto hasta el momento? {.smaller .scrollable}
 
 - Manejo de tipos y estructuras de datos con ![](https://www.r-project.org/Rlogo.png){width="50px"}
 
@@ -37,7 +37,7 @@ library(terra)
     
     - Rasters
 
-## Contenidos clase
+## Contenidos clase {.smaller .scrollable}
 
 - Sistemas de Referencias de Coordenadas (SRC)
   
@@ -45,7 +45,7 @@ library(terra)
     
     - Datos Raster
     
-## 1. Manejo de CRS en R
+## 1. Manejo de CRS en R {.smaller .scrollable}
 
 - `Coordenadas geográficas`: esféricas
 - `Coordenadas proyectadas`: cónica, cilíndrica y planas
@@ -62,13 +62,13 @@ Así, hay tres formatos para manejar los `CRS`
 
 `{sf}` y `{terra}` usan EPSG y wkt (well-known text)
 
-## 2. Datos vectoriales: `{sf}`
+## 2. Datos vectoriales: `{sf}` {.smaller .scrollable}
 
 ```{r}
 st_crs(4326)
 ```
 
-## 2. Datos vectoriales: `{sf}`
+## 2. Datos vectoriales: `{sf}` {.smaller .scrollable}
 
 Recomendación utilizar `EPSG (European Petroleum Survey Group)` y `wkt` para identificar el `CRS`, cuando sea posible. No se aconseja el uso de `proj4`.
 
@@ -81,7 +81,7 @@ nc.web_mercator <- st_transform(nc, 3857)
 head(st_geometry(nc.web_mercator)[[4]][[1]][[1]],n=3)
 ```
 
-## 3. Datos raster: `{terra}`
+## 3. Datos raster: `{terra}` {.smaller .scrollable}
 
 ```{r}
 url <- 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/cogs/'
@@ -89,7 +89,7 @@ name <- 'chirps-v2.0.2021.09.cog'
 (x <- rast(paste0('/vsicurl/',url,name)))
 ```
 
-## 3. Datos raster: `{terra}`
+## 3. Datos raster: `{terra}` {.smaller .scrollable}
 
 Para inspeccionar el SRC usamos la función `crs`
 
@@ -97,7 +97,7 @@ Para inspeccionar el SRC usamos la función `crs`
 cat(crs(x))
 ```
 
-## 3. Datos raster: `{terra}`
+## 3. Datos raster: `{terra}` {.smaller .scrollable}
 
 Asignar un `CRS` a un raster. Utilice `crs` 
 
@@ -107,7 +107,7 @@ crs(xx) <- ''
 crs(xx)
 ```
 
-## 3. Datos raster: `{terra}`
+## 3. Datos raster: `{terra}` {.smaller .scrollable}
 
 Asignar un `CRS` a un raster. Utilice `crs` 
 
@@ -117,7 +117,7 @@ crs(xx) <- "+proj=longlat +datum=WGS84"
 crs(xx2) <- "epsg:4326"
 ```
 
-## 3. Datos raster: `{terra}`
+## 3. Datos raster: `{terra}` {.smaller .scrollable}
 
 __Reproyectar__
 
@@ -133,7 +133,7 @@ values(r) <- 1:ncell(r)
 r
 ```
 
-## 3. Datos raster: `{terra}`
+## 3. Datos raster: `{terra}` {.smaller .scrollable}
 
 __Reproyectar__
 
