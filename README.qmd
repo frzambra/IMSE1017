@@ -31,7 +31,7 @@ I) Unidad 1: Manejo de  datos SIG  con R.
     7) [Sistemas de Referencia de Coordenadas (SRC)](Clase4/slides_SRC.html)
     8) [Operaciones Geométricas con datos vectoriales](Clase4/slides_operaciones_vectoriales.html)
     9) [Maipulación de datos raster](Clase5/slides_manipulacion_rasters.html)
-    
+
 ## Talleres
 
 1) [Taller 1: Tipos y estructuras de datos en R](Talleres/Taller1/taller1.html)

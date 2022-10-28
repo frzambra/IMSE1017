@@ -13,6 +13,7 @@ format:
     theme: default
     echo: true
 ---
+<<<<<<< HEAD
 
 ## Contenidos {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
 
@@ -24,6 +25,8 @@ Operaciones geométricas con datos vectoriales:
 4. Clipping (recortar)
 5. Union
 
+=======
+>>>>>>> refs/remotes/origin/gh-pages
 ```{r setup}
 #| echo: false
 #| message: false
@@ -32,9 +35,26 @@ library(terra)
 library(spData)
 ```
 
+<<<<<<< HEAD
 ## 1. Simplificación {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
 
 La `simplificación` es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.
+=======
+## Contenidos {.smaller .scrollable}
+
+Operaciones geométricas con datos vectoriales:
+
+1. Simplificación
+2. Centroides
+3. Buffers
+4. Clipping (recortar)
+5. Cortar y subconjunto
+6. Union
+
+## Simplificación {.smaller .scrollable}
+
+La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.
+>>>>>>> refs/remotes/origin/gh-pages
 
 ### `geometria:` linea
 
@@ -60,7 +80,11 @@ plot(seine_simp$geometry)
 :::
 :::
 
+<<<<<<< HEAD
 ## 1. Simplificación  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 1. Simplificación  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 El objeto `seine_simp` resultante es una copia del `seine` original pero con menos vértices. Esto es evidente, siendo el resultado visualmente más simple y consumiendo menos memoria que el objeto original, como se verifica a continuación:
 
@@ -70,7 +94,11 @@ object.size(seine_simp)
 ```
 
 
+<<<<<<< HEAD
 ## 1. Simplificación  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 1. Simplificación  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.
 
@@ -99,7 +127,11 @@ object.size(us_states_simp1)
 :::
 :::
 
+<<<<<<< HEAD
 ## 2. Centroides  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 2. Centroides  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 Las operaciones de centroide identifican el centro de los objetos geográficos.
 
@@ -110,7 +142,11 @@ nz_centroid = st_centroid(nz)
 seine_centroid = st_centroid(seine)
 ```
 
+<<<<<<< HEAD
 ## 2. Centroides  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 2. Centroides  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 Las operaciones de centroide identifican el centro de los objetos geográficos.
 
@@ -118,7 +154,11 @@ Las operaciones de centroide identifican el centro de los objetos geográficos.
 plot(nz$geom)
 plot(nz_centroid$geom,add = TRUE,col='red')
 ```
+<<<<<<< HEAD
 ## 2. Centroides {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 2. Centroides {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 Las operaciones de centroide identifican el centro de los objetos geográficos.
 ```{r}
@@ -126,7 +166,11 @@ plot(seine$geometry)
 plot(seine_centroid$geom,add = TRUE,col = 'red')
 ```
 
+<<<<<<< HEAD
 ## 2. Centroides  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 2. Centroides  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).
 
@@ -139,7 +183,11 @@ plot(nz$geom)
 plot(nz_pos$geom,add = TRUE,col = 'red')
 ```
 
+<<<<<<< HEAD
 ## 2. Centroides  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 2. Centroides  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).
 
@@ -151,7 +199,11 @@ plot(seine$geom)
 plot(seine_pos$geom,add = TRUE,col = 'red')
 ```
 
+<<<<<<< HEAD
 ## 3. Buffers  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 3. Buffers  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 Los `buffer` (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.
 
@@ -161,7 +213,11 @@ plot(seine_buff_5km$geometry,col ='blue')
 plot(seine$geometry,add = TRUE)
 ```
 
+<<<<<<< HEAD
 ## 3. Buffers  {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
+=======
+## 3. Buffers  {.smaller .scrollable}
+>>>>>>> refs/remotes/origin/gh-pages
 
 Los `buffer` (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.
 
@@ -171,6 +227,7 @@ plot(seine_buff_50km$geometry,col ='blue')
 plot(seine$geometry,add = TRUE)
 ```
 
+<<<<<<< HEAD
 ## 4. Recortar (clipping) {.smaller .scrollable background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" background-position="97.5% 2.5%" background-size="7.5%"}
 
 El recorte espacial es una forma de creación de subconjuntos espaciales que implica cambios en las columnas de geometría de al menos algunas de las entidades afectadas.
@@ -290,3 +347,12 @@ plot(st_union(nc$geometry[1],nc$geometry[10]))
 c(nc$geometry[1],nc$geometry[10])
 st_union(nc$geometry[1],nc$geometry[10])
 ```
+=======
+## 4. Recortar (clipping) {.smaller .scrollable}
+
+El recorte espacial es una forma de creación de subconjuntos espaciales que implica cambios en las columnas de geometría de al menos algunas de las entidades afectadas.
+
+
+
+![](../img/venn-clip-1.png){width="800px"}
+>>>>>>> refs/remotes/origin/gh-pages
