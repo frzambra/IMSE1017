@@ -1,5 +1,5 @@
 ---
-title: "Operaciones geométricas con datos vectoriales"
+title: "Manipulación de datos rasters"
 author: "Dr. Francisco Zambrano"
 format: 
   revealjs:
