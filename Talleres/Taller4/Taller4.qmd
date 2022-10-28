@@ -1,6 +1,6 @@
 ---
 title: "Taller 3 (IMSE1017)"
-subtitle: "Datos vectoriales con {sf}"
+subtitle: "Datos raster con {terra}"
 author: 'Dr. Francisco Zambrano'
 format: 
   html:
@@ -14,15 +14,15 @@ editor: visual
 
 ## Descripción
 
-En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como `mtcars`, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas). En el segundo taller, trabajo con datos climáticos en donde tuvo que importar los datos, realizar diferentes tipos de indexaciones, algunas operaciones matemáticas, y exportar los datos a un archivo.
+En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como `mtcars`, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas). En el segundo taller, trabajó con datos climáticos en donde tuvo que importar los datos, realizar diferentes tipos de indexaciones, algunas operaciones matemáticas, y exportar los datos a un archivo. En el tercer taller se trabajo con datos vectoriales utilizando `{sf}`. 
 
 ## Objetivo del taller
 
-Trabajar con datos vectoriales y raster en R con los paquetes {sf} y {terra}
+Trabajar con datos raster en R con el paquete `{terra}`
 
 ## Paquetes R
 
-Hasta el momento hemos trabajado con los paquetes que vienen inculidos en R base. Ahora empezaremos a trabajar con paquetes adicionales que no vienen instalados por defecto en `R`, por lo que deberá instalarlos. Los paquetes con los que trabajaremos con `{sf}` y `{terra}`, los que permiten trabajar con datos espaciales vectoriales y rasters.
+Hasta el momento hemos trabajado con los paquetes que vienen inculidos en R base. Ahora empezaremos a trabajar con paquetes adicionales que no vienen instalados por defecto en `R`, por lo que deberá instalarlos. El paquete con el que trabajaremos este taller es `{terra}`, el cual nos permite trabajar con datos de tipo raster.
 
 Para instalar los paquetes debe realizar lo siguiente:
 
@@ -30,12 +30,11 @@ Para instalar los paquetes debe realizar lo siguiente:
 #| echo: true
 
 # instala los paquetes
-install.packages(c('sf','terra'))
+install.packages('terra')
 
 # carga los paqutes en el entorno de R y permite utilizar 
 # las funciones adicionales que contienen
 
-library(sf)
 library(terra)
 ```
 
