@@ -387,17 +387,7 @@
   <p class="author">Dr.&nbsp;Francisco Zambrano</p>
 </section>
 
-<<<<<<< HEAD
 <section id="contenidos" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section class="slide level2">
-
-<div class="cell">
-
-</div>
-</section>
-<section id="contenidos" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>Contenidos</h2>
 <p>Operaciones geométricas con datos vectoriales:</p>
 <ol type="1">
@@ -405,7 +395,6 @@
 <li>Centroides</li>
 <li>Buffers</li>
 <li>Clipping (recortar)</li>
-<<<<<<< HEAD
 <li>Union</li>
 </ol>
 <div class="cell">
@@ -415,15 +404,6 @@
 <section id="simplificación" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>1. Simplificación</h2>
 <p>La <code>simplificación</code> es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.</p>
-=======
-<li>Cortar y subconjunto</li>
-<li>Union</li>
-</ol>
-</section>
-<section id="simplificación" class="slide level2 smaller scrollable">
-<h2>Simplificación</h2>
-<p>La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.</p>
->>>>>>> refs/remotes/origin/gh-pages
 <h3 id="geometria-linea"><code>geometria:</code> linea</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>seine_simp <span class="ot">=</span> <span class="fu">st_simplify</span>(seine, <span class="at">dTolerance =</span> <span class="dv">2000</span>)  <span class="co"># 2000 m</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -447,11 +427,7 @@
 </div>
 </div>
 </section>
-<<<<<<< HEAD
 <section id="simplificación-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="simplificación-1" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>1. Simplificación</h2>
 <p>El objeto <code>seine_simp</code> resultante es una copia del <code>seine</code> original pero con menos vértices. Esto es evidente, siendo el resultado visualmente más simple y consumiendo menos memoria que el objeto original, como se verifica a continuación:</p>
 <div class="cell">
@@ -465,11 +441,7 @@
 </div>
 </div>
 </section>
-<<<<<<< HEAD
 <section id="simplificación-2" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="simplificación-2" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>1. Simplificación</h2>
 <p>La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.</p>
 <h3 id="geometria-polígono"><code>geometria:</code> polígono</h3>
@@ -503,11 +475,7 @@
 </div>
 </div>
 </section>
-<<<<<<< HEAD
 <section id="centroides" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="centroides" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>2. Centroides</h2>
 <p>Las operaciones de centroide identifican el centro de los objetos geográficos.</p>
 <p>La función <code>st_centroid</code> de {sf} permite calcular los centroides.</p>
@@ -516,11 +484,7 @@
 <span id="cb15-2"><a href="#cb15-2"></a>seine_centroid <span class="ot">=</span> <span class="fu">st_centroid</span>(seine)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<<<<<<< HEAD
 <section id="centroides-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="centroides-1" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>2. Centroides</h2>
 <p>Las operaciones de centroide identifican el centro de los objetos geográficos.</p>
 <div class="cell">
@@ -529,11 +493,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<<<<<<< HEAD
 <section id="centroides-2" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="centroides-2" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>2. Centroides</h2>
 <p>Las operaciones de centroide identifican el centro de los objetos geográficos.</p>
 <div class="cell">
@@ -542,11 +502,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<<<<<<< HEAD
 <section id="centroides-3" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="centroides-3" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>2. Centroides</h2>
 <p>A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).</p>
 <p>La función <code>st_point_on_surface</code> de <code>{sf}</code> asegura que los puntos caeran en el objeto.</p>
@@ -557,11 +513,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-11-1.png" style="width:6cm" class="r-stretch"></section>
-<<<<<<< HEAD
 <section id="centroides-4" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="centroides-4" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>2. Centroides</h2>
 <p>A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).</p>
 <p>La función <code>st_point_on_surface</code> de <code>{sf}</code> asegura que los puntos caeran en el objeto.</p>
@@ -572,11 +524,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<<<<<<< HEAD
 <section id="buffers" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="buffers" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>3. Buffers</h2>
 <p>Los <code>buffer</code> (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.</p>
 <div class="cell">
@@ -586,11 +534,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<<<<<<< HEAD
 <section id="buffers-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-=======
-<section id="buffers-1" class="slide level2 smaller scrollable">
->>>>>>> refs/remotes/origin/gh-pages
 <h2>3. Buffers</h2>
 <p>Los <code>buffer</code> (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.</p>
 <div class="cell">
@@ -600,7 +544,6 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
-<<<<<<< HEAD
 <section id="recortar-clipping" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>4. Recortar (clipping)</h2>
 <p>El recorte espacial es una forma de creación de subconjuntos espaciales que implica cambios en las columnas de geometría de al menos algunas de las entidades afectadas.</p>
@@ -732,14 +675,6 @@ Geodetic CRS:  NAD27</code></pre>
 </div>
 
 <img src="logo_hemera.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
-=======
-<section id="recortar-clipping" class="slide level2 smaller scrollable">
-<h2>4. Recortar (clipping)</h2>
-<p>El recorte espacial es una forma de creación de subconjuntos espaciales que implica cambios en las columnas de geometría de al menos algunas de las entidades afectadas.</p>
-<p><img data-src="../img/venn-clip-1.png" width="800"></p>
-<p><img src="logo_hemera.jpg" class="slide-logo"></p>
-<div class="footer footer-default">
->>>>>>> refs/remotes/origin/gh-pages
 <p>IMSE1017|2-2022</p>
 </div>
 </section>
