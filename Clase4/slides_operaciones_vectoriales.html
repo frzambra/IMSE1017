@@ -387,13 +387,7 @@
   <p class="author">Dr.&nbsp;Francisco Zambrano</p>
 </section>
 
-<section class="slide level2">
-
-<div class="cell">
-
-</div>
-</section>
-<section id="contenidos" class="slide level2 smaller scrollable">
+<section id="contenidos" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>Contenidos</h2>
 <p>Operaciones geométricas con datos vectoriales:</p>
 <ol type="1">
@@ -401,13 +395,15 @@
 <li>Centroides</li>
 <li>Buffers</li>
 <li>Clipping (recortar)</li>
-<li>Cortar y subconjunto</li>
 <li>Union</li>
 </ol>
+<div class="cell">
+
+</div>
 </section>
-<section id="simplificación" class="slide level2 smaller scrollable">
-<h2>Simplificación</h2>
-<p>La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.</p>
+<section id="simplificación" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>1. Simplificación</h2>
+<p>La <code>simplificación</code> es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.</p>
 <h3 id="geometria-linea"><code>geometria:</code> linea</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>seine_simp <span class="ot">=</span> <span class="fu">st_simplify</span>(seine, <span class="at">dTolerance =</span> <span class="dv">2000</span>)  <span class="co"># 2000 m</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -431,7 +427,7 @@
 </div>
 </div>
 </section>
-<section id="simplificación-1" class="slide level2 smaller scrollable">
+<section id="simplificación-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>1. Simplificación</h2>
 <p>El objeto <code>seine_simp</code> resultante es una copia del <code>seine</code> original pero con menos vértices. Esto es evidente, siendo el resultado visualmente más simple y consumiendo menos memoria que el objeto original, como se verifica a continuación:</p>
 <div class="cell">
@@ -445,7 +441,7 @@
 </div>
 </div>
 </section>
-<section id="simplificación-2" class="slide level2 smaller scrollable">
+<section id="simplificación-2" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>1. Simplificación</h2>
 <p>La simplificación es un proceso de generalización de objetos vectoriales (líneas y polígonos) generalmente para su uso en mapas de menor escala.</p>
 <h3 id="geometria-polígono"><code>geometria:</code> polígono</h3>
@@ -479,7 +475,7 @@
 </div>
 </div>
 </section>
-<section id="centroides" class="slide level2 smaller scrollable">
+<section id="centroides" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>2. Centroides</h2>
 <p>Las operaciones de centroide identifican el centro de los objetos geográficos.</p>
 <p>La función <code>st_centroid</code> de {sf} permite calcular los centroides.</p>
@@ -488,7 +484,7 @@
 <span id="cb15-2"><a href="#cb15-2"></a>seine_centroid <span class="ot">=</span> <span class="fu">st_centroid</span>(seine)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="centroides-1" class="slide level2 smaller scrollable">
+<section id="centroides-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>2. Centroides</h2>
 <p>Las operaciones de centroide identifican el centro de los objetos geográficos.</p>
 <div class="cell">
@@ -497,7 +493,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="centroides-2" class="slide level2 smaller scrollable">
+<section id="centroides-2" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>2. Centroides</h2>
 <p>Las operaciones de centroide identifican el centro de los objetos geográficos.</p>
 <div class="cell">
@@ -506,7 +502,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="centroides-3" class="slide level2 smaller scrollable">
+<section id="centroides-3" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>2. Centroides</h2>
 <p>A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).</p>
 <p>La función <code>st_point_on_surface</code> de <code>{sf}</code> asegura que los puntos caeran en el objeto.</p>
@@ -517,7 +513,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-11-1.png" style="width:6cm" class="r-stretch"></section>
-<section id="centroides-4" class="slide level2 smaller scrollable">
+<section id="centroides-4" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>2. Centroides</h2>
 <p>A veces, el centroide geográfico cae fuera de los límites de sus objetos principales (piense en una dona).</p>
 <p>La función <code>st_point_on_surface</code> de <code>{sf}</code> asegura que los puntos caeran en el objeto.</p>
@@ -528,7 +524,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<section id="buffers" class="slide level2 smaller scrollable">
+<section id="buffers" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Buffers</h2>
 <p>Los <code>buffer</code> (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.</p>
 <div class="cell">
@@ -538,7 +534,7 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="buffers-1" class="slide level2 smaller scrollable">
+<section id="buffers-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Buffers</h2>
 <p>Los <code>buffer</code> (zonas de influencia) son polígonos que representan el área dentro de una distancia determinada de una entidad geométrica: independientemente de si la entrada es un punto, una línea o un polígono, la salida es un polígono.</p>
 <div class="cell">
@@ -548,12 +544,137 @@
 
 </div>
 <img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
-<section id="recortar-clipping" class="slide level2 smaller scrollable">
+<section id="recortar-clipping" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>4. Recortar (clipping)</h2>
 <p>El recorte espacial es una forma de creación de subconjuntos espaciales que implica cambios en las columnas de geometría de al menos algunas de las entidades afectadas.</p>
-<p><img data-src="../img/venn-clip-1.png" width="800"></p>
-<p><img src="logo_hemera.jpg" class="slide-logo"></p>
-<div class="footer footer-default">
+
+<img data-src="../img/venn-clip-1.png" width="800" class="r-stretch"></section>
+<section id="recortar-clipping-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>4. Recortar (clipping)</h2>
+<p>Un ejemplo utilizando <code>sf</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb22-2"><a href="#cb22-2"></a>b <span class="ot">=</span> <span class="fu">st_sfc</span>(<span class="fu">st_point</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)), <span class="fu">st_point</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))) <span class="co"># create 2 points</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>b <span class="ot">=</span> <span class="fu">st_buffer</span>(b, <span class="at">dist =</span> <span class="dv">1</span>) <span class="co"># convert points to circles</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="fu">plot</span>(b, <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>), <span class="at">y =</span> <span class="dv">1</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">cex =</span> <span class="dv">3</span>) <span class="co"># add text</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="recortar-clipping-2" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>4. Recortar (clipping)</h2>
+<p><strong>Diferencia:</strong> <code>st_difference</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>x <span class="ot">=</span> b[<span class="dv">1</span>]</span>
+<span id="cb23-2"><a href="#cb23-2"></a>y <span class="ot">=</span> b[<span class="dv">2</span>]</span>
+<span id="cb23-3"><a href="#cb23-3"></a>x_diff_y <span class="ot">=</span> <span class="fu">st_difference</span>(x, y)</span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="fu">plot</span>(b, <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb23-5"><a href="#cb23-5"></a><span class="fu">plot</span>(x_diff_y, <span class="at">col =</span> <span class="st">"lightgrey"</span>, <span class="at">border =</span> <span class="st">"grey"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="recortar-clipping-3" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>4. Recortar (clipping)</h2>
+<p><strong>Diferencia:</strong> <code>st_difference</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>y_diff_x <span class="ot">=</span> <span class="fu">st_difference</span>(y, x)</span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">plot</span>(b, <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="fu">plot</span>(y_diff_x, <span class="at">col =</span> <span class="st">"lightgrey"</span>, <span class="at">border =</span> <span class="st">"grey"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<section id="recortar-clipping-4" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>4. Recortar (clipping)</h2>
+<p><strong>Unión:</strong> <code>st_union</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>y_union_x <span class="ot">=</span> <span class="fu">st_union</span>(y, x)</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">plot</span>(b, <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="fu">plot</span>(y_union_x, <span class="at">col =</span> <span class="st">"lightgrey"</span>, <span class="at">border =</span> <span class="st">"grey"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<section id="recortar-clipping-5" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>4. Recortar (clipping)</h2>
+<p><strong>Intersección:</strong> <code>st_intersection</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>x_and_y <span class="ot">=</span> <span class="fu">st_intersection</span>(x, y)</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">plot</span>(b, <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="fu">plot</span>(x_and_y, <span class="at">col =</span> <span class="st">"lightgrey"</span>, <span class="at">border =</span> <span class="st">"grey"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<section id="recortar-clipping-6" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>4. Recortar (clipping)</h2>
+<p><strong>Diferencia simétrica:</strong> <code>st_sym_difference</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>x <span class="ot">=</span> b[<span class="dv">1</span>]</span>
+<span id="cb27-2"><a href="#cb27-2"></a>y <span class="ot">=</span> b[<span class="dv">2</span>]</span>
+<span id="cb27-3"><a href="#cb27-3"></a>x_sym_y <span class="ot">=</span> <span class="fu">st_sym_difference</span>(x, y)</span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="fu">plot</span>(b, <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb27-5"><a href="#cb27-5"></a><span class="fu">plot</span>(x_sym_y, <span class="at">col =</span> <span class="st">"lightgrey"</span>, <span class="at">border =</span> <span class="st">"grey"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="unión-clipping" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>5. Unión (clipping)</h2>
+<p>Une geometrias. Funciona de dos formas posibles:</p>
+<p><strong>disuelve</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>nc <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="fu">system.file</span>(<span class="st">"shape/nc.shp"</span>, <span class="at">package=</span><span class="st">"sf"</span>))</span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">plot</span>(nc<span class="sc">$</span>geometry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
+<section id="unión-clipping-1" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>5. Unión (clipping)</h2>
+<p>Une geometrias. Funciona de dos formas posibles:</p>
+<p><strong>disuelve</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">plot</span>(<span class="fu">st_union</span>(nc<span class="sc">$</span>geometry))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
+<section id="unión-clipping-2" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>5. Unión (clipping)</h2>
+<p>Une geometrias. Funciona de dos formas posibles:</p>
+<p><strong>une</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">plot</span>(<span class="fu">c</span>(nc<span class="sc">$</span>geometry[<span class="dv">1</span>],nc<span class="sc">$</span>geometry[<span class="dv">10</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
+<section id="unión-clipping-3" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>5. Unión (clipping)</h2>
+<p>Une geometrias. Funciona de dos formas posibles:</p>
+<p><strong>une</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">plot</span>(<span class="fu">st_union</span>(nc<span class="sc">$</span>geometry[<span class="dv">1</span>],nc<span class="sc">$</span>geometry[<span class="dv">10</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides_operaciones_vectoriales_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<section id="unión-clipping-4" class="slide level2 smaller scrollable" data-background-image="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<h2>5. Unión (clipping)</h2>
+<p>¿Cuál es la diferencia?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">c</span>(nc<span class="sc">$</span>geometry[<span class="dv">1</span>],nc<span class="sc">$</span>geometry[<span class="dv">10</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Geometry set for 2 features 
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -81.74107 ymin: 36.23436 xmax: -80.02406 ymax: 36.58965
+Geodetic CRS:  NAD27</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">st_union</span>(nc<span class="sc">$</span>geometry[<span class="dv">1</span>],nc<span class="sc">$</span>geometry[<span class="dv">10</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Geometry set for 1 feature 
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -81.74107 ymin: 36.23436 xmax: -80.02406 ymax: 36.58965
+Geodetic CRS:  NAD27</code></pre>
+</div>
+</div>
+
+<img src="logo_hemera.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>IMSE1017|2-2022</p>
 </div>
 </section>
