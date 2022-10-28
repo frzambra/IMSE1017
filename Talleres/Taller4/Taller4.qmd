@@ -1,6 +1,6 @@
 ---
 title: "Taller 3 (IMSE1017)"
-subtitle: "Datos raster con {terra}"
+subtitle: "Operaciones geométricas en datos vectoriales con {sf}"
 author: 'Dr. Francisco Zambrano'
 format: 
   html:
@@ -30,17 +30,17 @@ Para instalar los paquetes debe realizar lo siguiente:
 #| echo: true
 
 # instala los paquetes
-install.packages('terra')
+install.packages('sf')
 
 # carga los paqutes en el entorno de R y permite utilizar 
 # las funciones adicionales que contienen
 
-library(terra)
+library(sf)
 ```
 
 ## Data
 
-En el campus virtual, en la sección `Actividades -> Talleres -> Taller3` se encuentran archivos de tipo vectorial y raster con los que se trabajará.
+En el campus virtual, en la sección `Actividades -> Talleres -> Taller3` se encuentran archivos de tipo vectorial con los que se trabajará.
 
 ## ¿Qué debe entregar?
 
@@ -56,68 +56,48 @@ Debeŕa utilizar RStudio para crear un script, en donde resolverá cada uno de l
 }
 ```
 
-Debe guardar el script con el nombre `taller3_grupo_{número_grupo}.R`. Los archivos los debe subir en el campus virtual en la sección `Actividades -> Talleres -> Taller2`
+Debe guardar el script con el nombre `taller4_grupo_{número_grupo}.R`. Los archivos los debe subir en el campus virtual en la sección `Actividades -> Talleres -> Taller4`
 
 ## Fecha de entrega
 
-Viernes 21 de octubre hasta las 8:00am
+Viernes 3 de noviembre hasta las 13:00am
 
 ## Ejercicios
 
 ### Ejercicio 1
 
-Cree un objeto `sfg` de tipo punto de dos, tres y cuatro dimensiones. Utilicé las coordenadas de latitud -36.25 y longitud -72.65 una elevación de 200 metros y una direccción de 90°. Revise la estructura del objeto creado utilizando la función `str`
+- Cargue el archivo vectorial de división comunal de Chile.
+- Seleccione las comunas de "La Florida", "Queilén" y "Molina"
+- Realice una simplificación de la geometria con una tolerancia de 200, 500 y 1000 metros y asigne los resultados a nuevos objetos de R.
+- Cree un mapa con los resultados.
 
 ### Ejercicio 2
 
-```{r}
-#| echo: true
-#| eval: true
-set.seed(123)
-(data.frame(longitud = runif(10,-74,-70),latitud = runif(10,-50,-14)))
-```
-
-Utilice las coordenadas anteriores para crear los siguientes tipos de objetos `sfg`:\
-- `MULTIPOINT`\
-- `LINESTRING`\
-- `MULTILINESTRING`\
-- `POLYGON`\
-- `MULTIPOLYGON`\
-- `GEOMETRY COLLECTION`
+- Seleccione la región Metropolitana del archivo vectorial de la división comunal de Chile y asigneselo al objeto `rm` .
+- Calcule los centroides de cada una de las comunas y guardelo en un objeto llamado `centro_rm`
+- Cree un mapa en donde se pueda ver los límites de las comunas de la región Metropolitana y los centroides de cada una.
 
 ### Ejercicio 3
 
-Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc`, luego utilice la función `st_sf` para crear un objeto `sf`.
+Haga lo mismo que en el ejercicio 2 pero para la región de Los Ríos.
 
 ### Ejercicio 4
 
-Con las coordenadas del ejercicio 2 cree un objeto de tipo punto `sfg` para cada fila. Convierta todos los puntos en un objeto `sfc` y luego en un `sf`. Agregue una columna como atributo con los nombres "Pocoyan", "Pichasca", "Chiguayante", "Paillaco", "Canela", "Estación Experimental Austral", "Recoleta", "El Romeral", "San Jorge Los Niches" y "Catemu".
+- Cargue la capa vectorial de canales nacionales
+- Utilicé las operaciones de corte para encontrar los canales que corresponden a la provincia de Santiago y guardelo en un objeto `canal_prov_rm`.
+- Cree un `buffer` de 150 metros para los canales de la provincia de Santiago
+- Cree mapas en los que se puedan ver los canales sin buffer y otro con los canales con el buffer.
 
 ### Ejercicio 5
 
-Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:\
-- Indique el Sistema de Referencia de Coordenadas\
-- Indique el tipo de geometria que tiene almacenada\
-- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
-- Cuántas entidades espaciales tiene la capa vectorial.\
-- Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'\
-- Extraiga cinco entidades espaciales y haga un mapa de cada una
-
-```{r}
-#| echo: true
-# ruta donde está almacenado el archvio
-archivo <- system.file("shape/nc.shp", package="sf")
-
-# cargar en archvio y asignarlo al objeto nc en R
-nc <- st_read(archivo)
-```
+- Cargue el archivo vectorial de estaciones de Chile.
+- Seleccione las estaciones que se encuentran en la región de O'Higgins.
+- Cree un buffer de 500m alrededor de cada estación.
 
 ### Ejercicio 6
 
-Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:\
-- Indique el Sistema de Referencia de Coordenadas\
-- Indique el tipo de geometria que tiene almacenada\
-- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
-- Cuántas entidades espaciales tiene la capa vectorial.\
-- Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica\
-- Extraiga cinco entidades espaciales y haga un mapa de cada una - Indique el codigo EPSG de cada una de las capas vectoriales (canales, estaciones, comunas) - Transforme el sistema de referencia de coordenadas de las tres capas vectoriales a datum WGS84 coordenadas geográficas.
+- Disuelva las comunas de la provincia de Ñuble y guardela en un objeto nuevo.
+- Exporte el objeto nuevo como tipo de archivo shapefile (.shp)
+- Exporte el objeto nuevo como tipo de archivo geopackage (.gpkg)
+- Seleccione dos comunas de la provincia de Ñuble y unalas en un solo objeto `sfg`, asigneselo a un objeto nuevo.
+- Exporte el objeto anterior a un archivo geopackage.
