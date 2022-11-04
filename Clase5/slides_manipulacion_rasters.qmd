@@ -20,11 +20,11 @@ format:
 
 1. Creando datos raster
 2. Algebra raster
-3. Funciones de alto nivel
-4. Funciones de ayuda
-5. Acceder a los valores de celda
+3. Funciones con {terra}
 
 :::
+
+# 1. Creando datos raster {background-color="orange"}
 
 ## 1 . Creando datos raster {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
 
@@ -296,6 +296,8 @@ r <- rast(filename, lyrs=2)
 r
 ```
 
+# 2. Algebra raster {background-color="grey"}
+
 ## 2. Algebra raster {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
 
 Muchas de las operaciones genéricas han sido implementadas
@@ -413,4 +415,159 @@ Usar `global` para obtener un valor resumen de todo el raster.
 ```{r}
 global(st, 'sum')
 global(sst, 'sum')
+```
+
+# 3. Funciones con {terra} {background-color="lightblue"}
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+- Funciones que se encuentran en otros software para procesamiento de datos raster.
+
+
+- `function(x,...)` -> `x` es generalmente un `SpatRaster`
+
+
+- `...` argumentos específicos de la `function`.
+
+
+- Argumento `filename`, por defecto es un `character` vacio `“”`.
+
+
+- Sí no se se especifíca un `filename` por defecto devuelve un raster que es guardado en memoria (RAM)
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+- `crop` corta un raster de mayor tamaño.
+
+- `draw` permite crear una extensión de forma visual, el resultado se puede usar con la función `crop`.
+
+- `trim` remueve las filas/columnas externas que tienen valores `NA`
+
+- `extend` agrega filas/columnas con valores `NA`. 
+
+- `merge` une dos raster en uno. Los raster de entrada deben tener la misma resolución y origen.
+
+- `aggregate` y `disagg` permite cambiar la resolución de un objeto raster. Con `aggregate` debes especificar una función, por defecto `mean`.
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+- `resample` ajusta dos raster que no calzan, en términos de origen y resolución. 
+
+  - Nearest Neighboor o bilinear
+
+- `shift` para ajustar desfase lineal.
+
+
+- `project` para cambiar el `CRS`
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+### Modificar objetos raster
+
+`aggregate`
+
+```{r fig.show='hide'}
+r <- rast(ncol=10,nrow=5)
+values(r) <- 1:ncell(r)
+res(r)
+plot(r)
+text(r)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`aggregate`
+
+```{r echo = FALSE,fig.height=5}
+plot(r)
+text(r)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`aggregate`
+
+```{r fig.height=4}
+ra <- aggregate(r, 2)
+plot(ra)
+text(ra)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`disaggregate`
+
+```{r fig.height=4}
+rd <- disagg(ra, 2)
+plot(rd)
+text(rd)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`crop` 
+
+```{r fig.height=4, fig.width=10}
+r1 <- crop(r, ext(-50,50,-30,50))
+r2 <- crop(r, ext(30,180,10, 90))
+par(mfrow = c(1,2))
+plot(r1);text(r1); plot(r2); text(r2)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`mask` 
+
+```{r fig.height=4, fig.width=10}
+msk <- r
+msk[sample(ncell(r),10)] <- NA
+msk[!is.na(msk)] <- 10
+par(mfrow = c(1,2))
+plot(r);text(r); plot(msk); text(msk)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`mask` 
+
+```{r fig.height=4, fig.width=10}
+rmsk <- mask(r,msk)
+plot(rmsk);text(rmsk)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`merge`
+
+```{r fig.height = 5}
+m <- merge(r1, r2)
+plot(m); text(m)
+```
+
+## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
+
+### Modificar objetos raster
+
+`flip`
+
+```{r fig.height = 5}
+f <- flip(m,'horizontal')
+plot(f); text(f)
 ```
