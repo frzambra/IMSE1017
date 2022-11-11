@@ -1,6 +1,6 @@
 ---
-title: "Taller 4 (IMSE1017)"
-subtitle: "Operaciones con datos raster {terra}"
+title: "Taller 5 (IMSE1017)"
+subtitle: "Datos raster {terra}"
 author: 'Dr. Francisco Zambrano'
 format: 
   html:
