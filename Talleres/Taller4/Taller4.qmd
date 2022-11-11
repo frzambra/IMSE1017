@@ -14,15 +14,15 @@ editor: visual
 
 ## Descripción
 
-En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como `mtcars`, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas). En el segundo taller, trabajó con datos climáticos en donde tuvo que importar los datos, realizar diferentes tipos de indexaciones, algunas operaciones matemáticas, y exportar los datos a un archivo. En el tercer taller se trabajo con datos vectoriales utilizando `{sf}`. 
+En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como `mtcars`, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas). En el segundo taller, trabajó con datos climáticos en donde tuvo que importar los datos, realizar diferentes tipos de indexaciones, algunas operaciones matemáticas, y exportar los datos a un archivo. En el tercer taller se trabajo con datos vectoriales utilizando `{sf}`.
 
 ## Objetivo del taller
 
-Trabajar con datos raster en R con el paquete `{terra}`
+Trabajar con operaciones geométricas con datos vectoriales en `R` con el paquete `{sf}`
 
 ## Paquetes R
 
-Hasta el momento hemos trabajado con los paquetes que vienen inculidos en R base. Ahora empezaremos a trabajar con paquetes adicionales que no vienen instalados por defecto en `R`, por lo que deberá instalarlos. El paquete con el que trabajaremos este taller es `{terra}`, el cual nos permite trabajar con datos de tipo raster.
+Hasta el momento hemos trabajado con los paquetes que vienen inculidos en R base. Ahora empezaremos a trabajar con paquetes adicionales que no vienen instalados por defecto en `R`, por lo que deberá instalarlos. El paquete con el que trabajaremos este taller es `{sf}`, el cual nos permite trabajar con datos de tipo vectoriales.
 
 Para instalar los paquetes debe realizar lo siguiente:
 
@@ -66,16 +66,16 @@ Viernes 3 de noviembre hasta las 13:00am
 
 ### Ejercicio 1
 
-- Cargue el archivo vectorial de división comunal de Chile.
-- Seleccione las comunas de "La Florida", "Queilén" y "Molina"
-- Realice una simplificación de la geometria con una tolerancia de 200, 500 y 1000 metros y asigne los resultados a nuevos objetos de R.
-- Cree un mapa con los resultados.
+-   Cargue el archivo vectorial de división comunal de Chile.
+-   Seleccione las comunas de "La Florida", "Queilén" y "Molina"
+-   Realice una simplificación de la geometria con una tolerancia de 200, 500 y 1000 metros y asigne los resultados a nuevos objetos de R.
+-   Cree un mapa con los resultados.
 
 ### Ejercicio 2
 
-- Seleccione la región Metropolitana del archivo vectorial de la división comunal de Chile y asigneselo al objeto `rm` .
-- Calcule los centroides de cada una de las comunas y guardelo en un objeto llamado `centro_rm`
-- Cree un mapa en donde se pueda ver los límites de las comunas de la región Metropolitana y los centroides de cada una.
+-   Seleccione la región Metropolitana del archivo vectorial de la división comunal de Chile y asigneselo al objeto `rm` .
+-   Calcule los centroides de cada una de las comunas y guardelo en un objeto llamado `centro_rm`
+-   Cree un mapa en donde se pueda ver los límites de las comunas de la región Metropolitana y los centroides de cada una.
 
 ### Ejercicio 3
 
@@ -83,21 +83,21 @@ Haga lo mismo que en el ejercicio 2 pero para la región de Los Ríos.
 
 ### Ejercicio 4
 
-- Cargue la capa vectorial de canales nacionales
-- Utilicé las operaciones de corte para encontrar los canales que corresponden a la provincia de Santiago y guardelo en un objeto `canal_prov_rm`.
-- Cree un `buffer` de 150 metros para los canales de la provincia de Santiago
-- Cree mapas en los que se puedan ver los canales sin buffer y otro con los canales con el buffer.
+-   Cargue la capa vectorial de canales nacionales
+-   Utilicé las operaciones de corte para encontrar los canales que corresponden a la provincia de Santiago y guardelo en un objeto `canal_prov_rm`.
+-   Cree un `buffer` de 150 metros para los canales de la provincia de Santiago
+-   Cree mapas en los que se puedan ver los canales sin buffer y otro con los canales con el buffer.
 
 ### Ejercicio 5
 
-- Cargue el archivo vectorial de estaciones de Chile.
-- Seleccione las estaciones que se encuentran en la región de O'Higgins.
-- Cree un buffer de 500m alrededor de cada estación.
+-   Cargue el archivo vectorial de estaciones de Chile.
+-   Seleccione las estaciones que se encuentran en la región de O'Higgins.
+-   Cree un buffer de 500m alrededor de cada estación.
 
 ### Ejercicio 6
 
-- Disuelva las comunas de la provincia de Ñuble y guardela en un objeto nuevo.
-- Exporte el objeto nuevo como tipo de archivo shapefile (.shp)
-- Exporte el objeto nuevo como tipo de archivo geopackage (.gpkg)
-- Seleccione dos comunas de la provincia de Ñuble y unalas en un solo objeto `sfg`, asigneselo a un objeto nuevo.
-- Exporte el objeto anterior a un archivo geopackage.
+-   Disuelva las comunas de la provincia de Ñuble y guardela en un objeto nuevo.
+-   Exporte el objeto nuevo como tipo de archivo shapefile (.shp)
+-   Exporte el objeto nuevo como tipo de archivo geopackage (.gpkg)
+-   Seleccione dos comunas de la provincia de Ñuble y unalas en un solo objeto `sfg`, asigneselo a un objeto nuevo.
+-   Exporte el objeto anterior a un archivo geopackage.

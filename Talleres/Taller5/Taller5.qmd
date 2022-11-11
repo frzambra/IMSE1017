@@ -1,0 +1,108 @@
+---
+title: "Taller 4 (IMSE1017)"
+subtitle: "Operaciones con datos raster {terra}"
+author: 'Dr. Francisco Zambrano'
+format: 
+  html:
+    number-sections: false
+    echo: true
+    eval: false
+    table-of-contents: true
+lang: es
+editor: visual
+---
+
+## Descripción
+
+En las primeras clases de la asignatura se ha empezado a trabajar con el software R, partiendo por conocer la sintaxis, la IDE RStudio, las estructuras y tipos de datos. En el primer taller trabajó con datos que vienen incluidos en los paquetes base de R como `mtcars`, aplicando funciones que permitan identificar los tipos de objetos y su estructura, además de realizar proceso de indexación para diferentes tipos de objetos (ej, data.frame, matrix, listas). En el segundo taller, trabajó con datos climáticos en donde tuvo que importar los datos, realizar diferentes tipos de indexaciones, algunas operaciones matemáticas, y exportar los datos a un archivo. En el tercer taller comenzó a familiarizarce con datos vectoriales utilizando `{sf}`. Luego, el el taller número cuatro utilizó las operaciones geométricas con datos vectoriales.
+
+## Objetivo del taller
+
+Trabajar con datos raster en R con el paquete `{terra}`
+
+## Paquetes R
+
+Hasta el momento hemos trabajado con los paquetes que vienen inculidos en R base. Ahora empezaremos a trabajar con paquetes adicionales que no vienen instalados por defecto en `R`, por lo que deberá instalarlos. El paquete con el que trabajaremos este taller es `{terra}`, el cual nos permite trabajar con datos de tipo raster.
+
+Para instalar los paquetes debe realizar lo siguiente:
+
+```{r}
+#| echo: true
+
+# instala los paquetes
+install.packages(c('sf','terra'))
+
+# carga los paqutes en el entorno de R y permite utilizar 
+# las funciones adicionales que contienen
+
+library(sf)
+library(terra)
+```
+
+## Data
+
+En el campus virtual, en la sección `Actividades -> Talleres -> Taller5` se encuentran archivos de tipo vectorial y raster con los que se trabajará.
+
+Para obtener los valores de precipitación debe multiplicar los valores por 0.01
+Para obtener los valores de temperatura debe multiplica por 0.1 y restar 273.
+
+
+## ¿Qué debe entregar?
+
+Debeŕa utilizar RStudio para crear un script, en donde resolverá cada uno de los ejercicios. Debe utilizar los comentarios (`#`) para hacer una descripción del ejercicio e incorporar cualquier información que ayude a entender lo realizado. A modo de ejemplo:
+
+```{r}
+#| eval: false
+# Ejercicio 1:
+# comentario explicando lo que se hace
+{
+  Aca va el script que resuelve el ejericio 1
+  
+}
+```
+
+Debe guardar el script con el nombre `taller5_grupo_{número_grupo}.R`. Los archivos los debe subir en el campus virtual en la sección `Actividades -> Talleres -> Taller5`
+
+## Fecha de entrega
+
+Viernes 18 de noviembre hasta las 13:00am
+
+## Ejercicios
+
+### Ejercicio 1
+
+Cargue los archivos raster del mes de junio del año 2019, correspondientes a la temperatura media mensual (`CHELSA_tas_v2.1_20190601.tif`) y precipitación acumulada mensual del (`CHELSA_pr_v2.1_20190601.tif`). Asignelos a un objeto en R llamados `temp` y `pre`, respectivamente.
+
+### Ejercicio 2
+
+Para obtenr los valores de temperatura debe multiplica `temp`*0.1-273 y reemplace `temp`.
+Para obtener los valores de precipitación multiplique `pre`*0.01 y reemplace `pre`.
+
+### Ejercicio 3
+
+Utilizando funciones de `{terra}` extraiga la resolucíon espacial, la cantidad de pixeles/celdas, cantidad de columnas, cantidad de filas y el sistema de referencia de coordenadas (SRC).
+
+### Ejercicio 4
+
+Cargue el archivo vectorial de division comunal y asignelo a el objeto `comunas`. Seleccione la región de la Araucania. Disuelva las comunas para quedar con el poligono de la región y guardelo en el objeto `region_araucania`.
+
+### Ejercicio 5
+
+Realice el corte de los raster de temperatura y precipitación para la región de la Araucania. Guardelos como `temp_araucania` y `prec_araucania`.
+
+### Ejercicio 6
+
+Cargue los datos vectoriales de `estaciones_chile` que corresponde a la ubicación de las estaciones climáticas de Chile. 
+
+Utilice la función `extract` para extraer los valores de precipitación en la ubicación de las estaciones. 
+
+### Ejercicio 7
+
+Convierta en valores `NA` los datos de temperatura menor a 0°C. Haga un mapa con `plot` del mapa resultante.
+
+Convierta en valores `NA` los datos de precipitación menor a 300 mm. Haga un mapa con `plot` del mapa resultante.
+
+### Ejercicio 8
+
+Guarde los raster creados en el ejercicio anterior como `temp_mayor_0_araucania.tif` y `prec_menor_300_araucania.tif`. Utilice la función `writeRaster`.
+

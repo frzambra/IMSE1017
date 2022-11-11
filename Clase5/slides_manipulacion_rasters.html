@@ -1066,16 +1066,6 @@ sum 433.3333</code></pre>
 </section>
 <section id="funciones-con-terra-1" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
-<ul>
-<li><p>Funciones que se encuentran en otros software para procesamiento de datos raster.</p></li>
-<li><p><code>function(x,...)</code> -&gt; <code>x</code> es generalmente un <code>SpatRaster</code></p></li>
-<li><p><code>...</code> argumentos específicos de la <code>function</code>.</p></li>
-<li><p>Argumento <code>filename</code>, por defecto es un <code>character</code> vacio <code>“”</code>.</p></li>
-<li><p>Sí no se se especifíca un <code>filename</code> por defecto devuelve un raster que es guardado en memoria (RAM)</p></li>
-</ul>
-</section>
-<section id="funciones-con-terra-2" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
-<h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster">Modificar objetos raster</h3>
 <ul>
 <li><p><code>crop</code> corta un raster de mayor tamaño.</p></li>
@@ -1086,7 +1076,7 @@ sum 433.3333</code></pre>
 <li><p><code>aggregate</code> y <code>disagg</code> permite cambiar la resolución de un objeto raster. Con <code>aggregate</code> debes especificar una función, por defecto <code>mean</code>.</p></li>
 </ul>
 </section>
-<section id="funciones-con-terra-3" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-2" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-1">Modificar objetos raster</h3>
 <ul>
@@ -1096,9 +1086,10 @@ sum 433.3333</code></pre>
 </ul></li>
 <li><p><code>shift</code> para ajustar desfase lineal.</p></li>
 <li><p><code>project</code> para cambiar el <code>CRS</code></p></li>
+<li><p><code>extract</code> para extraer valores de un raster basado en una capa vectorial</p></li>
 </ul>
 </section>
-<section id="funciones-con-terra-4" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-3" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-2">Modificar objetos raster</h3>
 <p><code>aggregate</code></p>
@@ -1113,13 +1104,13 @@ sum 433.3333</code></pre>
 <span id="cb97-2"><a href="#cb97-2"></a><span class="fu">text</span>(r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="funciones-con-terra-5" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-4" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-3">Modificar objetos raster</h3>
 <p><code>aggregate</code></p>
 
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-6" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-5" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-4">Modificar objetos raster</h3>
 <p><code>aggregate</code></p>
@@ -1130,7 +1121,7 @@ sum 433.3333</code></pre>
 
 </div>
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-7" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-6" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-5">Modificar objetos raster</h3>
 <p><code>disaggregate</code></p>
@@ -1141,7 +1132,7 @@ sum 433.3333</code></pre>
 
 </div>
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-8" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-7" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-6">Modificar objetos raster</h3>
 <p><code>crop</code></p>
@@ -1153,7 +1144,7 @@ sum 433.3333</code></pre>
 
 </div>
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-9" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-8" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-7">Modificar objetos raster</h3>
 <p><code>mask</code></p>
@@ -1166,7 +1157,7 @@ sum 433.3333</code></pre>
 
 </div>
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-10" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-9" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-8">Modificar objetos raster</h3>
 <p><code>mask</code></p>
@@ -1176,7 +1167,7 @@ sum 433.3333</code></pre>
 
 </div>
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-11" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-10" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-9">Modificar objetos raster</h3>
 <p><code>merge</code></p>
@@ -1186,7 +1177,7 @@ sum 433.3333</code></pre>
 
 </div>
 <img data-src="slides_manipulacion_rasters_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
-<section id="funciones-con-terra-12" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
+<section id="funciones-con-terra-11" class="slide level2 smaller scrollable" data-background-image="https://rspatial.github.io/terra/reference/figures/logo.png" data-background-position="97.5% 2.5%" data-background-size="7.5%">
 <h2>3. Funciones con {terra}</h2>
 <h3 id="modificar-objetos-raster-10">Modificar objetos raster</h3>
 <p><code>flip</code></p>

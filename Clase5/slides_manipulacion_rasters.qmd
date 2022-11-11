@@ -421,22 +421,6 @@ global(sst, 'sum')
 
 ## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
 
-- Funciones que se encuentran en otros software para procesamiento de datos raster.
-
-
-- `function(x,...)` -> `x` es generalmente un `SpatRaster`
-
-
-- `...` argumentos específicos de la `function`.
-
-
-- Argumento `filename`, por defecto es un `character` vacio `“”`.
-
-
-- Sí no se se especifíca un `filename` por defecto devuelve un raster que es guardado en memoria (RAM)
-
-## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
-
 ### Modificar objetos raster
 
 - `crop` corta un raster de mayor tamaño.
@@ -463,6 +447,8 @@ global(sst, 'sum')
 
 
 - `project` para cambiar el `CRS`
+
+- `extract` para extraer valores de un raster basado en una capa vectorial
 
 ## 3. Funciones con {terra} {.smaller .scrollable background-image="https://rspatial.github.io/terra/reference/figures/logo.png" background-position="97.5% 2.5%" background-size="7.5%"}
 ### Modificar objetos raster
