@@ -99,7 +99,9 @@ Con las coordenadas del ejercicio 2 cree un objeto de tipo punto `sfg` para cada
 Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:\
 - Indique el Sistema de Referencia de Coordenadas\
 - Indique el tipo de geometria que tiene almacenada\
-- Extraiga la list-colum correspondiente a las geometrias - Extraiga el data.frame (sin la geometria) - Cuantas columnas tiene la tabla de atributos\
+- Extraiga la list-colum correspondiente a las geometrias 
+- Extraiga el data.frame (sin la geometria) 
+- Cuantas columnas tiene la tabla de atributos\
 - Cuántas entidades espaciales tiene la capa vectorial.\
 - Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'\
 - Extraiga cinco entidades espaciales y haga un mapa de cada una

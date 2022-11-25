@@ -40,6 +40,7 @@ I) Unidad 1: Manejo de  datos SIG  con R.
 3) [Taller 3: Datos vectoriales con {sf}](Talleres/Taller3/Taller3.html)
 4) [Taller 4: Operaciones geométricas con {sf}](Talleres/Taller4/Taller4.html)
 5) [Taller 5: Datos raster con {terra}](Talleres/Taller5/Taller5.html)
+6) [Taller 6: Creación de mapas con {tmap}](Talleres/Taller6/Taller6.html)
 
 ## Ejercicios
 
