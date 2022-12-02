@@ -31,7 +31,7 @@ Para instalar los paquetes debe realizar lo siguiente:
 #| eval: false
 #| 
 # instala los paquetes
-install.packages(c('sf','terra','tmap','elevatr'))
+install.packages(c('sf','terra','tmap'))
 
 # carga los paqutes en el entorno de R y permite utilizar 
 # las funciones adicionales que contienen
