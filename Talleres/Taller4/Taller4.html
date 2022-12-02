@@ -2,20 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr.&nbsp;Francisco Zambrano">
 
-<title>Taller 3 (IMSE1017)</title>
+<title>Taller 4 (IMSE1017)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -54,7 +59,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -67,7 +72,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -100,7 +105,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc">
+  <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Indice de contenidos</h2>
    
   <ul>
@@ -112,12 +117,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#fecha-de-entrega" id="toc-fecha-de-entrega" class="nav-link" data-scroll-target="#fecha-de-entrega">Fecha de entrega</a></li>
   <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
   <ul class="collapse">
-  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1">Ejercicio 1</a></li>
-  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">Ejercicio 2</a></li>
-  <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">Ejercicio 3</a></li>
-  <li><a href="#ejercicio-4" id="toc-ejercicio-4" class="nav-link" data-scroll-target="#ejercicio-4">Ejercicio 4</a></li>
-  <li><a href="#ejercicio-5" id="toc-ejercicio-5" class="nav-link" data-scroll-target="#ejercicio-5">Ejercicio 5</a></li>
-  <li><a href="#ejercicio-6" id="toc-ejercicio-6" class="nav-link" data-scroll-target="#ejercicio-6">Ejercicio 6</a></li>
+  <li><a href="#ejercicio-1-40pts" id="toc-ejercicio-1-40pts" class="nav-link" data-scroll-target="#ejercicio-1-40pts">Ejercicio 1 (40pts)</a></li>
+  <li><a href="#ejercicio-2-50pts" id="toc-ejercicio-2-50pts" class="nav-link" data-scroll-target="#ejercicio-2-50pts">Ejercicio 2 (50pts)</a></li>
+  <li><a href="#ejercicio-3-50pts" id="toc-ejercicio-3-50pts" class="nav-link" data-scroll-target="#ejercicio-3-50pts">Ejercicio 3 (50pts)</a></li>
+  <li><a href="#ejercicio-4-80pts" id="toc-ejercicio-4-80pts" class="nav-link" data-scroll-target="#ejercicio-4-80pts">Ejercicio 4 (80pts)</a></li>
+  <li><a href="#ejercicio-5-60pts" id="toc-ejercicio-5-60pts" class="nav-link" data-scroll-target="#ejercicio-5-60pts">Ejercicio 5 (60pts)</a></li>
+  <li><a href="#ejercicio-6-80pts" id="toc-ejercicio-6-80pts" class="nav-link" data-scroll-target="#ejercicio-6-80pts">Ejercicio 6 (80pts)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -126,7 +131,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Taller 3 (IMSE1017)</h1>
+<h1 class="title">Taller 4 (IMSE1017)</h1>
 <p class="subtitle lead">Operaciones geométricas en datos vectoriales con {sf}</p>
 </div>
 
@@ -192,46 +197,138 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="ejercicios" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
-<section id="ejercicio-1" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h3>
+<section id="ejercicio-1-40pts" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-1-40pts">Ejercicio 1 (40pts)</h3>
 <ul>
 <li>Cargue el archivo vectorial de división comunal de Chile.</li>
 <li>Seleccione las comunas de “La Florida”, “Queilén” y “Molina”</li>
 <li>Realice una simplificación de la geometria con una tolerancia de 200, 500 y 1000 metros y asigne los resultados a nuevos objetos de R.</li>
 <li>Cree un mapa con los resultados.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>comunas <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">'../data/division_comunal/division_comunal.shp'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>comunas_sel <span class="ot">&lt;-</span> comunas[comunas<span class="sc">$</span>NOM_COM <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"La Florida"</span>, <span class="st">"Queilén"</span>, <span class="st">"Molina"</span>),]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>comunas_sel_sim200 <span class="ot">&lt;-</span> <span class="fu">st_simplify</span>(comunas_sel,<span class="at">dTolerance =</span> <span class="dv">200</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>comunas_sel_sim500 <span class="ot">&lt;-</span> <span class="fu">st_simplify</span>(comunas_sel,<span class="at">dTolerance =</span> <span class="dv">500</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>comunas_sel_sim1000 <span class="ot">&lt;-</span> <span class="fu">st_simplify</span>(comunas_sel,<span class="at">dTolerance =</span> <span class="dv">1000</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(comunas_sel_sim200<span class="sc">$</span>geometry)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(comunas_sel_sim500<span class="sc">$</span>geometry)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(comunas_sel_sim1000<span class="sc">$</span>geometry)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
-<section id="ejercicio-2" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h3>
+<section id="ejercicio-2-50pts" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-2-50pts">Ejercicio 2 (50pts)</h3>
 <ul>
 <li>Seleccione la región Metropolitana del archivo vectorial de la división comunal de Chile y asigneselo al objeto <code>rm</code> .</li>
 <li>Calcule los centroides de cada una de las comunas y guardelo en un objeto llamado <code>centro_rm</code></li>
 <li>Cree un mapa en donde se pueda ver los límites de las comunas de la región Metropolitana y los centroides de cada una.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># selección región Metropolitana</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>comunas_RM <span class="ot">&lt;-</span> comunas[comunas<span class="sc">$</span>NOM_REG <span class="sc">==</span> <span class="st">"Región Metropolitana de Santiago"</span>, ]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#calculo de centroides</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>centro_rm <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(comunas_RM)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in st_centroid.sf(comunas_RM): st_centroid assumes attributes are
+constant over geometries of x</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#mapa limites comunas y centroides</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(comunas_RM<span class="sc">$</span>geometry)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(centro_rm<span class="sc">$</span>geometry,<span class="at">col =</span><span class="st">'red'</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller4_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
-<section id="ejercicio-3" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h3>
+<section id="ejercicio-3-50pts" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-3-50pts">Ejercicio 3 (50pts)</h3>
 <p>Haga lo mismo que en el ejercicio 2 pero para la región de Los Ríos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># selección región de Los Ríos</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>comunas_LR <span class="ot">&lt;-</span> comunas[comunas<span class="sc">$</span>NOM_REG <span class="sc">==</span> <span class="st">"Región de Los Ríos"</span>, ]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#calculo de centroides</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>centro_lr <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(comunas_LR)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in st_centroid.sf(comunas_LR): st_centroid assumes attributes are
+constant over geometries of x</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#mapa limites comunas y centroides</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(comunas_LR<span class="sc">$</span>geometry)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(centro_lr<span class="sc">$</span>geometry,<span class="at">col =</span><span class="st">'red'</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller4_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
-<section id="ejercicio-4" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h3>
+<section id="ejercicio-4-80pts" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-4-80pts">Ejercicio 4 (80pts)</h3>
 <ul>
 <li>Cargue la capa vectorial de canales nacionales</li>
 <li>Utilicé las operaciones de corte para encontrar los canales que corresponden a la provincia de Santiago y guardelo en un objeto <code>canal_prov_rm</code>.</li>
 <li>Cree un <code>buffer</code> de 150 metros para los canales de la provincia de Santiago</li>
 <li>Cree mapas en los que se puedan ver los canales sin buffer y otro con los canales con el buffer.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>canales <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">'../data/canales_nacional_final/canales_nacional_final.shp'</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#selccionar comunas que corresponden a la provincia de Santiago</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>provincia_stgo <span class="ot">&lt;-</span> comunas[comunas<span class="sc">$</span>NOM_PROV <span class="sc">==</span> <span class="st">'Santiago'</span>,]</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># utilizar operaciones geometricas para intersectar todos los canales de Chile con la provincia de Santiago</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>canales_stgo <span class="ot">&lt;-</span> <span class="fu">st_intersection</span>(canales,provincia_stgo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: attribute variables are assumed to be spatially constant throughout all
+geometries</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>can_stgo_buff <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(canales_stgo,<span class="dv">150</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(canales_stgo<span class="sc">$</span>geometry)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(can_stgo_buff<span class="sc">$</span>geometry)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller4_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
-<section id="ejercicio-5" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h3>
+<section id="ejercicio-5-60pts" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-5-60pts">Ejercicio 5 (60pts)</h3>
 <ul>
 <li>Cargue el archivo vectorial de estaciones de Chile.</li>
 <li>Seleccione las estaciones que se encuentran en la región de O’Higgins.</li>
 <li>Cree un buffer de 500m alrededor de cada estación.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>estaciones <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">'../data/estaciones_chile/estaciones_chile.shp'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>reg_ohi <span class="ot">&lt;-</span> comunas[comunas<span class="sc">$</span>NOM_REG <span class="sc">==</span> <span class="st">"Región del Libertador Bernardo O'Higgins"</span>, ]</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>estaciones <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(estaciones,<span class="fu">st_crs</span>(reg_ohi))</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>estaciones_ohi <span class="ot">&lt;-</span> <span class="fu">st_intersection</span>(estaciones,reg_ohi)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: attribute variables are assumed to be spatially constant throughout all
+geometries</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>estaciones_ohi_buff <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(estaciones_ohi,<span class="dv">500</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(estaciones_ohi_buff<span class="sc">$</span>geometry)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller4_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
-<section id="ejercicio-6" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h3>
+<section id="ejercicio-6-80pts" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-6-80pts">Ejercicio 6 (80pts)</h3>
 <ul>
 <li>Disuelva las comunas de la provincia de Ñuble y guardela en un objeto nuevo.</li>
 <li>Exporte el objeto nuevo como tipo de archivo shapefile (.shp)</li>
@@ -239,6 +336,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Seleccione dos comunas de la provincia de Ñuble y unalas en un solo objeto <code>sfg</code>, asigneselo a un objeto nuevo.</li>
 <li>Exporte el objeto anterior a un archivo geopackage.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>provi_nuble <span class="ot">&lt;-</span> comunas[comunas<span class="sc">$</span>NOM_PROV <span class="sc">==</span> <span class="st">'Ñuble'</span>,]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>provi_nuble_u <span class="ot">&lt;-</span> <span class="fu">st_union</span>(provi_nuble)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(provi_nuble_u,<span class="st">'../data/provi_nuble.shp'</span>,<span class="at">append =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Updating layer `provi_nuble' to data source `../data/provi_nuble.shp' using driver `ESRI Shapefile'
+Updating existing layer provi_nuble
+Writing 1 features with 0 fields and geometry type Polygon.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(provi_nuble_u,<span class="st">'../data/provi_nuble.gpkg'</span>,<span class="at">append =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Updating layer `provi_nuble' to data source `../data/provi_nuble.gpkg' using driver `GPKG'
+Updating existing layer provi_nuble
+Writing 1 features with 0 fields and geometry type Polygon.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in CPL_write_ogr(obj, dsn, layer, driver,
+as.character(dataset_options), : GDAL Message 1: A geometry of type POLYGON
+is inserted into layer provi_nuble of geometry type MULTIPOLYGON, which is not
+normally allowed by the GeoPackage specification, but the driver will however do
+it. To create a conformant GeoPackage, if using ogr2ogr, the -nlt option can be
+used to override the layer geometry type. This warning will no longer be emitted
+for this combination of layer and feature geometry type.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dos_comunas <span class="ot">&lt;-</span> <span class="fu">st_union</span>(provi_nuble[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>),])</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dos_comunas)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Taller4_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(dos_comunas,<span class="st">'../data/dos_comunas.gpkg'</span>,<span class="at">append =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Updating layer `dos_comunas' to data source `../data/dos_comunas.gpkg' using driver `GPKG'
+Updating existing layer dos_comunas
+Writing 1 features with 0 fields and geometry type Multi Polygon.</code></pre>
+</div>
+</div>
 </section>
 </section>
 
@@ -313,7 +446,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
