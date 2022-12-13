@@ -43,6 +43,11 @@ I) Unidad 1: Manejo de  datos SIG  con R.
 6) [Taller 6: Creación de mapas con {tmap}](Talleres/Taller6/Taller6.html)
 7) [Taller recuperativo: R como SIG](Talleres/Taller_recuperativo/Taller_recuperativo.html)
 
+## Evaluaciones
+
+1) [Evaluación 1](Evaluaciones/Eva1/evaluacion1.html)
+2) [Evaluación 2](Evaluaciones/Eva2/evaluacion2.html)
+
 ## Ejercicios
 
 1) [Ejercicios evaluación 1](Ejercicios/Ejercicios_eval1.html)
