@@ -22,7 +22,14 @@ editor: visual
 
 3.  (20pts) Indique que paquetes de R utiliza para trabajar con datos vectoriales y raster. (20pts)
 
+**R:** para datos vectoriales usamos `{sf}` y para datos raster `{terra}`
+
 4.  (20pts) Escriba un vector de tipo cáracter que contenga cinco elementos, cada uno debe corresponden a un día de la semana de lunes a viernes. Asigne el vector creado al objeto `dias`.
+
+```{r}
+dias <- c('lunes','martes','miercoles','jueves','viernes')
+```
+
 
 5.  (20pts) Considere el siguiente vector
 
@@ -40,6 +47,10 @@ r
 ¿Qué tipo de vector es `r`?\
 ¿Qué valores tiene r?
 
+```{r}
+class(r)
+```
+
 6.  (20pts) Considere las siguientes operaciones en `R`:
 
 ```{r}
@@ -48,6 +59,8 @@ class(x)
 ```
 
 ¿Explique por qué la clase obtenida es de tipo `character`?
+
+**R:** Por la jerarquía de coerción los valores numéricos se convierten a tipo caracter.
 
 7.  (20pts) Cree un vector numérico con los números de 1 a 100.
 
@@ -82,7 +95,9 @@ m[2:3,2:3]
 9.  Describa las principales características de las estructuras de dato tipo `data.frame`.
 
 **R:**\
-\* Es uno de los objetos más destacados, nace del mundo de software de análisis estadístico. \* Cada columna corresponde a una variable y cada fila a una observación. \* Puede almacenar columnas con diferentes tipos de datos
+- Es uno de los objetos más destacados, nace del mundo de software de análisis estadístico.  
+- Cada columna corresponde a una variable y cada fila a una observación.  
+- Puede almacenar columnas con diferentes tipos de datos
 
 10. Considere el siguiente `data.frame`
 
@@ -98,9 +113,20 @@ df[df$Species == 'setosa',]
 
 -   (20pts) ¿Cómo puedo obtener los nombres de las columnas del `data.frame` `df`?
 
+```{r}
+names(df)
+```
+
 -   (20pts) Indique dos maneras de extraer la columna `Petal.Length` y asignela al objeto `pl`.
 
+```{r}
+pl <- df$Petal.length
+pl <- df['Petal.Length']
+```
+
 11. (40pts) Explique por qué necesitamos los paquetes `{sf}` y `{terra}` en R para trabajar con datos espaciales. ¿Cuál es la ventaja de usarlos?
+
+**R:** En R base no existen estructuras de datos para manejar datos geoespaciales. Necesitamos {terra} y {sf} ya que estos paquetes proporcionan las clases de objetos que nos permiten trabajar de forma adecuada con datos raster y vetcoriales.
 
 12. (30pts) Explique cuál es la diferencia entre los dos set de datos siguientes:
 
@@ -115,6 +141,8 @@ datos2 <- st_as_sf(datos1,coords = c('lon','lat'))
 datos2
 ```
 
+**R:** El primero es un `data.frame` y el segundo es un objeto de tipo `sf`.
+
 13. Respecto al objeto datos creados en el siguiente script.
 
 ```{r}
@@ -128,10 +156,24 @@ class(datos$geometry)
 ```
 
 -   (20pts) ¿Qué clase de objeto es `datos$geometry`?
+
+```{r}
+class(datos$geometry)
+```
+
 -   (20pts) ¿Qué clase de objeto es `datos$geometry[1]`?
+
+```{r}
+class(datos$geometry[1])
+```
+
 -   (20pts) Explique cuál es la diferencia entre las dos clases de objeto anteriores.
 
+**R:** El primero es un objeto de clase `sfc` un list-column con todas las geometrias, el segundo es un objeto de tipo `sfg` que contiene la geometria individual.
+
 14. (20pts) La clase `spatRaster` a qué paquete de R corresponde.
+
+**R:** a `{terra}`
 
 15. Considere el siguiente objeto `spatRaster`.
 
@@ -141,14 +183,29 @@ r <- rast(ncol=4,nrow=4,crs="EPSG:4326")
 ```
 
 -   (20pts) ¿Qué valores tiene el objeto `r`?
+
+```{r}
+r
+```
+
 -   (20pts) ¿Cuál es el sistema de referencia de coordenadas del objeto r?
+
+```{r}
+st_crs(r)$epsg
+```
+
 -   (20pts) ¿Cómo puedo cambiar/asignar los valores del 1 al 16 a `r`?
+
+```{r}
+values(r) <- 1:16
+```
 
 16. (30pts) ¿Qué valores tiene en cada celda el siguiente raster?
 
 ```{r}
 r <- rast(ncol=3,nrow=3)
 values(r) <- 9:1
+plot(r);text(r)
 ```
 
 17. (20pts) ¿Qué consecuencias tiene la operación `c(r,r,r,r)` con el raster?
@@ -159,6 +216,8 @@ values(r) <- 1:9
 
 r2 <- c(r,r,r,r)
 ```
+
+**R:** Crea un raster multicapa, en este caso con cuatro capas.
 
 # Segunda parte
 
