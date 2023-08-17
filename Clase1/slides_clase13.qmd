@@ -14,7 +14,7 @@ format:
     theme: default
 ---
 
-## Contenidos {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Contenidos {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 ::: incremental
 1. Sintaxis de R
 2. Tipos de datos básicos: `numeric, character, logical`
@@ -24,7 +24,7 @@ format:
 
 # 0. Antes de partir {background-color="grey" }
 
-## Algunos consejos {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Algunos consejos {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 ::: incremental
 - `R` es quizas el más poderoso ambiente computacional para análisis de datos.
 - Con `R` puedes:
@@ -41,12 +41,12 @@ format:
 - Tolerancia a la frustración es un requisito. Al principio muchas cosas fallarán y volveran a fallar, hasta que luego empezaran a funcionar.
 :::
 
-##  Instalar `R` {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+##  Instalar `R` {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 - Si deseas instalar R en tu PC 
   - [Descargar R](https://www.r-project.org/)
   - Descargar una IDE, aconsejo [RStudio](https://rstudio.com/)
 
-## Explorando RStudio {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Explorando RStudio {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: incremental
 - Por defecto RStudio está organizado en los siguientes paneles:
@@ -56,7 +56,7 @@ format:
     4. `Misc (derecha abajo):` Una variedad de pestañas que ayudan a buscar archivos, ver los gráficos, ver ayuda, etc.
 :::
 
-## Explorando RStudio {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Explorando RStudio {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 RStudio también tiene varias personalizaciones que ayudan a un mejor uso::
 
@@ -64,7 +64,7 @@ RStudio también tiene varias personalizaciones que ayudan a un mejor uso::
 - Click Tools --> Global Options --> `Code` selecciona el cuadro que dice "Soft-wrap R source files" para ajustar el texto al ancho del panel.
 - Click Tools --> Global Options --> Code --> `Display` selecciona el cuadro que dice "Highlight selected line" y "Highlight R function calls". Proporciona destacado de linea y funciones.
 
-## 1.R como una calculadora {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 1.R como una calculadora {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -76,7 +76,7 @@ exp(10)
 pi
 ```
 
-## 1. Sintaxis de R {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 1. Sintaxis de R {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Ejemplo de script:
 
@@ -99,7 +99,7 @@ nombre_archivo <- 'datos.csv'
 data <- read.csv2(nombre_archivo,header = FALSE)
 ```
 
-## 1. Sintaxis de R {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 1. Sintaxis de R {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ### Tener en mente
 
@@ -124,7 +124,7 @@ ls()
 
 # 2. Tipos de datos básicos {background-color='orange'}
 
-## Numeric: integer o double {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Numeric: integer o double {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -152,7 +152,7 @@ typeof(x)
 
 :::
 
-## Numeric: integer o double {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Numeric: integer o double {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -179,7 +179,7 @@ typeof(z)
 
 :::
 
-## Character {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Siempre entre comillas: `'` o `"`
 
@@ -197,7 +197,7 @@ pais
 'pais'
 ```
 
-## Character {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ¿Qué pasa en este caso?
 
@@ -207,7 +207,7 @@ pais
 Chile
 ```
 
-## Character: algunas funciones útiles {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character: algunas funciones útiles {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -218,7 +218,7 @@ y
 paste('Python', y)
 ```
 
-## Character: algunas funciones útiles {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character: algunas funciones útiles {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -226,7 +226,7 @@ x
 gsub('R es el mejor lenguaje','R y Python son dos de los mejores lenguajes',x)
 ```
 
-## Logical {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Logical {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -256,7 +256,7 @@ F
 
 :::
 
-## Logical {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Logical {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Ejemplo:
 
@@ -271,7 +271,7 @@ TRUE <- 4
 
 ```
 
-## Logical {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Logical {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -310,7 +310,7 @@ FALSE + 1
 
 # 3. Tipos de datos derivados {background-color='lightblue'}
 
-## Valores faltantes (NA: Not Available) {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Valores faltantes (NA: Not Available) {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 
 El análisis de datos faltantes es muy importante en análisis de datos
@@ -324,7 +324,7 @@ is.na(f) # busca en f los NAs, TRUE en la posicion que hay, FALSE en otro caso
 TRUE + FALSE + FALSE + TRUE
 ```
 
-## Date-time {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Date-time {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -337,7 +337,7 @@ d2
 class(d2)
 ```
 
-## Date-time {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Date-time {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -347,7 +347,7 @@ d2
 d - as.Date(d2)
 ```
 
-## Factor {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Factor {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Las funciones as.________, convierten un tipo de dato a otro
 
@@ -381,7 +381,7 @@ levels(y)
 
 # 4. Estructura de datos {background-color='darkgreen'}
 
-## Vectores {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Vectores {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Hay dos tipos de vectores en R:
 
@@ -393,7 +393,7 @@ Hay dos tipos de vectores en R:
 
 ![](img/data-structures-overview.png){width=400}
 
-## Atomic vectors {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Atomic vectors {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Almacena el mismo tipo de dato (numeric, character, logical)
 
@@ -405,7 +405,7 @@ c(TRUE, FALSE, TRUE) # logical vector
 ```
 
 
-## Atomic vectors {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Atomic vectors {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ¿Qué pasa si mezclamos diferentes tipos?
 
@@ -444,7 +444,7 @@ class(c('TRUE',1L))
 ```
 :::
 
-## Numeric vector: algunas funciones {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Numeric vector: algunas funciones {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -454,7 +454,7 @@ rep(2,times=10) # repite 2, 10 veces
 rev(c(1,2,3,4)) # inverso de 1,2,3,4
 ```
 
-## Character vector: algunas funciones {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character vector: algunas funciones {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Constantes integradas en R
 
@@ -483,7 +483,7 @@ length(month.name)
 :::
 :::
 
-## Character vector {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character vector {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Los vectores tienen atributos (metadata)
 
@@ -497,7 +497,7 @@ attributes(x)
 attr(x,'names')
 ```
 
-## Character vector: algunas funciones {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character vector: algunas funciones {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Regular expresion (regex) pueden utilizarse para buscar texto por un patrón usamos `grep`.
 
@@ -509,7 +509,7 @@ grep(pattern='a',month.name)
 
 Para más información sobre regex vaya a [regexr.com](https://regexr.com/)
 
-## Factor {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Factor {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 En escencia es un vector con attributos. Representa una variable nominal/categorica. Usados para test estadísticos.
 
@@ -526,7 +526,7 @@ v
 attributes(v)
 ```
 
-## List: es un tipo de vector {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## List: es un tipo de vector {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 
 Muy importante!! Permite mezlar diferentes tipos de datos
@@ -550,7 +550,7 @@ list(l,f)
 :::
 :::
 
-## Matrix {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Matrix {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 `vector` tiene una dimensión, la `matrix` tiene 2
 
@@ -575,7 +575,7 @@ typeof(m)
 :::
 :::
 
-## Matrix: algunas funciones {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Matrix: algunas funciones {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -600,7 +600,7 @@ f
 :::
 :::
 
-## Matrix: algunas funciones {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Matrix: algunas funciones {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -625,7 +625,7 @@ f
 :::
 :::
 
-## Data.frame {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Data.frame {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 - Es uno de los objetos más destacados, nace del mundo de software de análisis estadístico.
 
@@ -639,7 +639,7 @@ f
 head(iris)
 ```
 
-## Data.frame {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Data.frame {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ¿Cómo creamos un data.frame?
 
@@ -654,7 +654,7 @@ df <- data.frame(id,nombres,sexo,num_letras)
 df
 ```
 
-## Data.frame {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Data.frame {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true

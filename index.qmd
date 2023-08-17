@@ -56,8 +56,10 @@ I) Unidad 1: Manejo de  datos SIG  con R.
 -->
 ## Ejercicios
 
+<!--
 1) [Ejercicios evaluación 1](Ejercicios/Ejercicios_eval1.html)
 2) [Ejercicios evaluación 2](Ejercicios/Ejercicios_eval2.html)
+-->
 
 ## Material
 

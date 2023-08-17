@@ -171,7 +171,7 @@ format:
 
 # Descripción del Curso {background-color='green'}
 
-## Objetivos {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Objetivos {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: incremental
 - Lograr habilidades en el uso básico del software `R`
@@ -182,14 +182,14 @@ format:
 
 :::
 
-## Metodología {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Metodología {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 - Clases teóricas con ejemplos 
 
 - Talleres en computador utilizando `R` y la IDE `RStudio`
 
 
-## Horario {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Horario {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 
 ::: incremental
@@ -201,7 +201,7 @@ Sala HHSR-204
 Sala MALI-201
 :::
 
-## Evaluaciones  {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Evaluaciones  {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 - Evaluación 1 (20%)
     - Tipo: teórica practica
@@ -218,7 +218,7 @@ Sala MALI-201
 - Trabajo Final (20%)
 
 
-## Recursos para aprender {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Recursos para aprender {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: incremental
 - R
