@@ -20,7 +20,7 @@ En este repositorio se pone a disposición de los alumnos de Ing. en Medio Ambie
 
 ## Clases
 
-I) Unidad 1: Manejo de  datos SIG  con R.
+I) Unidad 1:Introducción al uso de R.
     
     1) [Presentación curso](Clase1/slides_clase11.html)  
     2) [Introducción a `R`](Clase1/slides_clase12.html)   
