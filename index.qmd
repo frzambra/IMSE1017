@@ -1,0 +1,77 @@
+---
+title: "Uso Avanzado de Sistemas de Información Geográfica (SIG) (IMSE1017)"
+subtitle: "Ing. en Medio Ambiente Y Sustentabilidad"
+author: "Dr. Francisco Zambrano"
+lang: es
+theme: default
+format:
+  html:
+    number-sections: true
+    number-depth: 2
+    smooth-scroll: true
+    code-fold: true
+    toc: true
+    html-math-method: katex
+---
+
+## Reseña
+
+En este repositorio se pone a disposición de los alumnos de Ing. en Medio Ambiente y sustentabilidad de la UMayor, las clases, laboratorios y material que se utilizará en la asignatura de SIG Avanzado. Este repositorio está creado con [quarto](https://quarto.org/) por medio del software `R`.
+
+## Clases
+
+I) Unidad 1: Manejo de  datos SIG  con R.
+    
+    1) [Presentación curso](Clase1/slides_clase11.html)  
+    2) [Introducción a `R`](Clase1/slides_clase12.html)   
+    3) [`R`: Tipos y estructuras de datos](Clase1/slides_clase13.html) 
+  <!--  
+    4) [Manipulación de datos](Clase2/slides_clase21.html)
+    5) [Introducción al análisis espacial con R](Clase3/slides_clase31.html)
+    6) [Datos Espaciales en R](Clase3/slides_clase32.html)
+    7) [Sistemas de Referencia de Coordenadas (SRC)](Clase4/slides_SRC.html)
+    8) [Operaciones Geométricas con datos vectoriales](Clase4/slides_operaciones_vectoriales.html)
+    9) [Maipulación de datos raster](Clase5/slides_manipulacion_rasters.html)
+    10) [Creación de mapas con {tmap}](Clase6/slides_mapas_con_tmap.html)
+    -->
+
+## Talleres
+
+<!-- 
+1) [Taller 1: Tipos y estructuras de datos en R](Talleres/Taller1/taller1.html)
+2) [Taller 2: Datos climáticos en R](Talleres/Taller2/Taller2.html)
+3) [Taller 3: Datos vectoriales con {sf}](Talleres/Taller3/Taller3.html)
+4) [Taller 4: Operaciones geométricas con {sf}](Talleres/Taller4/Taller4.html)
+5) [Taller 5: Datos raster con {terra}](Talleres/Taller5/Taller5.html)
+6) [Taller 6: Creación de mapas con {tmap}](Talleres/Taller6/Taller6.html)
+7) [Taller recuperativo: R como SIG](Talleres/Taller_recuperativo/Taller_recuperativo.html)
+-->
+
+## Evaluaciones
+
+<!--
+1) [Evaluación 1](Evaluaciones/Eva1/evaluacion1.html)
+2) [Evaluación 2](Evaluaciones/Eva2/evaluacion2.html)
+3) [Examen](Evaluaciones/Examen/examen.html)
+-->
+## Ejercicios
+
+1) [Ejercicios evaluación 1](Ejercicios/Ejercicios_eval1.html)
+2) [Ejercicios evaluación 2](Ejercicios/Ejercicios_eval2.html)
+
+## Material
+
+- R
+  - [SWIRL](https://swirlstats.com/)
+  - [Quick-R](https://www.statmethods.net/)
+
+- R-Spatial
+  - [r-spatial](https://www.r-spatial.org/) - Edzer Pebesma
+  - [rspatial](https://www.rspatial.org/) - Robert Hijmans
+
+- Libros R-Spatial
+  - [Applied Spatial Data Analysis with R. Roger Bivand, Edzer Pebesma, Virgilio Gómez-Rubio.](http://gis.humboldt.edu/OLM/r/Spatial%20Analysis%20With%20R.pdf)
+  - [Geocomputation with R. Robin Lovelace, Jakub Nowosad, Jannes Muenchow](https://geocompr.robinlovelace.net/)
+  - [Spatial Data Science](https://keen-swartz-3146c4.netlify.app/). Edzer Pebesma y Roger Bivand. Estado: en desarrollo
+  
+
