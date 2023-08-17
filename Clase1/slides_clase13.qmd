@@ -99,7 +99,7 @@ nombre_archivo <- 'datos.csv'
 data <- read.csv2(nombre_archivo,header = FALSE)
 ```
 
-## 1. Sintaxis de R {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 1. Sintaxis de R {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ### Tener en mente
 
@@ -124,7 +124,7 @@ ls()
 
 # 2. Tipos de datos básicos {background-color='orange'}
 
-## Numeric: integer o double {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Numeric: integer o double {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -152,7 +152,7 @@ typeof(x)
 
 :::
 
-## Numeric: integer o double {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Numeric: integer o double {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -179,7 +179,7 @@ typeof(z)
 
 :::
 
-## Character {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Siempre entre comillas: `'` o `"`
 
@@ -197,7 +197,7 @@ pais
 'pais'
 ```
 
-## Character {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ¿Qué pasa en este caso?
 
@@ -207,7 +207,7 @@ pais
 Chile
 ```
 
-## Character: algunas funciones útiles {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character: algunas funciones útiles {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -218,7 +218,7 @@ y
 paste('Python', y)
 ```
 
-## Character: algunas funciones útiles {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character: algunas funciones útiles {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -226,7 +226,7 @@ x
 gsub('R es el mejor lenguaje','R y Python son dos de los mejores lenguajes',x)
 ```
 
-## Logical {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Logical {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -256,7 +256,7 @@ F
 
 :::
 
-## Logical {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Logical {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Ejemplo:
 
@@ -271,7 +271,7 @@ TRUE <- 4
 
 ```
 
-## Logical {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Logical {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: {.columns}
 
@@ -310,7 +310,7 @@ FALSE + 1
 
 # 3. Tipos de datos derivados {background-color='lightblue'}
 
-## Valores faltantes (NA: Not Available) {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Valores faltantes (NA: Not Available) {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 
 El análisis de datos faltantes es muy importante en análisis de datos
@@ -324,7 +324,7 @@ is.na(f) # busca en f los NAs, TRUE en la posicion que hay, FALSE en otro caso
 TRUE + FALSE + FALSE + TRUE
 ```
 
-## Date-time {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Date-time {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -337,7 +337,7 @@ d2
 class(d2)
 ```
 
-## Date-time {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Date-time {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -347,7 +347,7 @@ d2
 d - as.Date(d2)
 ```
 
-## Factor {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Factor {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Las funciones as.________, convierten un tipo de dato a otro
 
@@ -381,7 +381,7 @@ levels(y)
 
 # 4. Estructura de datos {background-color='darkgreen'}
 
-## Vectores {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Vectores {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Hay dos tipos de vectores en R:
 
@@ -393,7 +393,7 @@ Hay dos tipos de vectores en R:
 
 ![](img/data-structures-overview.png){width=400}
 
-## Atomic vectors {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Atomic vectors {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Almacena el mismo tipo de dato (numeric, character, logical)
 
@@ -405,7 +405,7 @@ c(TRUE, FALSE, TRUE) # logical vector
 ```
 
 
-## Atomic vectors {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Atomic vectors {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ¿Qué pasa si mezclamos diferentes tipos?
 
@@ -444,7 +444,7 @@ class(c('TRUE',1L))
 ```
 :::
 
-## Numeric vector: algunas funciones {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Numeric vector: algunas funciones {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: true
@@ -454,7 +454,7 @@ rep(2,times=10) # repite 2, 10 veces
 rev(c(1,2,3,4)) # inverso de 1,2,3,4
 ```
 
-## Character vector: algunas funciones {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character vector: algunas funciones {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Constantes integradas en R
 
@@ -483,7 +483,7 @@ length(month.name)
 :::
 :::
 
-## Character vector {background-image="../img//img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## Character vector {background-image="../img//R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 Los vectores tienen atributos (metadata)
 
