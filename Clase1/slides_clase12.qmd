@@ -16,7 +16,7 @@ format:
     code-summary: "Código"
 ---
 
-## 1 Motivación {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 1 Motivación {background-image="../img/R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: incremental
 
@@ -37,7 +37,7 @@ format:
 
 :::
 
-## 1 Motivación {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 1 Motivación {background-image="../img/R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ::: incremental
 ¿Por qué utilizar `R`?
@@ -56,7 +56,7 @@ format:
 :::
 
 
-## 2. Ranking popularidad `R` {background-image="../R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
+## 2. Ranking popularidad `R` {background-image="../img/R_logo.png" background-position="97.5% 2.5%" background-size="7.5%" layout="true" .smaller}
 
 ```{r}
 #| echo: false
