@@ -1,0 +1,362 @@
+---
+title: "Taller 1: Ejercicios R base"
+subtitle: "Uso Avanzado de Sistemas de Información Geográfica"
+institute: "Escuela de Ingeniería en Medio Ambiente, Universidad Mayor"
+author: "Dr. Francisco Zambrano"
+date: "2023-08-25"
+lang: "es"
+execute:
+  echo: false
+  eval: false
+format:
+  html:
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    code-fold: show
+    toc: true
+    html-math-method: katex
+    self-contained: true
+---
+
+## Lo básico
+
+1. Escriba un programa en R para crear una secuencia de números del 20 al 50 y encuentre la media de los números del 20 al 60 y la suma de los números del 51 al 91.
+
+```{r}
+print("Secuencias de números desde 20 a 50:")
+print(seq(20,50))
+print("Promedio de números desde el 20 al 60:")
+print(mean(20:60))
+print("Suma de números del 51 al 91:")
+print(sum(51:91))
+```
+
+
+<!-- 2. Escriba un programa R para imprimir los números del 1 al 100 e imprime "Fizz" para múltiplos de 3, imprime "Buzz" para múltiplos de 5 e imprime "FizzBuzz" para múltiplos de ambos. -->
+
+<!-- ```{r} -->
+<!-- ## forma iterativa -->
+<!-- x <- c() -->
+<!-- for (n in 1:100) { -->
+<!--   if (n %% 3 == 0 & n %% 5 == 0) {x[n] <- 'FizzBuzz'; print("FizzBuzz")} -->
+<!--   else if (n %% 3 == 0) {x[n] <- 'Fizz'; print("Fizz")} -->
+<!--   else if (n %% 5 == 0) {x[n] <- 'Buzz'; print("Buzz")} -->
+<!--   else print(n) -->
+<!-- } -->
+
+<!-- # usnado funciones vectorizadas -->
+
+<!-- n <- 1:100 -->
+<!-- x1 <- rep(NA,100) -->
+<!-- x1[n %% 3 == 0] <- 'Fizz' -->
+<!-- x1[n %% 5 == 0] <- 'Buzz' -->
+<!-- x1[n %% 3 == 0 & n %% 5 == 0] <- 'FizzBuzz' -->
+
+<!-- identical(x,x1) -->
+
+<!-- ``` -->
+
+<!-- 3. Escriba un programa R para obtener los primeros 10 números de Fibonacci. -->
+
+<!-- ```{r} -->
+<!-- Fibonacci <- numeric(10) -->
+<!-- Fibonacci[1] <- Fibonacci[2] <- 1 -->
+<!-- for (i in 3:10) Fibonacci[i] <- Fibonacci[i - 2] + Fibonacci[i - 1] -->
+<!-- print("Primeros 10 números de  Fibonacci:") -->
+<!-- print(Fibonacci) -->
+<!-- ``` -->
+
+<!-- 4. Escriba un programa en R para obtener todos los números primos hasta un número dado (basado en la criba de Eratóstenes). -->
+
+<!-- ```{r} -->
+<!-- prime_numbers <- function(n) { -->
+<!-- if (n >= 2) { -->
+<!--  x = seq(2, n) -->
+<!--  prime_nums = c() -->
+<!--  for (i in seq(2, n)) { -->
+<!--  if (any(x == i)) { -->
+<!--  prime_nums = c(prime_nums, i) -->
+<!--  x = c(x[(x %% i) != 0], i) -->
+<!--  } -->
+<!--  } -->
+<!--  return(prime_nums) -->
+<!--  } -->
+<!--  else  -->
+<!--  { -->
+<!--  stop("El número ingresado debe ser al menos 2.") -->
+<!--  } -->
+<!--  }  -->
+<!-- prime_numbers(12) -->
+<!-- ``` -->
+
+5. Escriba un programa en R para crear una curva de campana de una distribución normal aleatoria
+
+```{r}
+n = floor(rnorm(10000, 500, 100))
+t = table(n)
+hist(n)
+```
+
+6. Escriba un programa R para crear una lista de elementos usando vectores, matrices y funciones. Imprime el contenido de la lista.
+
+```{r}
+l = list(
+  c(1, 2, 2, 5, 7, 12),  
+  month.abb,
+  matrix(c(3, -8, 1, -3), nrow = 2),
+  asin
+)
+print("Contenido de la lista:")
+print(l)
+```
+
+7. Escriba un programa en R para crear una matriz de 5 x 4, una matriz de 3 x 3 con etiquetas y rellene la matriz por filas y una matriz de 2 x 2 con etiquetas y rellene la matriz por columnas.
+
+```{r}
+m1 = matrix(1:20, nrow=5, ncol=4)
+print("Matriz de 5 × 4 :")
+print(m1)
+cells = c(1,3,5,7,8,9,11,12,14)
+rnames = c("Row1", "Row2", "Row3")
+cnames = c("Col1", "Col2", "Col3")
+m2 = matrix(cells, nrow=3, ncol=3, byrow=TRUE, dimnames=list(rnames, cnames))
+print("Matriz de 3 × 3 con etiquetas, llenada por fila: ")
+print(m2)
+print("3 × 3 matrix with labels, filled by columns: ")
+m3 = matrix(cells, nrow=3, ncol=3, byrow=FALSE, dimnames=list(rnames, cnames))
+print(m3)
+```
+
+<!-- 8. Escriba un programa en R para crear un array, pasando un vector de valores y un vector de dimensiones. También proporcione nombres para cada dimensión. -->
+
+<!-- ```{r} -->
+<!-- a =  array( -->
+<!--   6:30, -->
+<!--   dim = c(4, 3, 2), -->
+<!--   dimnames = list( -->
+<!--     c("Col1", "Col2", "Col3", "Col4"), -->
+<!--     c("Row1", "Row2", "Row3"), -->
+<!--     c("Part1", "Part2") -->
+<!--   ) -->
+<!-- ) -->
+<!-- print(a) -->
+<!-- ``` -->
+
+<!-- 9. Escriba un programa R para crear un array con tres columnas, tres filas y dos "matrices", tomando dos vectores como entrada para la matriz. Imprime la matriz. -->
+
+<!-- ```{r} -->
+<!-- v1 = c(1, 3, 5, 7) -->
+<!-- v2 = c(2, 4, 6, 8, 10) -->
+<!-- arra1 = array(c(v1, v2),dim = c(3,3,2)) -->
+<!-- print(arra1) -->
+<!-- ``` -->
+
+10. Escriba un programa R para crear un `data.frame` que contenga detalles (genero, edad, rut, dirección, profesión) de 5 empleados y muestre un resumen de los datos.
+
+```{r}
+empleados = data.frame(Nombre=c("Joaquin","Josefina","Israel", "Esteban","Claudio"),
+                      Genero = c("M","F","M","M","M"),
+                      Edad = c(23,22,25,26,32),
+                      Designation=c("CEO","CTO","Ejecutivo","CEO","Data Scientist"),
+                      SSN=c("123-34-2346","123-44-779","556-24-433","123-98-987","679-77-576")
+                      )
+print("Resmen de los datos:")                      
+print(summary(empleados))
+```
+
+
+## Vectores
+
+1. Escriba un programa en R para crear un vector de un tipo y una longitud específicos. Cree vectores de tipos numéricos, complejos, lógicos y de caracteres de longitud 6.
+
+```{r}
+x = vector("numeric", 5)
+print("Tipo numérico:")
+print(x)
+c = vector("complex", 5)
+print("Tipo complejo:")
+print(c)
+l = vector("logical", 5)
+print("Tipo lógico:")
+print(l)
+chr = vector("character", 5)
+print("Tipo carácter:")
+print(chr)
+```
+
+2. Escriba un programa en R para sumar dos vectores de tipo entero y longitud 3.
+
+```{r}
+x = c(10, 20, 30)
+ y = c(20, 10, 40)
+ print("Vectores originales:")
+ print(x)
+ print(y)
+ print("Despues de sumar los dos vectores:")
+ z = x + y
+ print(z)
+```
+
+<!-- 3. Escriba un programa R para agregar valores a un vector vacío dado. -->
+
+<!-- ```{r} -->
+<!-- vector = c() -->
+<!-- values = c(0,1,2,3,4,5,6,7,8,9) -->
+<!-- for (i in 1:length(values)) -->
+<!--   vector[i] <- values[i] -->
+<!-- print(vector) -->
+<!-- ``` -->
+
+
+4. Escriba un programa en R para encontrar la suma, la media y el producto de un vector.
+
+```{r}
+x = c(10, 20, 30)
+print("Sum:")
+print(sum(x))
+print("Mean:")
+print(mean(x))  
+print("Product:")
+print(prod(x))
+```
+
+7. Escriba un programa R para encontrar la suma, la media y el producto de un vector, ignore elementos como NA o NaN.
+
+8. Escriba un programa en R para ordenar un Vector en orden ascendente y descendente.
+
+9. Escriba un programa R para probar si un vector dado contiene un elemento específico.
+
+10. Escriba un programa R para encontrar el segundo valor más alto en un vector dado.
+
+11. Escriba un programa en R para encontrar el enésimo valor más alto en un vector dado.
+
+12. Escriba un programa en R para convertir la(s) columna(s) dada(s) de un `data.frame` en un vector.
+
+13. Escriba un programa R para encontrar los elementos de un vector dado que no están en otro vector dado.
+
+14. Escriba un programa en R para invertir el orden del vector dado.
+
+15. Escriba un programa en R para crear un vector y encuentre la longitud y la dimensión del vector.
+
+16. Escriba un programa R para probar si el valor del elemento de un vector dado es mayor que 10 o no. Devuelve `TRUE` o `FALSE`.
+
+17. Escriba un programa en R para sumar 3 a cada elemento en un vector dado. Imprime el vector original y el nuevo.
+
+18. Escriba un programa en R para crear un vector usando el operador : y la función seq().
+
+## Factors
+
+1. Escriba un programa R para encontrar los niveles de factor de un vector dado.
+
+2. Escriba un programa R para cambiar el primer nivel de un factor con otro nivel de un factor dado.
+
+3. Escriba un programa en R para crear un factor ordenado a partir de datos que consisten en los nombres de los meses.
+
+<!-- 4. Escriba un programa R para concatenar dos factores dados en un solo factor. -->
+
+4. Escriba un programa R para extraer los cinco niveles de factor creados a partir de una muestra aleatoria de las `letters` (parte de la distribución base R).
+
+5. Escriba un programa en R para crear un factor correspondiente al conjunto de datos de la altura de las mujeres, que contenga la altura y el peso de una muestra de mujeres.
+
+```{r}
+data = women
+print("Women data set of height and weights:")
+print(data)
+height_f = cut(women$height,3)
+print("Factor corresponding to height:")
+print(table(height_f))
+```
+
+## Matrices
+
+1. Escriba un programa en R para crear una matriz en blanco.
+
+2. Escriba un programa en R para crear una matriz tomando como entrada un vector dado de números. Muestre la matriz.
+
+3. Escriba un programa en R para crear una matriz que tome un vector dado de números como entrada y defina los nombres de columna y fila. Muestre la matriz.
+
+<!-- 4. Escriba un programa en R para acceder al elemento en la 3ª columna y la 2ª fila, sólo en la 3ª fila y sólo en la 4ª columna de una matriz dada. -->
+
+4. Escriba un programa en R para crear dos matrices de 2x3, luego sume, reste, multiplique y divida las matrices.
+
+<!-- 5. Escriba un programa en R para crear una matriz a partir de una lista de vectores dados. -->
+
+<!-- 5. Escriba un programa en R para extraer la submatriz cuyas filas tienen un valor de columna > 7 de una matriz dada. -->
+
+<!-- 8. Escriba un programa en R para convertir una matriz en un arreglo unidimensional. -->
+
+5. Escriba un programa en R para crear una matriz de correlación a partir de un `data.frame` del mismo tipo de datos.
+
+<!-- 10. Escriba un programa en R para convertir una matriz dada en una lista de columnas-vectores. -->
+
+6. Escriba un programa R para encontrar el índice de fila y columna de valor máximo y mínimo en una matriz dada.
+
+<!-- 12. Escriba un programa en R para rotar una matriz dada 90 grados en el sentido de las agujas del reloj. -->
+
+7. Escriba un programa R para concatenar dos matrices dadas de la misma columna pero filas diferentes.
+
+## Data.frames
+
+1. Escriba un programa en R para crear un `data.frame` vacío.
+
+2. Escriba un programa en R para crear un `data.frame` a partir de cuatro vectores dados.
+
+3. Escriba un programa R para extraer una columna específica de un `data.frame` usando el nombre de la columna.
+
+4. Escriba un programa en R para extraer las filas 3 y 5 con las columnas 1 y 3 de un `data.frame` dado.
+
+5. Escriba un programa en R para eliminar la(s) columna(s) por nombre de un `data.frame` dado.
+
+<!-- 6. Escriba un programa en R para ordenar un `data.frame` dado por varias columnas. -->
+
+6. Escriba un programa en R para crear uniones (fusiones) internas, externas, izquierdas y derechas a partir de dos `data.frames` dados.
+
+7. Escriba un programa R para reemplazar los valores de NA con 3 en un `data.frame` dado.
+
+<!-- 8. Escriba un programa R para cambiar más de un nombre de columna de un `data.frame` dado. -->
+
+<!-- 8. Escriba un programa R para comparar dos `data.frame` para encontrar las filas en el primer `data.frame` que no están presentes en el segundo data.frame. -->
+
+<!-- 11. Escriba un programa en R para encontrar elementos que estén presentes en dos `data.frames` dados. -->
+
+<!-- 12. Escriba un programa en R para encontrar elementos que vienen solo una vez y que son comunes a ambos `data.frames` dados. -->
+
+8. Escriba un programa R para contar el número de valores NA en una columna de `data.frames`.
+
+9. Escriba un programa en R para crear un `data.frame` utilizando dos vectores dados y muestre los elementos duplicados y las filas únicas de dicho `data.frame`.
+
+10. Escriba un programa en R para llamar al conjunto de datos (incorporado) `airquality`. Elimine las variables 'Solar.R' y 'Wind' y muestre el `data.frame`.
+
+## Listas
+
+1. Escriba un programa R para crear una lista que contenga un vector, una matriz y una lista y asigne nombres a los elementos de la lista.
+
+2. Escriba un programa en R para crear una lista que contenga un vector, una matriz y una lista y asigne nombres a los elementos de la lista. Accede al primer y segundo elemento de la lista.
+
+3. Escriba un programa R para crear una lista que contenga un vector, una matriz y una lista y agregue un elemento al final de la lista.
+
+4. Escriba un programa en R para seleccionar el segundo elemento de una lista anidada determinada.
+
+5. Escriba un programa R para fusionar dos listas dadas en una lista.
+
+6. Escriba un programa en R para convertir una lista dada en vector.
+
+7. Escriba un programa en R para crear una lista de `data.frames` y acceda a cada uno de esos `data.frames` de la lista.
+
+8. Escriba un programa R para contar el número de objetos en una lista dada.
+
+<!-- 9. Escriba un programa en R para convertir un `data.frame` dado en una lista por filas. -->
+
+9. Escriba un programa en R para convertir una matriz dada en una lista.
+
+10. Escriba un programa R para asignar NULL a un elemento de lista dado.
+
+<!-- 12. Escriba un programa R para crear una lista llamada `s` que contenga una secuencia de 15 letras mayúsculas, comenzando desde 'E'. -->
+
+11. Escriba un programa R para asignar nuevos nombres "a", "b" y "c" a los elementos de una lista dada.
+
+12. Escriba un programa en R para obtener la longitud de los dos primeros vectores de una lista dada.
+
+<!-- 13. Escriba un programa R para encontrar todos los elementos de una lista dada que no están en otra lista dada. -->
+

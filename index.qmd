@@ -25,8 +25,9 @@ I) Unidad 1:Introducción al uso de R.
     1) [Presentación curso](Clase1/slides_clase11.html)  
     2) [Introducción a `R`](Clase1/slides_clase12.html)   
     3) [`R`: Tipos y estructuras de datos](Clase1/slides_clase13.html) 
-  <!--  
     4) [Manipulación de datos](Clase2/slides_clase21.html)
+
+  <!--  
     5) [Introducción al análisis espacial con R](Clase3/slides_clase31.html)
     6) [Datos Espaciales en R](Clase3/slides_clase32.html)
     7) [Sistemas de Referencia de Coordenadas (SRC)](Clase4/slides_SRC.html)
@@ -37,8 +38,8 @@ I) Unidad 1:Introducción al uso de R.
 
 ## Talleres
 
+1) [Taller 1: Tipos y estructuras de datos en R](Talleres/Taller1_2023/Ejercicios_R-base.html)
 <!-- 
-1) [Taller 1: Tipos y estructuras de datos en R](Talleres/Taller1/taller1.html)
 2) [Taller 2: Datos climáticos en R](Talleres/Taller2/Taller2.html)
 3) [Taller 3: Datos vectoriales con {sf}](Talleres/Taller3/Taller3.html)
 4) [Taller 4: Operaciones geométricas con {sf}](Talleres/Taller4/Taller4.html)
