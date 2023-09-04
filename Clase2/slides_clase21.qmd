@@ -21,8 +21,7 @@ format:
 3) Read and write files
 4) Exploración de datos
 5) Funciones
-6) Apply
-7) Estructuras de control
+6) Estructuras de control
   
 # 1. Indexación {background-color='lightblue'}
 
@@ -587,90 +586,7 @@ sumsquare <- function(a, b) {
 sumsquare(a = 1, b= 4)
 ```
 
-# 5 Applys
-
-## Tipos de funciones applys
-
-La familia de apply (`apply`, `tapply`, `lapply`, `sapply`)
-
-Forma elegante de `apply` una función a diferentes casos (`matrix`, `data.frame`, `list`)
-
-Evita el uso de ciclos (`for`, `while`, etc)
-
-__apply__
-
-::: columns
-::: {.column width="50%"}
-```{r}
-m <- matrix(1:15, nrow=5, ncol=3)
-m
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-apply(m, 1, sum) #promedio para cada file
-apply(m, 2, mean) #promedio para cada columna
-```
-:::
-:::
-
-## `Apply` sobre grupos
-
-__tapply__
-
-```{r}
-colnames(m) <- c('v1', 'v2', 'v3')
-d <- data.frame(name=c('Yi', 'Yi', 'Yi', 'Er', 'Er'), m)
-d$v2[1] <- NA
-d
-```
-
-::: columns
-::: {.column width="50%"}
-```{r}
-tapply(d$v1, d$name, mean)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-tapply(d$v2, d$name, mean)
-```
-:::
-:::
-
-## tapply
-
-
-```{r}
-tapply(d$v2, d$name, mean, na.rm=TRUE)
-```
-
-## `Apply` Sobre listas
-
-__sapply__  y __lapply__
-
-```{r}
-names <- list('Antoinette', 'Mary', 'Duncan', 'Obalaya', 'Jojo')
-nchar('Jim')
-```
-
-::: columns
-::: {.column width="50%"}
-```{r}
-lapply(names, nchar)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-sapply(names, nchar)
-```
-:::
-:::
-
-# 5 Estructuras de control
+# 6 Estructuras de control
 
 ## Estructuras comunes son:
 
