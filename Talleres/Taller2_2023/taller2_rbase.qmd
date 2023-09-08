@@ -1,0 +1,109 @@
+---
+title: "Taller 2: Ejercicios R base"
+subtitle: "Uso Avanzado de Sistemas de Información Geográfica"
+institute: "Escuela de Ingeniería en Medio Ambiente, Universidad Mayor"
+author: "Dr. Francisco Zambrano"
+date: "2023-09-08"
+lang: "es"
+execute:
+  echo: false
+  eval: false
+format:
+  html:
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    code-fold: show
+    toc: true
+    html-math-method: katex
+    self-contained: true
+---
+# Descripción
+
+A continuación hay una serie de ejercicios que debe resolver utilizando \``R`\`. El objetivo es comenzar a trabajar con los tipos de datos, estructuras e indexación en R.
+
+# ¿Qué debe entregar?
+
+Debeŕá utilizar RStudio para crear un script, en donde resolverá cada uno de los ejercicios. Debe utilizar los comentarios (`#`) para la descripción del ejercicio e incorporar cualquier texto que ayude a entender lo realizado. A modo de ejemplo:
+
+```{r}
+#| eval: false
+#| echo: true
+# Ejercicio 1:
+# comentario explicando lo que se hace
+
+  Aca va el script que resuelve el ejericio 1
+  
+
+```
+
+# Ejercicios
+
+## Data.frames
+
+1. Escriba un programa en R para crear un `data.frame` vacío.
+
+2. Escriba un programa en R para crear un `data.frame` a partir de cuatro vectores dados.
+
+3. Escriba un programa R para extraer una columna específica de un `data.frame` usando el nombre de la columna.
+
+4. Escriba un programa en R para extraer las filas 3 y 5 con las columnas 1 y 3 de un `data.frame` dado.
+
+5. Escriba un programa en R para eliminar la(s) columna(s) por nombre de un `data.frame` dado.
+
+6. Escriba un programa en R para agregar una nueva columna en un marco de datos determinado.
+
+7. Escriba un programa en R para ordenar un `data.frame` dado por varias columnas.
+
+8. Escriba un programa en R para crear uniones (fusiones) internas, externas, izquierdas y derechas a partir de dos `data.frames` dados.
+
+9. Escriba un programa R para reemplazar los valores de NA con 3 en un `data.frame` dado.
+
+10. Escriba un programa R para cambiar más de un nombre de columna de un `data.frame` dado.
+
+11. Escriba un programa R para comparar dos `data.frame` para encontrar las filas en el primer `data.frame` que no están presentes en el segundo data.frame. (ver `?setdiff`)
+
+12. Escriba un programa en R para encontrar elementos que estén presentes en dos `data.frames` dados. (ver `?intersect`)
+
+13. Escriba un programa en R para encontrar elementos que vienen solo una vez y que son comunes a ambos `data.frames` dados. (ver `?union`)
+
+14. Escriba un programa R para contar el número de valores NA en una columna de `data.frames`.
+
+15. Escriba un programa en R para crear un `data.frame` utilizando dos vectores dados y muestre los elementos duplicados y las filas únicas de dicho `data.frame`. (ver `?duplicated`)
+
+16. Escriba un programa en R para llamar al conjunto de datos (incorporado) `airquality`. Elimine las variables 'Solar.R' y 'Wind' y muestre el `data.frame`.
+
+17. Escriba un programa R para llamar al conjunto de datos (integrado) `airquality`. ¿Comprueba si es un marco de datos o no? Ordene todo el marco de datos por la primera y segunda columna. (ver `?order`)
+
+## Listas
+
+1. Escriba un programa R para crear una lista que contenga un vector, una matriz y una lista y asigne nombres a los elementos de la lista.
+
+2. Escriba un programa en R para crear una lista que contenga un vector, una matriz y una lista y asigne nombres a los elementos de la lista. Accede al primer y segundo elemento de la lista.
+
+3. Escriba un programa R para crear una lista que contenga un vector, una matriz y una lista y agregue un elemento al final de la lista.
+
+4. Escriba un programa en R para seleccionar el segundo elemento de una lista anidada determinada.
+
+5. Escriba un programa R para fusionar dos listas dadas en una lista.
+
+6. Escriba un programa en R para convertir una lista dada en vector.
+
+7. Escriba un programa en R para crear una lista de `data.frames` y acceda a cada uno de esos `data.frames` de la lista.
+
+8. Escriba un programa R para contar el número de objetos en una lista dada.
+
+<!-- 9. Escriba un programa en R para convertir un `data.frame` dado en una lista por filas. -->
+
+9. Escriba un programa en R para convertir una matriz dada en una lista.
+
+10. Escriba un programa R para asignar NULL a un elemento de lista dado.
+
+11. Escriba un programa R para crear una lista llamada `s` que contenga una secuencia de 15 letras mayúsculas, comenzando desde 'E'.
+
+12. Escriba un programa R para asignar nuevos nombres "a", "b" y "c" a los elementos de una lista dada.
+
+13. Escriba un programa en R para obtener la longitud de los dos primeros vectores de una lista dada.
+
+14. Escriba un programa R para encontrar todos los elementos de una lista dada que no están en otra lista dada. (ver `?setdiff`)
+

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dr. Francisco Zambrano">
 
-<title>Taller 1: Ejercicios R base</title>
+<title>Taller 2: Ejercicios R base</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -2991,10 +3025,13 @@ vertical-align: -.125em;
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#lo-básico" id="toc-lo-básico" class="nav-link active" data-scroll-target="#lo-básico"><span class="header-section-number">1</span> Lo básico</a></li>
-  <li><a href="#vectores" id="toc-vectores" class="nav-link" data-scroll-target="#vectores"><span class="header-section-number">2</span> Vectores</a></li>
-  <li><a href="#factors" id="toc-factors" class="nav-link" data-scroll-target="#factors"><span class="header-section-number">3</span> Factors</a></li>
-  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices"><span class="header-section-number">4</span> Matrices</a></li>
+  <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción"><span class="header-section-number">1</span> Descripción</a></li>
+  <li><a href="#qué-debe-entregar" id="toc-qué-debe-entregar" class="nav-link" data-scroll-target="#qué-debe-entregar"><span class="header-section-number">2</span> ¿Qué debe entregar?</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios"><span class="header-section-number">3</span> Ejercicios</a>
+  <ul class="collapse">
+  <li><a href="#data.frames" id="toc-data.frames" class="nav-link" data-scroll-target="#data.frames"><span class="header-section-number">3.1</span> Data.frames</a></li>
+  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas"><span class="header-section-number">3.2</span> Listas</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -3002,7 +3039,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Taller 1: Ejercicios R base</h1>
+<h1 class="title">Taller 2: Ejercicios R base</h1>
 <p class="subtitle lead">Uso Avanzado de Sistemas de Información Geográfica</p>
 </div>
 
@@ -3027,7 +3064,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">25 de agosto de 2023</p>
+      <p class="date">8 de septiembre de 2023</p>
     </div>
   </div>
   
@@ -3037,163 +3074,69 @@ vertical-align: -.125em;
 
 </header>
 
-<section id="lo-básico" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="lo-básico"><span class="header-section-number">1</span> Lo básico</h2>
+<section id="descripción" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Descripción</h1>
+<p>A continuación hay una serie de ejercicios que debe resolver utilizando `<code>R</code>`. El objetivo es comenzar a trabajar con los tipos de datos, estructuras e indexación en R.</p>
+</section>
+<section id="qué-debe-entregar" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> ¿Qué debe entregar?</h1>
+<p>Debeŕá utilizar RStudio para crear un script, en donde resolverá cada uno de los ejercicios. Debe utilizar los comentarios (<code>#</code>) para la descripción del ejercicio e incorporar cualquier texto que ayude a entender lo realizado. A modo de ejemplo:</p>
+<div class="cell">
+<details open>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejercicio 1:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># comentario explicando lo que se hace</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  Aca va el script que resuelve el ejericio <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="ejercicios" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Ejercicios</h1>
+<section id="data.frames" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="data.frames"><span class="header-section-number">3.1</span> Data.frames</h2>
 <ol type="1">
-<li>Escriba un programa en R para crear una secuencia de números del 20 al 50 y encuentre la media de los números del 20 al 60 y la suma de los números del 51 al 91.</li>
-</ol>
-<!-- 2. Escriba un programa R para imprimir los números del 1 al 100 e imprime "Fizz" para múltiplos de 3, imprime "Buzz" para múltiplos de 5 e imprime "FizzBuzz" para múltiplos de ambos. -->
-<!-- ```{r} -->
-<!-- ## forma iterativa -->
-<!-- x <- c() -->
-<!-- for (n in 1:100) { -->
-<!--   if (n %% 3 == 0 & n %% 5 == 0) {x[n] <- 'FizzBuzz'; print("FizzBuzz")} -->
-<!--   else if (n %% 3 == 0) {x[n] <- 'Fizz'; print("Fizz")} -->
-<!--   else if (n %% 5 == 0) {x[n] <- 'Buzz'; print("Buzz")} -->
-<!--   else print(n) -->
-<!-- } -->
-<!-- # usnado funciones vectorizadas -->
-<!-- n <- 1:100 -->
-<!-- x1 <- rep(NA,100) -->
-<!-- x1[n %% 3 == 0] <- 'Fizz' -->
-<!-- x1[n %% 5 == 0] <- 'Buzz' -->
-<!-- x1[n %% 3 == 0 & n %% 5 == 0] <- 'FizzBuzz' -->
-<!-- identical(x,x1) -->
-<!-- ``` -->
-<!-- 3. Escriba un programa R para obtener los primeros 10 números de Fibonacci. -->
-<!-- ```{r} -->
-<!-- Fibonacci <- numeric(10) -->
-<!-- Fibonacci[1] <- Fibonacci[2] <- 1 -->
-<!-- for (i in 3:10) Fibonacci[i] <- Fibonacci[i - 2] + Fibonacci[i - 1] -->
-<!-- print("Primeros 10 números de  Fibonacci:") -->
-<!-- print(Fibonacci) -->
-<!-- ``` -->
-<!-- 4. Escriba un programa en R para obtener todos los números primos hasta un número dado (basado en la criba de Eratóstenes). -->
-<!-- ```{r} -->
-<!-- prime_numbers <- function(n) { -->
-<!-- if (n >= 2) { -->
-<!--  x = seq(2, n) -->
-<!--  prime_nums = c() -->
-<!--  for (i in seq(2, n)) { -->
-<!--  if (any(x == i)) { -->
-<!--  prime_nums = c(prime_nums, i) -->
-<!--  x = c(x[(x %% i) != 0], i) -->
-<!--  } -->
-<!--  } -->
-<!--  return(prime_nums) -->
-<!--  } -->
-<!--  else  -->
-<!--  { -->
-<!--  stop("El número ingresado debe ser al menos 2.") -->
-<!--  } -->
-<!--  }  -->
-<!-- prime_numbers(12) -->
-<!-- ``` -->
-<ol start="5" type="1">
-<li>Escriba un programa en R para crear una curva de campana de una distribución normal aleatoria</li>
-</ol>
-<ol start="6" type="1">
-<li>Escriba un programa R para crear una lista de elementos usando vectores, matrices y funciones. Imprime el contenido de la lista.</li>
-</ol>
-<ol start="7" type="1">
-<li>Escriba un programa en R para crear una matriz de 5 x 4, una matriz de 3 x 3 con etiquetas y rellene la matriz por filas y una matriz de 2 x 2 con etiquetas y rellene la matriz por columnas.</li>
-</ol>
-<!-- 8. Escriba un programa en R para crear un array, pasando un vector de valores y un vector de dimensiones. También proporcione nombres para cada dimensión. -->
-<!-- ```{r} -->
-<!-- a =  array( -->
-<!--   6:30, -->
-<!--   dim = c(4, 3, 2), -->
-<!--   dimnames = list( -->
-<!--     c("Col1", "Col2", "Col3", "Col4"), -->
-<!--     c("Row1", "Row2", "Row3"), -->
-<!--     c("Part1", "Part2") -->
-<!--   ) -->
-<!-- ) -->
-<!-- print(a) -->
-<!-- ``` -->
-<!-- 9. Escriba un programa R para crear un array con tres columnas, tres filas y dos "matrices", tomando dos vectores como entrada para la matriz. Imprime la matriz. -->
-<!-- ```{r} -->
-<!-- v1 = c(1, 3, 5, 7) -->
-<!-- v2 = c(2, 4, 6, 8, 10) -->
-<!-- arra1 = array(c(v1, v2),dim = c(3,3,2)) -->
-<!-- print(arra1) -->
-<!-- ``` -->
-<ol start="10" type="1">
-<li>Escriba un programa R para crear un <code>data.frame</code> que contenga detalles (genero, edad, rut, dirección, profesión) de 5 empleados y muestre un resumen de los datos.</li>
+<li><p>Escriba un programa en R para crear un <code>data.frame</code> vacío.</p></li>
+<li><p>Escriba un programa en R para crear un <code>data.frame</code> a partir de cuatro vectores dados.</p></li>
+<li><p>Escriba un programa R para extraer una columna específica de un <code>data.frame</code> usando el nombre de la columna.</p></li>
+<li><p>Escriba un programa en R para extraer las filas 3 y 5 con las columnas 1 y 3 de un <code>data.frame</code> dado.</p></li>
+<li><p>Escriba un programa en R para eliminar la(s) columna(s) por nombre de un <code>data.frame</code> dado.</p></li>
+<li><p>Escriba un programa en R para agregar una nueva columna en un marco de datos determinado.</p></li>
+<li><p>Escriba un programa en R para ordenar un <code>data.frame</code> dado por varias columnas.</p></li>
+<li><p>Escriba un programa en R para crear uniones (fusiones) internas, externas, izquierdas y derechas a partir de dos <code>data.frames</code> dados.</p></li>
+<li><p>Escriba un programa R para reemplazar los valores de NA con 3 en un <code>data.frame</code> dado.</p></li>
+<li><p>Escriba un programa R para cambiar más de un nombre de columna de un <code>data.frame</code> dado.</p></li>
+<li><p>Escriba un programa R para comparar dos <code>data.frame</code> para encontrar las filas en el primer <code>data.frame</code> que no están presentes en el segundo data.frame. (ver <code>?setdiff</code>)</p></li>
+<li><p>Escriba un programa en R para encontrar elementos que estén presentes en dos <code>data.frames</code> dados. (ver <code>?intersect</code>)</p></li>
+<li><p>Escriba un programa en R para encontrar elementos que vienen solo una vez y que son comunes a ambos <code>data.frames</code> dados. (ver <code>?union</code>)</p></li>
+<li><p>Escriba un programa R para contar el número de valores NA en una columna de <code>data.frames</code>.</p></li>
+<li><p>Escriba un programa en R para crear un <code>data.frame</code> utilizando dos vectores dados y muestre los elementos duplicados y las filas únicas de dicho <code>data.frame</code>. (ver <code>?duplicated</code>)</p></li>
+<li><p>Escriba un programa en R para llamar al conjunto de datos (incorporado) <code>airquality</code>. Elimine las variables ‘Solar.R’ y ‘Wind’ y muestre el <code>data.frame</code>.</p></li>
+<li><p>Escriba un programa R para llamar al conjunto de datos (integrado) <code>airquality</code>. ¿Comprueba si es un marco de datos o no? Ordene todo el marco de datos por la primera y segunda columna. (ver <code>?order</code>)</p></li>
 </ol>
 </section>
-<section id="vectores" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="vectores"><span class="header-section-number">2</span> Vectores</h2>
+<section id="listas" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="listas"><span class="header-section-number">3.2</span> Listas</h2>
 <ol type="1">
-<li>Escriba un programa en R para crear un vector de un tipo y una longitud específicos. Cree vectores de tipos numéricos, complejos, lógicos y de caracteres de longitud 6.</li>
+<li><p>Escriba un programa R para crear una lista que contenga un vector, una matriz y una lista y asigne nombres a los elementos de la lista.</p></li>
+<li><p>Escriba un programa en R para crear una lista que contenga un vector, una matriz y una lista y asigne nombres a los elementos de la lista. Accede al primer y segundo elemento de la lista.</p></li>
+<li><p>Escriba un programa R para crear una lista que contenga un vector, una matriz y una lista y agregue un elemento al final de la lista.</p></li>
+<li><p>Escriba un programa en R para seleccionar el segundo elemento de una lista anidada determinada.</p></li>
+<li><p>Escriba un programa R para fusionar dos listas dadas en una lista.</p></li>
+<li><p>Escriba un programa en R para convertir una lista dada en vector.</p></li>
+<li><p>Escriba un programa en R para crear una lista de <code>data.frames</code> y acceda a cada uno de esos <code>data.frames</code> de la lista.</p></li>
+<li><p>Escriba un programa R para contar el número de objetos en una lista dada.</p></li>
 </ol>
-<ol start="2" type="1">
-<li>Escriba un programa en R para sumar dos vectores de tipo entero y longitud 3.</li>
-</ol>
-<!-- 3. Escriba un programa R para agregar valores a un vector vacío dado. -->
-<!-- ```{r} -->
-<!-- vector = c() -->
-<!-- values = c(0,1,2,3,4,5,6,7,8,9) -->
-<!-- for (i in 1:length(values)) -->
-<!--   vector[i] <- values[i] -->
-<!-- print(vector) -->
-<!-- ``` -->
-<ol start="4" type="1">
-<li>Escriba un programa en R para encontrar la suma, la media y el producto de un vector.</li>
-</ol>
-<ol start="7" type="1">
-<li><p>Escriba un programa R para encontrar la suma, la media y el producto de un vector, ignore elementos como NA o NaN.</p></li>
-<li><p>Escriba un programa en R para ordenar un Vector en orden ascendente y descendente.</p></li>
-<li><p>Escriba un programa R para probar si un vector dado contiene un elemento específico.</p></li>
-<li><p>Escriba un programa R para encontrar el segundo valor más alto en un vector dado.</p></li>
-<li><p>Escriba un programa en R para encontrar el enésimo valor más alto en un vector dado.</p></li>
-<li><p>Escriba un programa en R para convertir la(s) columna(s) dada(s) de un <code>data.frame</code> en un vector.</p></li>
-<li><p>Escriba un programa R para encontrar los elementos de un vector dado que no están en otro vector dado.</p></li>
-<li><p>Escriba un programa en R para invertir el orden del vector dado.</p></li>
-<li><p>Escriba un programa en R para crear un vector y encuentre la longitud y la dimensión del vector.</p></li>
-<li><p>Escriba un programa R para probar si el valor del elemento de un vector dado es mayor que 10 o no. Devuelve <code>TRUE</code> o <code>FALSE</code>.</p></li>
-<li><p>Escriba un programa en R para sumar 3 a cada elemento en un vector dado. Imprime el vector original y el nuevo.</p></li>
-<li><p>Escriba un programa en R para crear un vector usando el operador : y la función seq().</p></li>
+<!-- 9. Escriba un programa en R para convertir un `data.frame` dado en una lista por filas. -->
+<ol start="9" type="1">
+<li><p>Escriba un programa en R para convertir una matriz dada en una lista.</p></li>
+<li><p>Escriba un programa R para asignar NULL a un elemento de lista dado.</p></li>
+<li><p>Escriba un programa R para crear una lista llamada <code>s</code> que contenga una secuencia de 15 letras mayúsculas, comenzando desde ‘E’.</p></li>
+<li><p>Escriba un programa R para asignar nuevos nombres “a”, “b” y “c” a los elementos de una lista dada.</p></li>
+<li><p>Escriba un programa en R para obtener la longitud de los dos primeros vectores de una lista dada.</p></li>
+<li><p>Escriba un programa R para encontrar todos los elementos de una lista dada que no están en otra lista dada. (ver <code>?setdiff</code>)</p></li>
 </ol>
 </section>
-<section id="factors" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="factors"><span class="header-section-number">3</span> Factors</h2>
-<ol type="1">
-<li><p>Escriba un programa R para encontrar los niveles de factor de un vector dado.</p></li>
-<li><p>Escriba un programa R para cambiar el primer nivel de un factor con otro nivel de un factor dado.</p></li>
-<li><p>Escriba un programa en R para crear un factor ordenado a partir de datos que consisten en los nombres de los meses.</p></li>
-</ol>
-<!-- 4. Escriba un programa R para concatenar dos factores dados en un solo factor. -->
-<ol start="4" type="1">
-<li><p>Escriba un programa R para extraer los cinco niveles de factor creados a partir de una muestra aleatoria de las <code>letters</code> (parte de la distribución base R).</p></li>
-<li><p>Escriba un programa en R para crear un factor correspondiente al conjunto de datos de la altura de las mujeres, que contenga la altura y el peso de una muestra de mujeres.</p></li>
-</ol>
-</section>
-<section id="matrices" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="matrices"><span class="header-section-number">4</span> Matrices</h2>
-<ol type="1">
-<li><p>Escriba un programa en R para crear una matriz en blanco.</p></li>
-<li><p>Escriba un programa en R para crear una matriz tomando como entrada un vector dado de números. Muestre la matriz.</p></li>
-<li><p>Escriba un programa en R para crear una matriz que tome un vector dado de números como entrada y defina los nombres de columna y fila. Muestre la matriz.</p></li>
-</ol>
-<!-- 4. Escriba un programa en R para acceder al elemento en la 3ª columna y la 2ª fila, sólo en la 3ª fila y sólo en la 4ª columna de una matriz dada. -->
-<ol start="4" type="1">
-<li>Escriba un programa en R para crear dos matrices de 2x3, luego sume, reste, multiplique y divida las matrices.</li>
-</ol>
-<!-- 5. Escriba un programa en R para crear una matriz a partir de una lista de vectores dados. -->
-<!-- 5. Escriba un programa en R para extraer la submatriz cuyas filas tienen un valor de columna > 7 de una matriz dada. -->
-<!-- 8. Escriba un programa en R para convertir una matriz en un arreglo unidimensional. -->
-<ol start="5" type="1">
-<li>Escriba un programa en R para crear una matriz de correlación a partir de un <code>data.frame</code> del mismo tipo de datos.</li>
-</ol>
-<!-- 10. Escriba un programa en R para convertir una matriz dada en una lista de columnas-vectores. -->
-<ol start="6" type="1">
-<li>Escriba un programa R para encontrar el índice de fila y columna de valor máximo y mínimo en una matriz dada.</li>
-</ol>
-<!-- 12. Escriba un programa en R para rotar una matriz dada 90 grados en el sentido de las agujas del reloj. -->
-<ol start="7" type="1">
-<li>Escriba un programa R para concatenar dos matrices dadas de la misma columna pero filas diferentes.</li>
-</ol>
 </section>
 
 </main>
