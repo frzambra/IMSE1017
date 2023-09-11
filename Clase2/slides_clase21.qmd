@@ -20,9 +20,7 @@ format:
 2) Algebra
 3) Read and write files
 4) Exploración de datos
-5) Funciones
-6) Estructuras de control
-  
+
 # 1. Indexación {background-color='lightblue'}
 
 ## Vector 
