@@ -45,7 +45,7 @@ format:
 
 # 1.  Datos espaciales en ![](https://www.r-project.org/Rlogo.png){width="50px"} {background-color='brown'}
 
-## Tipos de dato espaciales
+## Tipos de dato espaciales {.smaller}
 
 ::: columns
 
@@ -74,7 +74,8 @@ precip <- round((runif(length(latitude))*10)^3)
 ```
 
 
-## Simple representación de datos espaciales
+## Simple representación de datos espaciales {.smaller}
+
 ```{r eval=FALSE}
 psize <- 1 + precip/500
 plot(stations, cex=psize, pch=20, col='red', main='Precipitation')
@@ -86,7 +87,8 @@ legend.psize <- 1+breaks/500
 legend("topright", legend=breaks, pch=20, pt.cex=legend.psize, col='red', bg='gray')
 ```
 
-## Simple representación de datos espaciales
+## Simple representación de datos espaciales {.smaller}
+
 ```{r echo=FALSE,eval=TRUE,fig.height=6}
 psize <- 1 + precip/500
 plot(stations, cex=psize, pch=20, col='red', main='Precipitation')
@@ -98,7 +100,8 @@ legend.psize <- 1+breaks/500
 legend("topright", legend=breaks, pch=20, pt.cex=legend.psize, col='red', bg='gray')
 ```
 
-## Simple representación de datos espaciales
+## Simple representación de datos espaciales {.smaller}
+
 ```{r eval=FALSE}
 lon <- c(-116.8, -114.2, -112.9, -111.9, -114.2, -115.4, -117.7)
 lat <- c(41.3, 42.9, 42.4, 39.8, 37.6, 38.3, 37.6)
@@ -110,7 +113,8 @@ points(x, cex=2, pch=20)
 points(stations, cex=psize, pch=20, col='red', main='Precipitation')
 ```
 
-## Simple representación de datos espaciales
+## Simple representación de datos espaciales {.smaller}
+
 ```{r echo=FALSE,fig.height=6}
 lon <- c(-116.8, -114.2, -112.9, -111.9, -114.2, -115.4, -117.7)
 lat <- c(41.3, 42.9, 42.4, 39.8, 37.6, 38.3, 37.6)
@@ -122,7 +126,7 @@ points(x, cex=2, pch=20)
 points(stations, cex=psize, pch=20, col='red', main='Precipitation')
 ```
 
-## Simple representación de datos espaciales
+## Simple representación de datos espaciales {.smaller}
 
 Podemos almacenar datos espaciales en un `data.frame`
 
@@ -134,7 +138,7 @@ wst
 # 2.  Datos espaciales vectoriales {background-color='grey'}
 
 
-## Simple Feature `{sf}`
+## Simple Feature `{sf}` {.smaller}
 
 
 - Utilizaremos `{sf}`  
@@ -147,7 +151,7 @@ wst
 >__Simple Feature:__ se refiere a un estándar formal (ISO 19125-1: 2004) que describe cómo los objetos en el mundo real se pueden representar en computadoras, con énfasis en la geometría espacial de estos objetos.
 
 
-## Simple Feature `{sf}`: Dimensiones
+## Simple Feature `{sf}`: Dimensiones {.smaller}
 
 - Todas las geometrias (puntos, lineas, polígonos) están formadas por puntos.
 
@@ -161,7 +165,7 @@ wst
 
   - coordinada `M` medición asociada con el punto (ej, tiempo en que fue medido)
   
-## Simple Feature `{sf}`: __Dimensiones__
+## Simple Feature `{sf}`: __Dimensiones__ {.smaller}
 
 - Cuatro casos posibles:
 
@@ -188,7 +192,7 @@ __Tipos de geometrías__
 | `GEOMETRYCOLLECTION`  | grupo de geometrías de cualquier tipo  |
 
 
-## Simple Feature `{sf}`: __Clases__
+## Simple Feature `{sf}`: __Clases__ {.smaller}
 
 `Geometria` -> `list-column` (tipo de dato)
 
@@ -203,38 +207,38 @@ Como `{sf}` almacena las `Simple Features`. Las tres tipos de datos utilizados p
 
   - `sfg`: la geometría de la entidad de cada `simple feature` individual
 
-## Simple Feature `{sf}`: __Clase `sf`__
+## Simple Feature `{sf}`: __Clase `sf`__ {.smaller}
 
 ```{r}
 library(sf)
 nc <- st_read(system.file("shape/nc.shp", package="sf"))
 ```      
 
-## Simple Feature `{sf}`: __Clase `sf`__
+## Simple Feature `{sf}`: __Clase `sf`__ {.smaller}
 
 ```{r fig.height=5}
 plot(nc[1])
 ```   
 
-## Simple Feature `{sf}`: __Clase `sf`__
+## Simple Feature `{sf}`: __Clase `sf`__ {.smaller}
 
 ```{r}
 class(nc)
 ```   
 
-## Simple Feature `{sf}`: __Clase `sf`__
+## Simple Feature `{sf}`: __Clase `sf`__ {.smaller}
 
 ```{r}
 lapply(attributes(nc),'head')
 ```     
 
-## Simple Feature `{sf}`: __Clase `sf`__
+## Simple Feature `{sf}`: __Clase `sf`__ {.smaller}
 
 ```{r}
 print(nc[9:15], n = 3)
 ```     
 
-## Simple Feature `{sf}`: __Clase `sf`__
+## Simple Feature `{sf}`: __Clase `sf`__ {.smaller}
 
 ![](../img/sf_xfig.png)
 
@@ -242,17 +246,17 @@ print(nc[9:15], n = 3)
 <i style="color:blue">AZUL:  geometría (objeto de clase `sfg`)  </i>  
 <i style="color:red">ROJO: Simple Feature `list-column` (`sfc`) </i>
 
-## Estructura datos espaciales vectoriales con {sf}
+## Estructura datos espaciales vectoriales con {sf} {.smaller}
 
 `sfc` (simple feature list-column)
 
-### Simple Feature `{sf}`: __Clase `sfc`__
+### Simple Feature `{sf}`: __Clase `sfc`__ {.smaller}
 
 ```{r}
 (nc_geom <- st_geometry(nc))
 ```
 
-## Simple Feature `{sf}`: __Clase `sfc`__
+## Simple Feature `{sf}`: __Clase `sfc`__ {.smaller}
 
 ```{r}
 class(nc_geom)
@@ -260,20 +264,20 @@ nc_geom[[1]]
 class(nc_geom[[1]])
 ```
 
-## Simple Feature `{sf}`: __Clase `sfc`__
+## Simple Feature `{sf}`: __Clase `sfc`__ {.smaller}
 
 ```{r fig.height=6}
 plot(nc_geom[[1]])
 ```
 
-## Simple Feature `{sf}`: Clase `sfc`
+## Simple Feature `{sf}`: Clase `sfc` {.smaller}
 
 ```{r fig.height=6}
 names(attributes(nc_geom))
 attr(nc_geom,'crs')
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 `sfg` (simple feature geometry) guarda la geometría de un a entidad individual, ej. un punto, una linea o polígono
 
@@ -283,7 +287,7 @@ Está implementada en en tipos de datos nativos de R (numeric, matrix, list), si
 2. un grupo de puntos, e.j. un `LINESTRING` o un anillo de un `POLYGON` es un `matrix` y cada fila de la `matrix` es un `POINT`
 3. cualquier otro grupo es un `list`
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r}
 (x <- st_point(c(1,2)))
@@ -292,7 +296,7 @@ str(x)
 str(x)
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r}
 (x <- st_point(c(1,2,3), "XYM"))
@@ -301,13 +305,13 @@ str(x)
 str(x)
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r}
 st_zm(x, drop = TRUE, what = "ZM")
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r}
 p <- rbind(c(3.2,4), c(3,4.6), c(3.8,4.4), c(3.5,3.8), c(3.4,3.6), c(3.9,4.5))
@@ -320,7 +324,7 @@ s3 <- rbind(c(0,4.4), c(0.6,5))
 
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r}
 p1 <- rbind(c(0,0), c(1,0), c(3,2), c(2,4), c(1,4), c(0,0))
@@ -333,7 +337,7 @@ p5 <- rbind(c(3,3), c(4,2), c(4,3), c(3,3))
 (gc <- st_geometrycollection(list(mp, mpol, ls)))
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r eval = FALSE}
 par(mfrow=c(2,3))
@@ -346,7 +350,7 @@ plot(gc,col = 'gray',border='red',main = 'GEOMETRY')
 
 ```
 
-## Simple Feature `{sf}`: Clase `sfg`
+## Simple Feature `{sf}`: Clase `sfg` {.smaller}
 
 ```{r echo=FALSE,fig.height=6,fig.width=10}
 par(mfrow=c(2,3))
@@ -361,7 +365,7 @@ plot(gc,col = 'gray',border='red',main = 'GEOMETRY')
 
 # 3.  Datos espaciales raster {background-color='#EBF8B8'}
 
-## ¿Con qué vamos a trabajas?
+## ¿Con qué vamos a trabajas? {.smaller}
 
 1. Vamos a utilizar el paquete `{terra}`
 
@@ -371,7 +375,7 @@ plot(gc,col = 'gray',border='red',main = 'GEOMETRY')
 
 4. Similar es lo que pasa con `{stars}`, no obstante el futuro de `r-spatial` será con `{stars}`, `{terra}` y `{sf}`
 
-##  {terra}
+##  {terra} {.smaller}
 
 El paquete `{terra}` tiene funciones para crear, leer, manipular y guardar datos raster.
 
@@ -387,14 +391,14 @@ Las clase definida por `{terra}` es `SpatRaster`
   - adicionalmente guarda información del archivo en donde se almacenan los valores del raster.
   - O, si no existe el archvio es por que `SpatRaster` lo puede almacenar en memoria.
 
-## Crear un `SpatRaster`
+## Crear un `SpatRaster` {.smaller}
 
 ```{r}
 library(terra)
 (r <- rast(ncol=10, nrow=10, xmax=-80, xmin=-150, ymin=20, ymax=60))
 ```
 
-## Crear un `SpatRaster`
+## Crear un `SpatRaster` {.smaller}
 
 El objeto `r` solo tiene el esqueleto del raster, pero aún no tiene valores
 
@@ -404,7 +408,7 @@ r
 
 ```
 
-## Crear un `SpatRaster`
+## Crear un `SpatRaster` {.smaller}
 
 El objeto `r` solo tiene el esqueleto del raster, pero aún no tiene valores
 
@@ -413,7 +417,7 @@ plot(r)
 text(r,digits = 2)
 ```
 
-## Crear un `SpatRaster`
+## Crear un `SpatRaster` {.smaller}
 
 También le podria asignar otros valores, por ejemplo el número de celda
 
@@ -422,7 +426,7 @@ values(r) <- 1:ncell(r)
 r
 ```
 
-## Crear un `SpatRaster`
+## Crear un `SpatRaster` {.smaller}
 
 También le podria asignar otros valores, por ejemplo el número de celda
 
@@ -431,7 +435,7 @@ plot(r)
 text(r)
 ```
 
-## Crear un `SpatRaster` multi-capa
+## Crear un `SpatRaster` multi-capa {.smaller}
 
 Puedes creart un objeto multi-capa usando la función `c`
 
@@ -442,7 +446,7 @@ s <- c(r,r2,r3)
 s
 ```
 
-## Crear un `SpatRaster` multi-capa
+## Crear un `SpatRaster` multi-capa {.smaller}
 
 ```{r,fig.height=6,fig.width=10}
 plot(s) 
@@ -450,13 +454,13 @@ plot(s)
 
 # 4. Leer y guardar datos espaciales en R {background-color='blue'}
 
-## Vectoriales
+## Vectoriales {.smaller}
 
 Usando `{sf}`   
   - leer: `st_read`, `read_sf`    
   - guardar: `st_write`, `write_sf`   
 
-## Vectoriales
+## Vectoriales {.smaller}
 
 ```{r, error = TRUE}
 library(sf)
@@ -466,7 +470,7 @@ st_write(nc, "nc.shp")
 ```
 
 ---
-## Vectoriales
+## Vectoriales {.smaller}
 
 ```{r, error = TRUE}
 filename <- system.file("shape/nc.shp", package="sf")
@@ -474,7 +478,7 @@ nc <- st_read(filename)
 st_write(nc, "nc.shp", delete_layer = TRUE)
 ```
 
-## Vectoriales
+## Vectoriales {.smaller}
 
 Drivers soportados por `GDAL`
 
@@ -489,7 +493,7 @@ st_layers(system.file("osm/overpass.osm", package="sf"))
 
 ```
 
-## Vectoriales {.smaller}
+## Vectoriales {.smaller} {.smaller}
 
 ### CRUD (create, read, update, delete)
 
@@ -502,13 +506,13 @@ Los siguientes argumentos
 - `delete_dsn=TRUE` borra el archvivo si existe. Utilizar con cuidado!
 
 
-## Rasters
+## Rasters {.smaller}
 
 Con `{terra}`   
   - leer: `rast`    
   - guardar: `writeRaster`    
 
-## Rasters
+## Rasters {.smaller}
 
 ### Leer
 
@@ -520,7 +524,7 @@ f <- system.file("external/rlogo.grd", package="raster")
 (r <- rast(f))
 ```
 
-## Rasters
+## Rasters {.smaller}
 
 ### Leer
 
@@ -528,7 +532,7 @@ f <- system.file("external/rlogo.grd", package="raster")
 plot(r)
 ```
 
-## Rasters
+## Rasters {.smaller}
 
 ### Leer archivos locales
 
@@ -540,7 +544,7 @@ r2 <- r[[2]]
 r2
 ```
 
-## Rasters
+## Rasters {.smaller}
 
 ### Leer archivos HTTP/FTP
 
@@ -551,11 +555,11 @@ Terra usa `GDAL` que tiene soporte para Virtual File Systems.
 Por ejemplo, abrir el producto de precipitación mensual del mes de septiembre año 2021 del producto CHIRPS v2.0 que está almacenado en formato COG (cloud opimized geotiff)
 
 ```{r}
-url <- 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/cogs/'
-name <- 'chirps-v2.0.2021.09.cog'
+url <- 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_pentad/cogs/'
+name <- 'chirps-v2.0.2023.07.6.cog'
 ```
 
-## Rasters
+## Rasters {.smaller}
 
 ### Leer archivos HTTP/FTP
 
@@ -564,7 +568,7 @@ x <- rast(paste0('/vsicurl/',url,name))
 plot(x)
 ```
 
-## Rasters
+## Rasters {.smaller}
 
 ### En Chile
 
@@ -574,7 +578,7 @@ x3 <- app(x2, fun = function(x){ x[x<0] <- NA; return(x)})
 plot(x3)
 ```
 
-## Rasters
+## Rasters {.smaller}
 
 ### Guardar
 

@@ -1328,7 +1328,7 @@ Dr.&nbsp;Francisco Zambrano
 [43] "2020     0.22     0.13     0.09    -0.14    -0.36    -0.87    -0.88    -0.94    -1.21    -1.19    -1.14    -1.16"
 [44] "2021    -1.18    -0.93    -0.81    -1.04    -1.16    -1.29    -1.53    -1.35    -1.45    -1.50    -1.43    -1.19"
 [45] "2022    -1.06    -0.96    -1.28    -1.76    -1.88    -2.07    -2.10    -1.79    -1.76    -1.71    -1.48    -1.25"
-[46] "2023    -1.11    -0.81    -0.67    -0.41    -0.14     0.23     0.25  -999.00  -999.00  -999.00  -999.00  -999.00"
+[46] "2023    -1.11    -0.81    -0.67    -0.41    -0.14     0.23     0.25     0.43  -999.00  -999.00  -999.00  -999.00"
 [47] "  -999.00"                                                                                                       
 [48] "Multivariate ENSO Index Version 2 (MEI.v2)"                                                                      
 [49] "https://www.psl.noaa.gov/enso/mei"                                                                               
@@ -1497,174 +1497,121 @@ Levels: setosa versicolor virginica</code></pre>
 </section>
 <section id="gráficos-base-1" class="slide level2">
 <h2>Gráficos (base)</h2>
-
-<img data-src="slides_clase21_files/figure-revealjs/unnamed-chunk-54-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="funciones" class="title-slide slide level1 center">
-<h1>5 Funciones</h1>
-
-</section>
-<section id="para-ver-el-contenido-de-una-función" class="slide level2">
-<h2>Para ver el contenido de una función</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb217"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb217-1"><a href="#cb217-1"></a>nrow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>function (x) 
-dim(x)[1L]
-&lt;bytecode: 0x5621671eef30&gt;
-&lt;environment: namespace:base&gt;</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb219"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb219-1"><a href="#cb219-1"></a>dim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>function (x)  .Primitive("dim")</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb221"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb221-1"><a href="#cb221-1"></a><span class="fu">nrow</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in nrow(): argument "x" is missing, with no default</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb223"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb223-1"><a href="#cb223-1"></a><span class="fu">args</span>(nrow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>function (x) 
-NULL</code></pre>
+<div class="cell-output-display">
+<p><img data-src="slides_clase21_files/figure-revealjs/unnamed-chunk-54-1.png" width="960"></p>
 </div>
 </div>
-</section>
-<section id="ayuda" class="slide level2">
-<h2>Ayuda</h2>
-<p>Ayuda sobre una función y ejemplos de uso</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb225"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb225-1"><a href="#cb225-1"></a><span class="fu">help</span>(<span class="st">'sum'</span>)</span>
-<span id="cb225-2"><a href="#cb225-2"></a>?summary</span>
-<span id="cb225-3"><a href="#cb225-3"></a>?<span class="st">`</span><span class="at">[</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="crear" class="slide level2">
-<h2>Crear</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb226"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb226-1"><a href="#cb226-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb226-2"><a href="#cb226-2"></a>    <span class="fu">return</span>(<span class="st">'Hola mundo'</span>)</span>
-<span id="cb226-3"><a href="#cb226-3"></a>}</span>
-<span id="cb226-4"><a href="#cb226-4"></a><span class="fu">f</span>() <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hola mundo"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb228"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb228-1"><a href="#cb228-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(name) {</span>
-<span id="cb228-2"><a href="#cb228-2"></a>    x <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">'Hola'</span>, name)</span>
-<span id="cb228-3"><a href="#cb228-3"></a>    <span class="fu">return</span>(x)</span>
-<span id="cb228-4"><a href="#cb228-4"></a>}</span>
-<span id="cb228-5"><a href="#cb228-5"></a><span class="fu">f</span>(<span class="st">'Francisco'</span>) <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hola Francisco"</code></pre>
-</div>
-</div>
-</section>
-<section id="crear-1" class="slide level2">
-<h2>Crear</h2>
-<p>Así también funciona, si no se explicita <code>return</code> R devuelve el último valor evaluado.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb230"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb230-1"><a href="#cb230-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(name) {</span>
-<span id="cb230-2"><a href="#cb230-2"></a>    <span class="fu">paste</span>(<span class="st">'Hola'</span>, name)</span>
-<span id="cb230-3"><a href="#cb230-3"></a>}</span>
-<span id="cb230-4"><a href="#cb230-4"></a></span>
-<span id="cb230-5"><a href="#cb230-5"></a><span class="fu">f</span>(<span class="st">'Javier'</span>) <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hola Javier"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb232"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb232-1"><a href="#cb232-1"></a>sumsquare <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
-<span id="cb232-2"><a href="#cb232-2"></a>    d <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
-<span id="cb232-3"><a href="#cb232-3"></a>    dd <span class="ot">&lt;-</span> d <span class="sc">*</span> d</span>
-<span id="cb232-4"><a href="#cb232-4"></a>    <span class="fu">return</span>(dd)</span>
-<span id="cb232-5"><a href="#cb232-5"></a>}</span>
-<span id="cb232-6"><a href="#cb232-6"></a></span>
-<span id="cb232-7"><a href="#cb232-7"></a><span class="fu">sumsquare</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 25</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="estructuras-de-control" class="title-slide slide level1 center">
-<h1>6 Estructuras de control</h1>
-
-</section>
-<section id="estructuras-comunes-son" class="slide level2">
-<h2>Estructuras comunes son:</h2>
-<ul>
-<li><p><code>if</code>, <code>else</code>: evaluar una condici;on</p></li>
-<li><p><code>for</code>: ejecuta un bucle</p></li>
-<li><p><code>while</code>: ejecuta un bucle <em>while</em> una condición es verdadera</p></li>
-<li><p><code>repeat</code>: ejecuta un buncle infinito</p></li>
-<li><p><code>break</code>: sale de la ejecucción de un bucle</p></li>
-<li><p><code>next</code>: se salta una iteración en el bucle</p></li>
-<li><p><code>return</code>: sale de una función</p></li>
-</ul>
-<p>La mayoría de las estructuras de control se utilizan para escribir funciones.</p>
-</section>
-<section id="estructura-de-control-if" class="slide level2">
-<h2>Estructura de control: <code>if</code></h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb234"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb234-1"><a href="#cb234-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
-<span id="cb234-2"><a href="#cb234-2"></a>        <span class="do">## do something</span></span>
-<span id="cb234-3"><a href="#cb234-3"></a>} <span class="cf">else</span> {</span>
-<span id="cb234-4"><a href="#cb234-4"></a>        <span class="do">## do something else</span></span>
-<span id="cb234-5"><a href="#cb234-5"></a>}</span>
-<span id="cb234-6"><a href="#cb234-6"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition1<span class="sc">&gt;</span>) {</span>
-<span id="cb234-7"><a href="#cb234-7"></a>        <span class="do">## do something</span></span>
-<span id="cb234-8"><a href="#cb234-8"></a>} <span class="cf">else</span> <span class="cf">if</span>(<span class="sc">&lt;</span>condition2<span class="sc">&gt;</span>)  {</span>
-<span id="cb234-9"><a href="#cb234-9"></a>        <span class="do">## do something different</span></span>
-<span id="cb234-10"><a href="#cb234-10"></a>} <span class="cf">else</span> {</span>
-<span id="cb234-11"><a href="#cb234-11"></a>        <span class="do">## do something different</span></span>
-<span id="cb234-12"><a href="#cb234-12"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="if" class="slide level2">
-<h2>if</h2>
-<p>Esta es una estructura <code>if/else</code> valida.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb235"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb235-1"><a href="#cb235-1"></a><span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">3</span>) {</span>
-<span id="cb235-2"><a href="#cb235-2"></a>        y <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb235-3"><a href="#cb235-3"></a>} <span class="cf">else</span> {</span>
-<span id="cb235-4"><a href="#cb235-4"></a>        y <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb235-5"><a href="#cb235-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Está será valida</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb236"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb236-1"><a href="#cb236-1"></a>y <span class="ot">&lt;-</span> <span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">3</span>) {</span>
-<span id="cb236-2"><a href="#cb236-2"></a>        <span class="dv">10</span></span>
-<span id="cb236-3"><a href="#cb236-3"></a>} <span class="cf">else</span> { </span>
-<span id="cb236-4"><a href="#cb236-4"></a>        <span class="dv">0</span></span>
-<span id="cb236-5"><a href="#cb236-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="for" class="slide level2">
-<h2>for</h2>
-<p><code>for</code> bucle toma una variable iterativa que le asigna su valor de un vector. Los bucles <code>for</code> son más comunmente usados para iterar entre los elementos de un objeto (list, vector, etc.)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb237"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb237-1"><a href="#cb237-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb237-2"><a href="#cb237-2"></a>        <span class="fu">print</span>(i)</span>
-<span id="cb237-3"><a href="#cb237-3"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Este bucle toma la variable <code>i</code> y en cada iteración el bucle cambia su valor a 1, 2, 3, …, 10, y luego termina.</p>
-</section>
-<section id="for-1" class="slide level2">
-<h2>for</h2>
-<p>Estos dos bucles tienen el mismo comportamiento.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb238"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb238-1"><a href="#cb238-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>)</span>
-<span id="cb238-2"><a href="#cb238-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
-<span id="cb238-3"><a href="#cb238-3"></a>        <span class="fu">print</span>(x[i])</span>
-<span id="cb238-4"><a href="#cb238-4"></a>}</span>
-<span id="cb238-5"><a href="#cb238-5"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq_along</span>(x)) {</span>
-<span id="cb238-6"><a href="#cb238-6"></a>        <span class="fu">print</span>(x[i])</span>
-<span id="cb238-7"><a href="#cb238-7"></a>}</span>
-<span id="cb238-8"><a href="#cb238-8"></a><span class="cf">for</span>(letter <span class="cf">in</span> x) {</span>
-<span id="cb238-9"><a href="#cb238-9"></a>        <span class="fu">print</span>(letter)</span>
-<span id="cb238-10"><a href="#cb238-10"></a>}</span>
-<span id="cb238-11"><a href="#cb238-11"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) <span class="fu">print</span>(x[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<img src="logo_hemera.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
-<p>IMSE1017|2-2022</p>
+<!-- # 5 Funciones -->
+<!-- ## Para ver el contenido de una función -->
+<!-- ```{r error=TRUE} -->
+<!-- nrow -->
+<!-- dim -->
+<!-- nrow() -->
+<!-- args(nrow) -->
+<!-- ``` -->
+<!-- ## Ayuda  -->
+<!-- Ayuda sobre una función y ejemplos de uso -->
+<!-- ```{r eval = FALSE} -->
+<!-- help('sum') -->
+<!-- ?summary -->
+<!-- ?`[` -->
+<!-- ``` -->
+<!-- ## Crear -->
+<!-- ```{r} -->
+<!-- f <- function() { -->
+<!--     return('Hola mundo') -->
+<!-- } -->
+<!-- f() #<< -->
+<!-- f <- function(name) { -->
+<!--     x <- paste('Hola', name) -->
+<!--     return(x) -->
+<!-- } -->
+<!-- f('Francisco') #<< -->
+<!-- ``` -->
+<!-- ## Crear -->
+<!-- Así también funciona, si no se explicita `return` R devuelve el último valor evaluado. -->
+<!-- ```{r} -->
+<!-- f <- function(name) { -->
+<!--     paste('Hola', name) -->
+<!-- } -->
+<!-- f('Javier') #<< -->
+<!-- sumsquare <- function(a, b) { -->
+<!--     d <- a + b -->
+<!--     dd <- d * d -->
+<!--     return(dd) -->
+<!-- } -->
+<!-- sumsquare(a = 1, b= 4) -->
+<!-- ``` -->
+<!-- # 6 Estructuras de control -->
+<!-- ## Estructuras comunes son: -->
+<!-- - `if`, `else`: evaluar una condici;on -->
+<!-- - `for`: ejecuta un bucle -->
+<!-- - `while`: ejecuta un bucle  _while_ una condición es verdadera -->
+<!-- - `repeat`: ejecuta un buncle infinito -->
+<!-- - `break`: sale de la ejecucción de un bucle -->
+<!-- - `next`: se salta una iteración en el bucle -->
+<!-- - `return`: sale de una función -->
+<!-- La mayoría de las estructuras de control se utilizan para escribir funciones. -->
+<!-- --- -->
+<!-- ## Estructura de control: `if` -->
+<!-- ```{r eval=FALSE} -->
+<!-- if(<condition>) { -->
+<!--         ## do something -->
+<!-- } else { -->
+<!--         ## do something else -->
+<!-- } -->
+<!-- if(<condition1>) { -->
+<!--         ## do something -->
+<!-- } else if(<condition2>)  { -->
+<!--         ## do something different -->
+<!-- } else { -->
+<!--         ## do something different -->
+<!-- } -->
+<!-- ``` -->
+<!-- ## if -->
+<!-- Esta es una estructura `if/else` valida. -->
+<!-- ```{r eval=FALSE} -->
+<!-- if(x > 3) { -->
+<!--         y <- 10 -->
+<!-- } else { -->
+<!--         y <- 0 -->
+<!-- } -->
+<!-- ``` -->
+<!-- Está será valida -->
+<!-- ```{r eval=FALSE} -->
+<!-- y <- if(x > 3) { -->
+<!--         10 -->
+<!-- } else {  -->
+<!--         0 -->
+<!-- } -->
+<!-- ``` -->
+<!-- ## for -->
+<!-- `for` bucle toma una variable iterativa que le asigna su valor de un vector. Los bucles `for` son más comunmente usados para iterar entre los elementos de un objeto (list, vector, etc.) -->
+<!-- ```{r eval = FALSE} -->
+<!-- for(i in 1:10) { -->
+<!--         print(i) -->
+<!-- } -->
+<!-- ``` -->
+<!-- Este bucle toma la variable `i` y en cada iteración el bucle cambia su valor a 1, 2, 3, ..., 10, y luego termina. -->
+<!-- ## for -->
+<!-- Estos dos bucles tienen el mismo comportamiento. -->
+<!-- ```{r eval = FALSE} -->
+<!-- x <- c("a", "b", "c", "d") -->
+<!-- for(i in 1:4) { -->
+<!--         print(x[i]) -->
+<!-- } -->
+<!-- for(i in seq_along(x)) { -->
+<!--         print(x[i]) -->
+<!-- } -->
+<!-- for(letter in x) { -->
+<!--         print(letter) -->
+<!-- } -->
+<!-- for(i in 1:4) print(x[i]) -->
+<!-- ``` -->
+<p><img src="logo_hemera.jpg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>IMSE1017|2-2023</p>
 </div>
 </section></section>
     </div>

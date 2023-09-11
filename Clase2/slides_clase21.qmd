@@ -9,7 +9,7 @@ format:
       #data-background-size: "contain"
     title-block-banner: true
     logo: "logo_hemera.jpg"
-    footer: "IMSE1017|2-2022"
+    footer: "IMSE1017|2-2023"
     theme: default
     echo: true
 ---
@@ -531,148 +531,148 @@ plot(sort(iris$Sepal.Length))
 hist(iris$Sepal.Width)
 ```
 
-# 5 Funciones
+<!-- # 5 Funciones -->
 
-## Para ver el contenido de una función
+<!-- ## Para ver el contenido de una función -->
 
-```{r error=TRUE}
-nrow
-dim
-nrow()
-args(nrow)
-```
+<!-- ```{r error=TRUE} -->
+<!-- nrow -->
+<!-- dim -->
+<!-- nrow() -->
+<!-- args(nrow) -->
+<!-- ``` -->
 
-## Ayuda 
+<!-- ## Ayuda  -->
 
-Ayuda sobre una función y ejemplos de uso
+<!-- Ayuda sobre una función y ejemplos de uso -->
 
-```{r eval = FALSE}
-help('sum')
-?summary
-?`[`
-```
+<!-- ```{r eval = FALSE} -->
+<!-- help('sum') -->
+<!-- ?summary -->
+<!-- ?`[` -->
+<!-- ``` -->
 
-## Crear
+<!-- ## Crear -->
 
-```{r}
-f <- function() {
-    return('Hola mundo')
-}
-f() #<<
-f <- function(name) {
-    x <- paste('Hola', name)
-    return(x)
-}
-f('Francisco') #<<
-```
+<!-- ```{r} -->
+<!-- f <- function() { -->
+<!--     return('Hola mundo') -->
+<!-- } -->
+<!-- f() #<< -->
+<!-- f <- function(name) { -->
+<!--     x <- paste('Hola', name) -->
+<!--     return(x) -->
+<!-- } -->
+<!-- f('Francisco') #<< -->
+<!-- ``` -->
 
-## Crear
+<!-- ## Crear -->
 
-Así también funciona, si no se explicita `return` R devuelve el último valor evaluado.
+<!-- Así también funciona, si no se explicita `return` R devuelve el último valor evaluado. -->
 
-```{r}
-f <- function(name) {
-    paste('Hola', name)
-}
+<!-- ```{r} -->
+<!-- f <- function(name) { -->
+<!--     paste('Hola', name) -->
+<!-- } -->
 
-f('Javier') #<<
+<!-- f('Javier') #<< -->
 
-sumsquare <- function(a, b) {
-    d <- a + b
-    dd <- d * d
-    return(dd)
-}
+<!-- sumsquare <- function(a, b) { -->
+<!--     d <- a + b -->
+<!--     dd <- d * d -->
+<!--     return(dd) -->
+<!-- } -->
 
-sumsquare(a = 1, b= 4)
-```
+<!-- sumsquare(a = 1, b= 4) -->
+<!-- ``` -->
 
-# 6 Estructuras de control
+<!-- # 6 Estructuras de control -->
 
-## Estructuras comunes son:
+<!-- ## Estructuras comunes son: -->
 
-- `if`, `else`: evaluar una condici;on
+<!-- - `if`, `else`: evaluar una condici;on -->
 
-- `for`: ejecuta un bucle
+<!-- - `for`: ejecuta un bucle -->
 
-- `while`: ejecuta un bucle  _while_ una condición es verdadera
+<!-- - `while`: ejecuta un bucle  _while_ una condición es verdadera -->
 
-- `repeat`: ejecuta un buncle infinito
+<!-- - `repeat`: ejecuta un buncle infinito -->
 
-- `break`: sale de la ejecucción de un bucle
+<!-- - `break`: sale de la ejecucción de un bucle -->
 
-- `next`: se salta una iteración en el bucle
+<!-- - `next`: se salta una iteración en el bucle -->
 
-- `return`: sale de una función
+<!-- - `return`: sale de una función -->
 
-La mayoría de las estructuras de control se utilizan para escribir funciones.
+<!-- La mayoría de las estructuras de control se utilizan para escribir funciones. -->
 
----
+<!-- --- -->
 
-## Estructura de control: `if`
+<!-- ## Estructura de control: `if` -->
 
-```{r eval=FALSE}
-if(<condition>) {
-        ## do something
-} else {
-        ## do something else
-}
-if(<condition1>) {
-        ## do something
-} else if(<condition2>)  {
-        ## do something different
-} else {
-        ## do something different
-}
-```
+<!-- ```{r eval=FALSE} -->
+<!-- if(<condition>) { -->
+<!--         ## do something -->
+<!-- } else { -->
+<!--         ## do something else -->
+<!-- } -->
+<!-- if(<condition1>) { -->
+<!--         ## do something -->
+<!-- } else if(<condition2>)  { -->
+<!--         ## do something different -->
+<!-- } else { -->
+<!--         ## do something different -->
+<!-- } -->
+<!-- ``` -->
 
-## if
+<!-- ## if -->
 
-Esta es una estructura `if/else` valida.
+<!-- Esta es una estructura `if/else` valida. -->
 
-```{r eval=FALSE}
-if(x > 3) {
-        y <- 10
-} else {
-        y <- 0
-}
-```
+<!-- ```{r eval=FALSE} -->
+<!-- if(x > 3) { -->
+<!--         y <- 10 -->
+<!-- } else { -->
+<!--         y <- 0 -->
+<!-- } -->
+<!-- ``` -->
 
-Está será valida
+<!-- Está será valida -->
 
-```{r eval=FALSE}
-y <- if(x > 3) {
-        10
-} else { 
-        0
-}
-```
+<!-- ```{r eval=FALSE} -->
+<!-- y <- if(x > 3) { -->
+<!--         10 -->
+<!-- } else {  -->
+<!--         0 -->
+<!-- } -->
+<!-- ``` -->
 
-## for
+<!-- ## for -->
 
-`for` bucle toma una variable iterativa que le asigna su valor de un vector. Los bucles `for` son más comunmente usados para iterar entre los elementos de un objeto (list, vector, etc.)
+<!-- `for` bucle toma una variable iterativa que le asigna su valor de un vector. Los bucles `for` son más comunmente usados para iterar entre los elementos de un objeto (list, vector, etc.) -->
 
-```{r eval = FALSE}
-for(i in 1:10) {
-        print(i)
-}
-```
+<!-- ```{r eval = FALSE} -->
+<!-- for(i in 1:10) { -->
+<!--         print(i) -->
+<!-- } -->
+<!-- ``` -->
 
-Este bucle toma la variable `i` y en cada iteración el bucle cambia su valor a 1, 2, 3, ..., 10, y luego termina.
+<!-- Este bucle toma la variable `i` y en cada iteración el bucle cambia su valor a 1, 2, 3, ..., 10, y luego termina. -->
 
-## for
+<!-- ## for -->
 
-Estos dos bucles tienen el mismo comportamiento.
+<!-- Estos dos bucles tienen el mismo comportamiento. -->
 
-```{r eval = FALSE}
-x <- c("a", "b", "c", "d")
-for(i in 1:4) {
-        print(x[i])
-}
-for(i in seq_along(x)) {
-        print(x[i])
-}
-for(letter in x) {
-        print(letter)
-}
-for(i in 1:4) print(x[i])
-```
+<!-- ```{r eval = FALSE} -->
+<!-- x <- c("a", "b", "c", "d") -->
+<!-- for(i in 1:4) { -->
+<!--         print(x[i]) -->
+<!-- } -->
+<!-- for(i in seq_along(x)) { -->
+<!--         print(x[i]) -->
+<!-- } -->
+<!-- for(letter in x) { -->
+<!--         print(letter) -->
+<!-- } -->
+<!-- for(i in 1:4) print(x[i]) -->
+<!-- ``` -->
