@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -80,18 +114,159 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
 <p>Escriba un script en R que permita realizar lo siguiente:</p>
 <ol type="1">
-<li><p>(2pt) Cargue en R el archivo <code>metadata_estaciones_agrometAPI.csv</code> y asignelo al objeto <code>data_info</code>.</p></li>
-<li><p>(2pt) Cuál es el nombre de las columnas de <code>data_info</code></p></li>
-<li><p>(2pt) Seleccione de <code>data_info</code> la estación que se le asigno en el campus virtual. Indique el nombre, comuna, región, latitud y longitud de la estación.</p></li>
-<li><p>(2pt) Cargar en R el archivo ‘.csv’ correspondiente a los datos climáticos y asignelo al objeto <code>data</code>. Debe elegir el archivo correspondiente al código de la estación de acuerdo a lo que se indica en el campus virtual <code>Evaluaciones/Evaluación 1 talleres</code>. Nota: Para los siguientes ejercicios debe seguir trabajando con estos datos.</p></li>
-<li><p>(2pt) Genere un resumen de la estructura de datos del objeto <code>data</code>, en el que se debe poder identificar la clase de objeto, la cantidad de variables y observaciones; y la clase de objeto de cada variable.</p></li>
-<li><p>(2pt) Haga un resumen estadístico de todas las variables que contiene <code>data</code>.</p></li>
-<li><p>(3pt) Indique entre que rango de fechas se encuentran las observaciones del objeto <code>data</code>.</p></li>
-<li><p>(4pt) Cree un objeto <code>data_temp</code> en el que se guarde un subconjunto de el objeto <code>data</code> que contenga las variables de <code>fecha_hora</code>,<code>temp_promedio_aire</code>, <code>temp_minima</code>, <code>temp_maxima</code>.</p></li>
-<li><p>(4pt) Cree un objeto <code>data_temp_enero</code> en el que se guarde un subconjunto del objeto <code>data_temp</code>, que debe contener todas las observaciones del mes de enero 2021.</p></li>
-<li><p>(2pt) Cuál es la temperatura promedio, máxima y mínima del mes de enero 2021.</p></li>
-<li><p>(5pt) Cree una matriz de correlación entre las variables de temperatura del objeto <code>data_temp</code>. No considere los valores NA en el cálculo.</p></li>
+<li>(2pt) Cargue en R el archivo <code>metadata_estaciones_agrometAPI.csv</code> y asignelo al objeto <code>data_info</code>.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_info <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">'data/metadata_estaciones_agrometAPI.csv'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>(2pt) Cuál es el nombre de las columnas de <code>data_info</code></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data_info)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "X"             "ema"           "institucion"   "nombre_ema"   
+[5] "comuna"        "region"        "latitud"       "longitud"     
+[9] "fecha_de_alta"</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>(2pt) Seleccione de <code>data_info</code> la estación que se le asigno en el campus virtual. Indique el nombre, comuna, región, latitud y longitud de la estación.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>id_estacion <span class="ot">&lt;-</span> <span class="dv">50</span> <span class="co">#codigo estacion asignada</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>data_info[data_info<span class="sc">$</span>ema <span class="sc">==</span> id_estacion,<span class="fu">c</span>(<span class="st">'nombre_ema'</span>,<span class="st">'comuna'</span>,<span class="st">'region'</span>,<span class="st">'latitud'</span>,<span class="st">'longitud'</span>)]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   nombre_ema    comuna        region   latitud  longitud
+49   Chocalan Melipilla Metropolitana -33.72556 -71.20972</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>(2pt) Cargar en R el archivo ‘.csv’ correspondiente a los datos climáticos y asignelo al objeto <code>data</code>. Debe elegir el archivo correspondiente al código de la estación de acuerdo a lo que se indica en el campus virtual <code>Evaluaciones/Evaluación 1 talleres</code>. Nota: Para los siguientes ejercicios debe seguir trabajando con estos datos.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">'data/archivos_csv_por_estacion/50.csv'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>(2pt) Genere un resumen de la estructura de datos del objeto <code>data</code>, en el que se debe poder identificar la clase de objeto, la cantidad de variables y observaciones; y la clase de objeto de cada variable.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   8736 obs. of  13 variables:
+ $ station_id           : int  50 50 50 50 50 50 50 50 50 50 ...
+ $ fecha_hora           : chr  "2021-01-01T03:00:00Z" "2021-01-01T04:00:00Z" "2021-01-01T05:00:00Z" "2021-01-01T06:00:00Z" ...
+ $ temp_promedio_aire   : num  13.1 13.1 12.7 11.8 12.1 15.3 17.2 19.1 20.9 22.3 ...
+ $ precipitacion_horaria: num  0 0 0 0 0 0 0 0 0 0 ...
+ $ humed_rel_promedio   : num  61.8 62.5 63.3 64.2 64.2 56.3 52.2 48.2 46 47.2 ...
+ $ presion_atmosferica  : num  1012 1012 1013 1013 1014 ...
+ $ radiacion_solar_max  : num  0 0 0 0 191 ...
+ $ veloc_max_viento     : num  0 0 0 0 0 0 0 0 0.1 0.1 ...
+ $ temp_minima          : num  13 13 12.5 11.5 11.4 14.2 16.6 18.3 20.6 21.7 ...
+ $ temp_maxima          : num  13.2 13.1 12.8 12.3 13.5 16.1 18 19.8 21.3 22.7 ...
+ $ direccion_del_viento : int  252 252 252 252 252 252 244 242 236 246 ...
+ $ grados_dia           : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ horas_frio           : int  NA NA NA NA NA NA NA NA NA NA ...</code></pre>
+</div>
+</div>
+<ol start="6" type="1">
+<li>(2pt) Haga un resumen estadístico de todas las variables que contiene <code>data</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   station_id  fecha_hora        temp_promedio_aire precipitacion_horaria
+ Min.   :50   Length:8736        Min.   :-1.00      Min.   :0.0000       
+ 1st Qu.:50   Class :character   1st Qu.: 9.90      1st Qu.:0.0000       
+ Median :50   Mode  :character   Median :13.50      Median :0.0000       
+ Mean   :50                      Mean   :14.19      Mean   :0.0113       
+ 3rd Qu.:50                      3rd Qu.:18.20      3rd Qu.:0.0000       
+ Max.   :50                      Max.   :33.80      Max.   :6.1000       
+                                 NA's   :596        NA's   :596          
+ humed_rel_promedio presion_atmosferica radiacion_solar_max veloc_max_viento
+ Min.   : 8.50      Min.   :1009        Min.   :   0.0      Min.   :0.0000  
+ 1st Qu.:49.50      1st Qu.:1015        1st Qu.:   0.0      1st Qu.:0.1000  
+ Median :60.00      Median :1017        Median :  11.0      Median :0.5000  
+ Mean   :57.54      Mean   :1018        Mean   : 191.0      Mean   :0.6593  
+ 3rd Qu.:67.80      3rd Qu.:1020        3rd Qu.: 336.7      3rd Qu.:1.1000  
+ Max.   :79.00      Max.   :1030        Max.   :1173.0      Max.   :5.6000  
+ NA's   :596        NA's   :596         NA's   :596         NA's   :596     
+  temp_minima     temp_maxima    direccion_del_viento   grados_dia    
+ Min.   :-1.20   Min.   :-0.90   Min.   :  0          Min.   :   0.0  
+ 1st Qu.: 9.60   1st Qu.:10.30   1st Qu.:181          1st Qu.: 108.3  
+ Median :13.10   Median :13.80   Median :219          Median : 599.9  
+ Mean   :13.72   Mean   :14.65   Mean   :227          Mean   : 586.2  
+ 3rd Qu.:17.50   3rd Qu.:18.80   3rd Qu.:300          3rd Qu.: 896.6  
+ Max.   :33.80   Max.   :34.00   Max.   :360          Max.   :1470.7  
+ NA's   :596     NA's   :596     NA's   :596          NA's   :8434    
+   horas_frio   
+ Min.   :  0.0  
+ 1st Qu.:101.5  
+ Median :198.0  
+ Mean   :253.6  
+ 3rd Qu.:405.5  
+ Max.   :630.0  
+ NA's   :8645   </code></pre>
+</div>
+</div>
+<ol start="7" type="1">
+<li>(3pt) Indique entre que rango de fechas se encuentran las observaciones del objeto <code>data</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(data<span class="sc">$</span>fecha_hora)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2021-01-01T03:00:00Z" "2021-12-31T03:00:00Z"</code></pre>
+</div>
+</div>
+<ol start="8" type="1">
+<li>(4pt) Cree un objeto <code>data_temp</code> en el que se guarde un subconjunto de el objeto <code>data</code> que contenga las variables de <code>fecha_hora</code>,<code>temp_promedio_aire</code>, <code>temp_minima</code>, <code>temp_maxima</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data_temp <span class="ot">&lt;-</span> data[,<span class="fu">c</span>(<span class="st">'fecha_hora'</span>,<span class="st">'temp_promedio_aire'</span>,<span class="st">'temp_minima'</span>,<span class="st">'temp_maxima'</span>)]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="9" type="1">
+<li>(4pt) Cree un objeto <code>data_temp_enero</code> en el que se guarde un subconjunto del objeto <code>data_temp</code>, que debe contener todas las observaciones del mes de enero 2021.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data_temp_enero <span class="ot">&lt;-</span> data_temp[<span class="dv">1</span><span class="sc">:</span><span class="dv">742</span>,]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(data_temp_enero<span class="sc">$</span>fecha_hora)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2021-01-01T03:00:00Z" "2021-02-01T00:00:00Z"</code></pre>
+</div>
+</div>
+<ol start="10" type="1">
+<li>(2pt) Cuál es la temperatura promedio, máxima y mínima del mes de enero 2021.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#temperatura promedio</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(data_temp_enero<span class="sc">$</span>temp_promedio_aire,<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 18.0528</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#temeratura máxima</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(data_temp_enero<span class="sc">$</span>temp_minima,<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#temperatura mínima</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(data_temp_enero<span class="sc">$</span>temp_maxima,<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 31.4</code></pre>
+</div>
+</div>
+<ol start="11" type="1">
+<li>(5pt) Cree una matriz de correlación entre las variables de temperatura del objeto <code>data_temp</code>. No considere los valores NA en el cálculo.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data_temp[,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>],<span class="at">use =</span> <span class="st">'complete.obs'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   temp_promedio_aire temp_minima temp_maxima
+temp_promedio_aire          1.0000000   0.9979817   0.9980450
+temp_minima                 0.9979817   1.0000000   0.9923999
+temp_maxima                 0.9980450   0.9923999   1.0000000</code></pre>
+</div>
+</div>
 </section>
 
 </main>
