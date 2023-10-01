@@ -2,9 +2,19 @@
 title: "Evaluación 1 talleres"
 subtitle: "Uso Avanzado de SIG"
 author: "Dr. Francisco Zambrano"
-format: html
-lang: es
-editor: visual
+lang: "es"
+execute:
+  echo: true
+  eval: true
+format:
+  html:
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    code-fold: show
+    toc: true
+    html-math-method: katex
+    self-contained: true
 ---
 
 ## Datos
