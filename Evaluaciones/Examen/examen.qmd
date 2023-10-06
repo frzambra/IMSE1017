@@ -37,12 +37,12 @@ editor: visual
 # **R:** 
 # para datos vectoriales usamos `{sf}` y para datos raster `{terra}`
 ```
+
 4.  (20pts) Escriba un vector de tipo cáracter que contenga cinco elementos, cada uno debe corresponden a un día de la semana de lunes a viernes. Asigne el vector creado al objeto `dias`.
 
 ```{r}
 dias <- c('lunes','martes','miercoles','jueves','viernes')
 ```
-
 
 5.  (20pts) Considere el siguiente vector
 
