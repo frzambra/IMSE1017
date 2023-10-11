@@ -53,6 +53,7 @@ II) Unidad 2: Manejo de datos espaciales en R
 
 1) [Evaluación 1 talleres](Evaluaciones/eva1_talleres/eva1_talleres.html)
 2) Evaluación 1:
+    + [Solución](Evaluaciones/Eva1_2023/evaluacion1.html)
     + [Tipo 1](Evaluaciones/Eva1_2023/evaluacion1_forma1.html)
     + [Tipo 2](Evaluaciones/Eva1_2023/evaluacion1_forma2.html)
     + [Tipo 3](Evaluaciones/Eva1_2023/evaluacion1_forma3.html)
