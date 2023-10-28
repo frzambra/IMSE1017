@@ -5,8 +5,8 @@ author: 'Dr. Francisco Zambrano'
 format: 
   html:
     number-sections: false
-    echo: true
-    eval: true
+    echo: false
+    eval: false
     table-of-contents: true
 lang: es
 bibliography: "referencias.bib"
@@ -202,7 +202,7 @@ class(gc)
 
 ```
 
-7. Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc` (salvo para la geometry collection), luego utilice la función `st_sf` para crear un objeto `sf` que contenga todas las geometrias. Agregue una columna `nombre_geometria` a los atributos en donde se identifique el tipo de geometria (ej, multipoligono, multilinea, multipuntos,etc).
+7. (20pts) Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc` (salvo para la geometry collection), luego utilice la función `st_sf` para crear un objeto `sf` que contenga todas las geometrias. Agregue una columna `nombre_geometria` a los atributos en donde se identifique el tipo de geometria (ej, multipoligono, multilinea, multipuntos,etc).
 
 ```{r}
 mpt_sfc <- st_sfc(mpt)
