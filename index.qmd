@@ -39,6 +39,9 @@ II) Unidad 2: Manejo de datos espaciales en R
 
 1) [Taller 1: Tipos y estructuras de datos en R](Talleres/Taller1_2023/Ejercicios_R-base.html)
 2) [Taller 2: Tipos y estructuras de datos en R](Talleres/Taller2_2023/taller2_rbase.html)
+3) [Taller 3: Evaluación 1 talleres](Evaluaciones/eva1_talleres/eva1_talleres.html)
+4) [Taller 4: Manejo de datos vectoriales con {sf}](Talleres/Taller4_2023/Taller4.html)
+
 
 <!-- 
 2) [Taller 2: Datos climáticos en R](Talleres/Taller2/Taller2.html)
@@ -51,8 +54,7 @@ II) Unidad 2: Manejo de datos espaciales en R
 
 ## Evaluaciones
 
-1) [Evaluación 1 talleres](Evaluaciones/eva1_talleres/eva1_talleres.html)
-2) Evaluación 1:
+1) Evaluación 1:
     + [Solución](Evaluaciones/Eva1_2023/evaluacion1.html)
     + [Tipo 1](Evaluaciones/Eva1_2023/evaluacion1_forma1.html)
     + [Tipo 2](Evaluaciones/Eva1_2023/evaluacion1_forma2.html)

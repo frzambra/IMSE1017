@@ -156,18 +156,19 @@ data_sf
 
 ### Ejercicio 5 (40 pts)
 
-Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:  
-- Indique el Sistema de Referencia de Coordenadas  
-- Indique el tipo de geometria que tiene almacenada  
-- Extraiga la list-colum correspondiente a las geometrias   
-- Extraiga el data.frame (sin la geometria)   
-- Cuantas columnas tiene la tabla de atributos  
-- Cuántas entidades espaciales tiene la capa vectorial.  
-- Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'  
-- Extraiga cinco entidades espaciales y haga un mapa de cada una  
+Cargue la el set de datos de ejemplo de Carolina del Norte que viene como archivo de tipo vectorial (nc) incluido con el paquete `{sf}`. Realice lo siguiente:\
+- Indique el Sistema de Referencia de Coordenadas\
+- Indique el tipo de geometria que tiene almacenada\
+- Extraiga la list-colum correspondiente a las geometrias\
+- Extraiga el data.frame (sin la geometria)\
+- Cuantas columnas tiene la tabla de atributos\
+- Cuántas entidades espaciales tiene la capa vectorial.\
+- Cree un mapa en el que se pueda apreciar la variación respecto a la columnas 'NAME'\
+- Extraiga cinco entidades espaciales y haga un mapa de cada una
 
 ```{r}
 #| echo: true
+#| eval: false
 # ruta donde está almacenado el archvio
 archivo <- system.file("shape/nc.shp", package="sf")
 
@@ -207,19 +208,20 @@ plot(nc$geometry[5])
 
 ### Ejercicio 6 (100 pts)
 
-Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:  
-- Indique el Sistema de Referencia de Coordenadas  
-- Indique el tipo de geometria que tiene almacenada  
-- Extraiga la list-colum correspondiente a las geometrias   
-- Extraiga el data.frame (sin la geometria)   
-- Cuantas columnas tiene la tabla de atributos  
-- Cuántas entidades espaciales tiene la capa vectorial.  
-- Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica.  
-- Extraiga cinco entidades espaciales y haga un mapa de cada una  
-- Indique el codigo EPSG de cada una de las capas vectoriales   (canales, estaciones, comunas)   
-- Transforme el sistema de referencia de coordenadas de las tres capas vectoriales a datum WGS84 coordenadas geográficas.  
+Cargue los set de datos vectoriales que se encuentran en el campus virtual: division_comunal, estaciones_chile y canales nacional. Realice lo siguiente:\
+- Indique el Sistema de Referencia de Coordenadas\
+- Indique el tipo de geometria que tiene almacenada\
+- Extraiga la list-colum correspondiente a las geometrias\
+- Extraiga el data.frame (sin la geometria)\
+- Cuantas columnas tiene la tabla de atributos\
+- Cuántas entidades espaciales tiene la capa vectorial.\
+- Cree un mapa en el que se pueda apreciar la variación respecto a una columna categórica y numérica.\
+- Extraiga cinco entidades espaciales y haga un mapa de cada una\
+- Indique el codigo EPSG de cada una de las capas vectoriales (canales, estaciones, comunas)\
+- Transforme el sistema de referencia de coordenadas de las tres capas vectoriales a datum WGS84 coordenadas geográficas.
 
 ```{r}
+#| eval: false
 #cargar las capas vectoriales
 canales <- read_sf('../data/canales_nacional_final/canales_nacional_final.shp')
 estaciones <- read_sf('../data/estaciones_chile/estaciones_chile.shp')
