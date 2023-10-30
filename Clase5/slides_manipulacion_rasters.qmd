@@ -9,7 +9,7 @@ format:
       #data-background-size: "contain"
     title-block-banner: true
     logo: "logo_hemera.jpg"
-    footer: "IMSE1017|2-2022"
+    footer: "IMSE1017|2-2023"
     theme: default
     echo: true
 ---
