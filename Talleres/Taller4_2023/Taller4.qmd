@@ -10,13 +10,12 @@ format:
     table-of-contents: true
 lang: es
 bibliography: "referencias.bib"
-editor: visual
+editor: source
 ---
 
 ## Descripción
 
-En la primera parte del curso se familiarizó con R [@R2023], las principales estructuras de datos, como realizar indexación, conoció algunas funciones y pudo realizar algunos gráficos básicos; utilizando R base. Ahora, en el curso hemos empezado a trabajar en R con datos geoespaciales de tipo vectoriales y raster. Para manejar datos vectoriales utilizamos `{sf}` [@Pebesma2018] y para datos de tipo raster `{terra}`[@Hijmans2023]. En este taller trabajaremos con 
-`{sf}`.
+En la primera parte del curso se familiarizó con R [@R2023], las principales estructuras de datos, como realizar indexación, conoció algunas funciones y pudo realizar algunos gráficos básicos; utilizando R base. Ahora, en el curso hemos empezado a trabajar en R con datos geoespaciales de tipo vectoriales y raster. Para manejar datos vectoriales utilizamos `{sf}` [@Pebesma2018] y para datos de tipo raster `{terra}`[@Hijmans2023]. En este taller trabajaremos con `{sf}`.
 
 ## Objetivo del taller
 
@@ -74,7 +73,7 @@ Viernes 3 de noviembre hasta las 11:00am
 
 ## Ejercicios
 
-1. (10pts) Cree un objeto `sfg` de tipo punto de dos, tres y cuatro dimensiones. Utilicé las coordenadas de latitud -36.25 y longitud -72.65 una elevación de 200 metros y una direccción de 90°. Revise la estructura del objeto creado utilizando la función `str`
+1.  (10pts) Cree un objeto `sfg` de tipo punto de dos, tres y cuatro dimensiones. Utilicé las coordenadas de latitud -36.25 y longitud -72.65 una elevación de 200 metros y una direccción de 90°. Revise la estructura del objeto creado utilizando la función `str`
 
 ```{r}
 library(sf)
@@ -83,9 +82,10 @@ p2 <- st_point(c(-36.25,-72.65,200))
 p3 <- st_point(c(-36.25,-72.65,200,90))
 ```
 
-2. (20pts) Utilice las siguientes coordenadas para crear los siguientes tipos de objetos `sfg`:\
-- `MULTIPOINT`\
-- `LINESTRING`\
+2.  (20pts) Utilice las siguientes coordenadas para crear los siguientes tipos de objetos `sfg`:\
+
+-   `MULTIPOINT`\
+-   `LINESTRING`\
 
 Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto.
 
@@ -115,9 +115,7 @@ class(ls)
 #plot(ls)
 ```
 
-
-3. (20pts) Utilice las siguientes coordenadas para crear un objeto `sfg` de tipo `MULTILINESTRING` que contenga dos lineas. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto.
-
+3.  (20pts) Utilice las siguientes coordenadas para crear un objeto `sfg` de tipo `MULTILINESTRING` que contenga dos lineas. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto.
 
 ```{r}
 #| echo: true
@@ -140,11 +138,12 @@ mls <- st_multilinestring(
 class(mls)
 #plot(mls)
 ```
-4. (20pts) Utilice las coordenadas en el `data.frame` `df_pol` para crear un objeto `sfg` de tipo `POLYGON`. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto
+
+4.  (20pts) Utilice las coordenadas en el `data.frame` `df_pol` para crear un objeto `sfg` de tipo `POLYGON`. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto
 
 ```{r}
-#|echo: true
-#|eval: true
+#| echo: true
+#| eval: true
 df_pol <- data.frame(
   latitud = c(-33.38943,-33.38911,-33.38959,-33.38991),
   longitud = c(-70.63566,-70.63531,-70.63468,-70.63500)
@@ -163,9 +162,12 @@ pol <- st_polygon(
 class(pol)
 #plot(pol)
 ```
-5. (20pts) Utilice las coordenadas en el `data.frame` `df_pol` para crear un objeto `sfg` de tipo `MULTIPOLYGON` que contenga dos polygonos. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto.
+
+5.  (20pts) Utilice las coordenadas en el `data.frame` `df_mpol` para crear un objeto `sfg` de tipo `MULTIPOLYGON` que contenga dos polygonos. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto.
 
 ```{r}
+#| echo: true
+#| eval: true
 df_mpol <- data.frame(
   poligono = c(rep('poligono_1',4),rep('poligono_2',4)),
    latitud = c(-33.38943,-33.38911,-33.38959,-33.38991,
@@ -193,7 +195,7 @@ class(mp)
 #plot(mp)
 ```
 
-6. (20pts) Junte todas las geometrias anteriores en un objteo `sfg` de tipo `GEOMETRY COLLECTION`. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto
+6.  (20pts) Junte todas las geometrias anteriores en un objteo `sfg` de tipo `GEOMETRY COLLECTION`. Verifique que la clase y geometría del objeto es la correspondiente y haga un `plot` de cada objeto
 
 ```{r}
 gc <- st_geometrycollection(list(mpt,ls,mls,pol,mp))
@@ -202,7 +204,7 @@ class(gc)
 
 ```
 
-7. (20pts) Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc` (salvo para la geometry collection), luego utilice la función `st_sf` para crear un objeto `sf` que contenga todas las geometrias. Agregue una columna `nombre_geometria` a los atributos en donde se identifique el tipo de geometria (ej, multipoligono, multilinea, multipuntos,etc).
+7.  (20pts) Utilice las función `st_sfc` para convertir los objetos `sfg` en tipo `sfc` (salvo para la geometry collection), luego utilice la función `st_sf` para crear un objeto `sf` que contenga todas las geometrias. Agregue una columna `nombre_geometria` a los atributos en donde se identifique el tipo de geometria (ej, multipoligono, multilinea, multipuntos,etc).
 
 ```{r}
 mpt_sfc <- st_sfc(mpt)
@@ -216,10 +218,11 @@ obj_sf$nombre_geometria <- c('multipunto','linea','multilinea','polígono','mult
 obj_sf
 ```
 
-8. (30pts) Las coordenadas siguientes corresponden a los puntos de ubicación de algunas estaciones meteorológicas automáticas (EMAs) en la región Metropolitana. Cree un objeto de tipo punto `sfg` para cada fila. Convierta todos los puntos en un objeto `sfc` y luego en un `sf` (revise la función `st_as_sf`). 
-
+8.  (30pts) Las coordenadas siguientes corresponden a los puntos de ubicación de algunas estaciones meteorológicas automáticas (EMAs) en la región Metropolitana. Cree un objeto de tipo punto `sfg` para cada fila. Convierta todos los puntos en un objeto `sfc` y luego en un `sf` (revise la función `st_as_sf`).
 
 ```{r}
+#| echo: true
+#| eval: true
 df <- data.frame(
   latitud = c(-33.70, -33.07, -33.12,-33.67, -33.70, -33.65, -33.67, -33.66, -33.86, -33.21),
   longitud = c(-71.37, -70.75, -70.83, -70.58, -70.70, -71.1, -70.92, -70.76, -70.63, -70.71)
@@ -233,13 +236,14 @@ Agregue una columna `nombre_ema` como atributo con los nombres de acuerdo al sig
 nombres_emas <- c("San Diego", "Huechúnb Ex Lampa", "Til til", "Pirque", "Buin", "Melipilla", "Talagante", "Lo Herrera", "Huelquen", "Colina")
 ```
 
-9. (20pts) Al objeto `sf` anterior asígnele el sistema de referencia de coordenadas (SRC) geográficas, datum WGS84. Luego cree otro objeto en donde se transforme el SRC del objeto anterior a coordenadas UTM huso 19 Sur, datum WGS84.
+9.  (20pts) Al objeto `sf` anterior asígnele el sistema de referencia de coordenadas (SRC) geográficas, datum WGS84. Luego cree otro objeto en donde se transforme el SRC del objeto anterior a coordenadas UTM huso 19 Sur, datum WGS84.
 
 10. (30pts) Cargue las capas vectoriales que debe descargar de la sección `datos`. Para cada una de las capas, indique:
-  - tipo de geometría
-  - cantidad de variables y observaciones
-  - sistema de referencia de coordenadas y código EPSG
-  
+
+-   tipo de geometría
+-   cantidad de variables y observaciones
+-   sistema de referencia de coordenadas y código EPSG
+
 11. (20pts) Transforme el sistema de referencia de coordenadas (SRC) de cada una de las capas al que corresponde al código EPSG:4326.
 
 12. (30pts) Para la capa `biodi_snaspe_2021` seleccione las áreas protegidas ubicadas en la región Metropolitana. Muestre el `data.frame` para las geometrias seleccionadas, para ellas seleccione las columnas de `categoria` y `nom_unidad`. Guarde el resultado en un archivo `.csv` llamado `areas_protegidad_RM.csv`. Guárdelo con configuración latina.
