@@ -44,7 +44,7 @@ library(terra)
 
 Se proporcionan capas rastesr con los que deberá trabajar en el taller, estas corresponden a estaciones de calidad de aire y capas de biodiversidad, ubicados en Chile.
 
-El archivo comprimido (.zip) que contiene los archivos los debe descargar desde [acá](https://drive.google.com/file/d/13YYw8KDhEab3sLeMwOCcQ7Wk1WAUCojc/view?usp=sharing).
+El archivo comprimido (.zip) que contiene los archivos los debe descargar desde [acá](https://drive.google.com/file/d/15F5zIXbz86fjf6IzyOVRaR11C8B0-HFA/view?usp=sharing).
 
 ## ¿Qué debe entregar?
 
