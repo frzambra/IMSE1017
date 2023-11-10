@@ -9,7 +9,7 @@ format:
       #data-background-size: "contain"
     title-block-banner: true
     logo: "logo_hemera.jpg"
-    footer: "IMSE1017|2-2022"
+    footer: "IMSE1017|2-2023"
     theme: default
     echo: true
 ---
@@ -18,6 +18,7 @@ format:
 library(spData)
 library(spDataLarge)
 library(basemaps)
+library(raster)
 set_defaults(map_service = "mapbox", map_type = "satellite",
              map_token = 'pk.eyJ1IjoiZnJ6YW1icmEiLCJhIjoiY2tqdmw5Z3QxMDZyZjJydG54M2RobWMyeSJ9.rl8_KzhiKaV0wgsLL2Y1WQ')
 
@@ -26,7 +27,7 @@ nz_height <- spData::nz_height
 world <- spData::world
 #elev <- spData::elev
 #grain <- spData::grain
-nz_elev <- spDataLarge::nz_elev
+nz_elev <- raster(system.file("raster/nz_elev.tif", package = "spDataLarge"))
 urban_agglomerations <- spData::urban_agglomerations
 ```
 
