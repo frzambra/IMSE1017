@@ -41,7 +41,7 @@ II) Unidad 2: Manejo de datos espaciales en R
 3) [Taller 3: Evaluación 1 talleres](Evaluaciones/eva1_talleres/eva1_talleres.html)
 4) [Taller 4: Manejo de datos vectoriales con {sf}](Talleres/Taller4_2023/Taller4.html)
 5) [Taller 5: Manejo de datos raster con {terra}](Talleres/Taller5_2023/Taller5.html)
-
+6) [Taller 6: Operaciones geométricas con {sf}](Talleres/Taller6_2023/Taller6.html)
 
 <!-- 
 2) [Taller 2: Datos climáticos en R](Talleres/Taller2/Taller2.html)
