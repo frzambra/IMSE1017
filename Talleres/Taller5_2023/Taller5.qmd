@@ -5,8 +5,8 @@ author: 'Dr. Francisco Zambrano'
 format: 
   html:
     number-sections: false
-    echo: false
-    eval: false
+    echo: true
+    eval: true
     table-of-contents: true
 lang: es
 bibliography: "referencias.bib"
@@ -118,6 +118,12 @@ r2 <- sum(r)
 
 6.- (30pts) Para el raster de la pregunta anterior aplique a cada celda la raiz cuadrada (`sqrt`) y guarde el raster en un objeto nuevo. Guarde el objeto raster en disco con el nombre `r_sqrt.tif`.
 
+```{r}
+dir_temp <- tempdir() #carpeta temporal
+r2_sqrt <- sqrt(r2) #aplica raiz cuadrada a r2
+writeRaster(r2_sqrt,file.path(dir_temp,'r_sqrt.tif'))
+```
+
 7.- (75) De los archivos raster que descargó en la sección data. Indique para cada uno de los archivos raster lo siguiente:
 
 - Sistema de Referencia de Coordenadas
@@ -125,6 +131,52 @@ r2 <- sum(r)
 - Resolución espacial
 - Número de capas (layers)
 - Haga un plot de cada raster. En el caso del raster de Santa Olga, utilice la función `plot` y `plotRGB`.
+
+```{r}
+#carpeta dónde se encuentran los archivos
+dir <- '/home/francisco/Descargas/capas_rasters/' 
+files_islas <- list.files(file.path(dir,'dem_islas'),
+                          full.names = TRUE)
+file_sta_olga <- list.files(dir,
+                          full.names = TRUE)
+# DEM Isla de Pascua
+dem_ip <- rast(files_islas[1])
+
+# DEM Juan Fernández
+dem_jf <- rast(files_islas[2])
+
+# Raster Santa Olga
+sta_olga <- rast(file_sta_olga[2])
+
+#sistema de referencia de coordenadas
+crs(dem_ip,describe = TRUE)
+crs(dem_jf,describe = TRUE)
+crs(sta_olga,describe = TRUE)
+
+#número de filas y columnas
+dim(dem_ip)
+dim(dem_jf)
+dim(sta_olga)
+
+#Resolución espacial
+res(dem_ip)
+res(dem_jf)
+res(sta_olga)
+
+#número de capas
+nlyr(dem_ip)
+nlyr(dem_jf)
+nlyr(sta_olga)
+
+#plot
+
+par(mfrow = c(1,2))
+plot(dem_ip)
+plot(dem_jf)
+
+plot(sta_olga)
+plotRGB(sta_olga)
+```
 
 
 
