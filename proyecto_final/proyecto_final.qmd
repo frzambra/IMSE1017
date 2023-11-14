@@ -54,7 +54,7 @@ Generar un script en `R` paso a paso, que permita generar un `data.frame` en el 
 
 - Planilla `Excel` con datos de presencia de `Frickius Variolosus`: Se entrega una planilla que contiene las coordenadas en donde se ha identificado la presencia de la especie. [Para descargar pinche acá](https://docs.google.com/spreadsheets/d/1gEdMUjZwewZy7iVLMPB-0pselxb6Zcot/edit?usp=sharing&ouid=101739380117499617729&rtpof=true&sd=true)
 
-- Datos climáticos `ERA5-Land`: Se entregan seis años de datos mensuales de precipitación acumulada mensual y temperatura promedio mensual.
+- Datos climáticos `ERA5-Land`: Se entregan seis años de datos mensuales de precipitación acumulada mensual y temperatura promedio mensual. [Para descargar pinche acá](https://drive.google.com/file/d/11A0Rd3EAaeBZtYo5NPinkK_qinwsteYy/view?usp=sharing)
 
 - Datos de elevación: Para descargar datos de elevación en `R` los puede hacer utilizando el paquete {`geodata`} yla función `elevation_global`.
 
