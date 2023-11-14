@@ -43,6 +43,10 @@ II) Unidad 2: Manejo de datos espaciales en R
 5) [Taller 5: Manejo de datos raster con {terra}](Talleres/Taller5_2023/Taller5.html)
 6) [Taller 6: Operaciones geométricas con {sf}](Talleres/Taller6_2023/Taller6.html)
 
+## Proyecto Final (20%)
+
+- [Preparación de datos para MDE](proyecto_final/proyecto_final.html)
+
 <!-- 
 2) [Taller 2: Datos climáticos en R](Talleres/Taller2/Taller2.html)
 3) [Taller 3: Datos vectoriales con {sf}](Talleres/Taller3/Taller3.html)
