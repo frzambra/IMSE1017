@@ -34,7 +34,7 @@ Los datos los debe descargar desde [acá](https://drive.google.com/file/d/1ngv-M
 
 # Vectoriales
 
-1. (20pts) Cree un pentágono con las coordenadas que se indican en los puntos A, B, C, D, E y F:
+1. (20pts) Cree un hexágono con las coordenadas que se indican en los puntos A, B, C, D, E y F:
 
 ![](img/p_21_graf2.gif)
 
