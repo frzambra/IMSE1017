@@ -74,8 +74,8 @@ plot(pol)
 getwd()
 
 # Cargar la capa vectorial del Inventario Lagos
-inventario_lagos <- st_read("/cloud/project/data_eva2/Lagos/Inventario_Lagos.shp")
-inventario_lagos
+inventario_lagos <- st_read("Evaluaciones/Eva2_2023/data/Lagos/")
+inventario_lagos3
 # a. Tipo de geometría
 tipo_geometria <- st_geometry_type(inventario_lagos)
 

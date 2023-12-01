@@ -12,6 +12,12 @@ format:
     footer: "IMSE1017|2-2023"
     theme: default
     echo: true
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+    retina: 1
+    dpi: 200
+
 ---
 
 ```{r setup, include=FALSE}
@@ -219,7 +225,7 @@ tm_shape(nz) +
 
 - La configuración predeterminada de `{tmap}` usa `pretty` `breaks`.
 
-Los argumentos:
+Los argumentos:  
 - `breaks` permite manualmente ajustar los `breaks`  
 - `n` define el numérp de bin en el cual la variable es categorizada  
 - `palette` define el esquema de colores  

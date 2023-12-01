@@ -97,7 +97,7 @@ st_bbox(lagos)
 ```{r}
 #   a) (15pts) seleccione los lagos que pertenecen a la provincia de Santiago y asignelo a un objeto `lagos_stgo`. ¿Cuántos son?
 
-lagos_stgo <- lagos[lagos$PROVINCIA == 'Santiago',] 
+lagos_stgo <- lagos[lagos$PROVINCIA %in% 'Santiago',] 
 
 ## ¿cuantos son?
 nrow(lagos_stgo)
@@ -194,7 +194,7 @@ plot(r)
 
 ```{r}
 funs = c(mean,median,sd)
-sapply(funs, \(fun) global(r,fun))
+sapply(funs, \(fun) global(r,fun,na.rm = TRUE))
 
 ```
 
