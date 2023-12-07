@@ -62,13 +62,13 @@ st_multipoint(matrix(c(-34.9, -72.6, -34.5, -76.4),ncol = 2))
 11. Al crear un objeto raster con el paquete {terra} y el siguiente código:
 
 ```{r}
+library(terra)
 x <- rast()
 ```
 
 ¿Qué caractéristicas tiene x en cuanto a extensión y sistema de referencia de coordenadas?
 
 ```{r}
-library(terra)
 (x <- rast())
 ```
 
@@ -115,26 +115,26 @@ I. Cree un script en R y súbalo acá. El script debe permitir resolver lo sigui
 
 ```{r}
 library(sf)
-cuencas <- read_sf('../data/cuencas_Chile/Cuencas_BNA.shp')
+cuencas <- read_sf('../../data/cuencas_Chile/Cuencas_BNA.shp')
 ```
 
 2.  (10 pts) Cargar en R el archvio "estaciones_chile.shp" y asignarlo al objeto "estaciones"
 
 ```{r}
-estaciones <- read_sf('../data/estaciones_chile/estaciones_chile.shp')
+estaciones <- read_sf('../../data/estaciones_chile/estaciones_chile.shp')
 ```
 
 3.  (10 pts) Cargar en R el archvio "CHELSA_pr_v2.1_20190101.tif" y asignarlo al objeto "prec" (precipitación acumulada mensual enero 2019).
 
 ```{r}
 library(terra)
-prec <- rast('../data/CHELSA_pr_v2.1_20190101.tif')
+prec <- rast('../../data/CHELSA_pr_v2.1_20190101.tif')
 ```
 
 4.  (10 pts) Cargar en R el archvio "CHELSA_tas_v2.1_20190101.tif" y asignarlo al objeto "temp" (temperatura promedio mensual enero 2019).
 
 ```{r}
-temp <- rast('../data/CHELSA_tas_v2.1_20190101.tif')
+temp <- rast('../../data/CHELSA_tas_v2.1_20190101.tif')
 ```
 
 5.  (30 pts) Obtenga la cantidad de geometrias, cantidad de variables (y sus nombres) y sistema de referencia de coordenadas de los objetos vectoriales anteriores.
@@ -248,14 +248,14 @@ plot(buffer_estaciones$geometry)
 
 ```{r}
 #| eval: false
-writeRaster(prec_temp,'../data/precipitacion_temperatura_cuenca_limari.tif')
+writeRaster(prec_temp,'../../data/precipitacion_temperatura_cuenca_limari.tif')
 ```
 
 9.  (20pts) Guarde la cuenca seleccionada como "cuenca\_{nombre_cuenca}.shp"
 
 ```{r}
 #| eval: false
-write_sf(cuenca_limari,'../data/cuenca_limari.shp')
+write_sf(cuenca_limari,'../../data/cuenca_limari.shp')
 ```
 
 10. (20 pts) Guarde las estaciones seleccionadas como "estaciones_cuenca\_{nombre_cuenca}.shp"
@@ -269,5 +269,5 @@ write_sf(estaciones_cuenca,'estaciones_cuenca_limari.shp')
 
 ```{r}
 #| eval: false
-write_sf(buffer_estaciones,'../data/buffer_estaciones_cuenca_limari.shp')
+write_sf(buffer_estaciones,'../../data/buffer_estaciones_cuenca_limari.shp')
 ```

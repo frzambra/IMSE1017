@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dr.&nbsp;Francisco Zambrano">
+<meta name="author" content="Francisco Zambrano">
 
-<title>Uso Avanzado de Sistemas de Información Geográfica (SIG) (IMSE1017)</title>
+<title>Evaluación Recuperativa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,44 +24,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/quarto.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<style>html{ scroll-behavior: smooth; }</style>
+<script src="Eva_recu_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Eva_recu_files/libs/quarto-html/quarto.js"></script>
+<script src="Eva_recu_files/libs/quarto-html/popper.min.js"></script>
+<script src="Eva_recu_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Eva_recu_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Eva_recu_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Eva_recu_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Eva_recu_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Eva_recu_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Eva_recu_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#reseña" id="toc-reseña" class="nav-link active" data-scroll-target="#reseña"><span class="header-section-number">1</span> Reseña</a></li>
-  <li><a href="#clases" id="toc-clases" class="nav-link" data-scroll-target="#clases"><span class="header-section-number">2</span> Clases</a></li>
-  <li><a href="#talleres" id="toc-talleres" class="nav-link" data-scroll-target="#talleres"><span class="header-section-number">3</span> Talleres</a></li>
-  <li><a href="#proyecto-final-20" id="toc-proyecto-final-20" class="nav-link" data-scroll-target="#proyecto-final-20"><span class="header-section-number">4</span> Proyecto Final (20%)</a></li>
-  <li><a href="#evaluaciones" id="toc-evaluaciones" class="nav-link" data-scroll-target="#evaluaciones"><span class="header-section-number">5</span> Evaluaciones</a></li>
-  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material"><span class="header-section-number">6</span> Material</a></li>
-  </ul>
-</nav>
-</div>
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Uso Avanzado de Sistemas de Información Geográfica (SIG) (IMSE1017)</h1>
-<p class="subtitle lead">Ing. en Medio Ambiente Y Sustentabilidad</p>
+<h1 class="title">Evaluación Recuperativa</h1>
 </div>
 
 
@@ -71,10 +56,16 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>Dr.&nbsp;Francisco Zambrano </p>
+             <p>Francisco Zambrano </p>
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">7 de diciembre de 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -82,94 +73,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="reseña" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="reseña"><span class="header-section-number">1</span> Reseña</h2>
-<p>En este repositorio se pone a disposición de los alumnos de Ing. en Medio Ambiente y sustentabilidad de la UMayor, las clases, laboratorios y material que se utilizará en la asignatura de SIG Avanzado. Este repositorio está creado con <a href="https://quarto.org/">quarto</a> por medio del software <code>R</code>.</p>
+<section id="datos" class="level2">
+<h2 class="anchored" data-anchor-id="datos">Datos</h2>
+<p>Para la evaluación debe trabajar con los siguientes datos geoespaciales.</p>
+<ul>
+<li><code>Cuencas_BNA:</code> Corresponden a las cuencas hidrográficas que se encuentran en Chile.</li>
+<li><code>Estaciones Chile:</code> red de estaciones climáticas en Chile.</li>
+<li><code>CHELSA_pr_v2.1_20190101.tif:</code> precipitación acumulada mensual para el mes de enero del año 2019 en Chile.</li>
+<li><code>CHELSA_tas_v2.1_20190101.tif:</code> temperatura promedio mensual para el mes de enero del año 2019 en Chile.</li>
+</ul>
+<p>Los datos los debe descargar desde <a href="https://drive.google.com/file/d/1Xhf_1FFfTnrLRe31zlOsumP2BFlb-l08/view?usp=sharing">acá</a></p>
 </section>
-<section id="clases" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="clases"><span class="header-section-number">2</span> Clases</h2>
-<ol type="I">
-<li><p>Unidad 1:Introducción al uso de R.</p>
+<section id="cree-un-script-en-r-que-permita-resolver-lo-siguiente" class="level2">
+<h2 class="anchored" data-anchor-id="cree-un-script-en-r-que-permita-resolver-lo-siguiente">Cree un script en R que permita resolver lo siguiente:</h2>
 <ol type="1">
-<li><a href="Clase1/slides_clase11.html">Presentación curso</a><br>
-</li>
-<li><a href="Clase1/slides_clase12.html">Introducción a <code>R</code></a><br>
-</li>
-<li><a href="Clase1/slides_clase13.html">Tipos y estructuras de datos</a></li>
-<li><a href="Clase2/slides_clase21.html">Manipulación de datos</a></li>
-</ol></li>
-<li><p>Unidad 2: Manejo de datos espaciales en R</p>
+<li>(10 pts) Cargar en R el archivo “Cuencas_BNA.shp” y asignarlo al objeto “cuencas”.</li>
+</ol>
+<ol start="2" type="1">
+<li>(10 pts) Cargar en R el archvio “estaciones_chile.shp” y asignarlo al objeto “estaciones”</li>
+</ol>
+<ol start="3" type="1">
+<li>(10 pts) Cargar en R el archvio “CHELSA_pr_v2.1_20190101.tif” y asignarlo al objeto “prec” (precipitación acumulada mensual enero 2019).</li>
+</ol>
+<ol start="4" type="1">
+<li>(10 pts) Cargar en R el archvio “CHELSA_tas_v2.1_20190101.tif” y asignarlo al objeto “temp” (temperatura promedio mensual enero 2019).</li>
+</ol>
 <ol start="5" type="1">
-<li><a href="Clase3/slides_clase31.html">Introducción al análisis espacial con R</a></li>
-<li><a href="Clase3/slides_clase32.html">Datos Espaciales en R</a></li>
-<li><a href="Clase4/slides_SRC.html">Sistemas de Referencia de Coordenadas (SRC)</a></li>
-<li><a href="Clase4/slides_operaciones_vectoriales.html">Operaciones Geométricas con datos vectoriales</a></li>
-<li><a href="Clase5/slides_manipulacion_rasters.html">Maipulación de datos raster</a></li>
-<li><a href="Clase6/slides_mapas_con_tmap.html">Creación de mapas con {tmap}</a></li>
-</ol></li>
+<li>(30 pts) Obtenga la cantidad de geometrias, cantidad de variables (y sus nombres) y sistema de referencia de coordenadas de los objetos vectoriales anteriores.</li>
 </ol>
-</section>
-<section id="talleres" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="talleres"><span class="header-section-number">3</span> Talleres</h2>
-<ol type="1">
-<li><a href="Talleres/Taller1_2023/Ejercicios_R-base.html">Taller 1: Tipos y estructuras de datos en R</a></li>
-<li><a href="Talleres/Taller2_2023/taller2_rbase.html">Taller 2: Tipos y estructuras de datos en R</a></li>
-<li><a href="Evaluaciones/eva1_talleres/eva1_talleres.html">Taller 3: Evaluación 1 talleres</a></li>
-<li><a href="Talleres/Taller4_2023/Taller4.html">Taller 4: Manejo de datos vectoriales con {sf}</a></li>
-<li><a href="Talleres/Taller5_2023/Taller5.html">Taller 5: Manejo de datos raster con {terra}</a></li>
-<li><a href="Talleres/Taller6_2023/Taller6.html">Taller 6: Operaciones geométricas con {sf}</a></li>
+<ol start="6" type="1">
+<li>(30 pts) Obtenga la resolución, número de columnas, número de filas, sistema de referencia de coordenadas de los objetos raster anteriores.</li>
 </ol>
-</section>
-<section id="proyecto-final-20" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="proyecto-final-20"><span class="header-section-number">4</span> Proyecto Final (20%)</h2>
-<ul>
-<li><a href="proyecto_final/proyecto_final.html">Preparación de datos para MDE</a></li>
-</ul>
-<!-- 
-2) [Taller 2: Datos climáticos en R](Talleres/Taller2/Taller2.html)
-3) [Taller 3: Datos vectoriales con {sf}](Talleres/Taller3/Taller3.html)
-4) [Taller 4: Operaciones geométricas con {sf}](Talleres/Taller4/Taller4.html)
-5) [Taller 5: Datos raster con {terra}](Talleres/Taller5/Taller5.html)
-6) [Taller 6: Creación de mapas con {tmap}](Talleres/Taller6/Taller6.html)
-7) [Taller recuperativo: R como SIG](Talleres/Taller_recuperativo/Taller_recuperativo.html)
--->
-</section>
-<section id="evaluaciones" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="evaluaciones"><span class="header-section-number">5</span> Evaluaciones</h2>
-<ol type="1">
-<li>Evaluación 1:
-<ul>
-<li><a href="Evaluaciones/Eva1_2023/evaluacion1.html">Solución</a></li>
-<li><a href="Evaluaciones/Eva1_2023/evaluacion1_forma1.html">Tipo 1</a></li>
-<li><a href="Evaluaciones/Eva1_2023/evaluacion1_forma2.html">Tipo 2</a></li>
-<li><a href="Evaluaciones/Eva1_2023/evaluacion1_forma3.html">Tipo 3</a></li>
-<li><a href="Evaluaciones/Eva1_2023/evaluacion1_forma4.html">Tipo 4</a></li>
-<li><a href="Evaluaciones/Eva1_2023/evaluacion1_forma5.html">Tipo 5</a></li>
-</ul></li>
-<li><a href="Evaluaciones/Eva2_2023/Eva2.html">Evaluación 2</a></li>
-<li><a href="Evaluaciones/Eva_recu_2023/Eva_recu.html">Evaluación recuperativa</a></li>
+<ol start="7" type="1">
+<li>(40 pts) Haga un “crop” y “mask” de los datos raster para la cuenca del <code>Río Maipo</code>. Elimine las filas o columnas con NAs en los bordes del raster si es necesario.</li>
 </ol>
-</section>
-<section id="material" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="material"><span class="header-section-number">6</span> Material</h2>
-<ul>
-<li>R
-<ul>
-<li><a href="https://swirlstats.com/">SWIRL</a></li>
-<li><a href="https://www.statmethods.net/">Quick-R</a></li>
-</ul></li>
-<li>R-Spatial
-<ul>
-<li><a href="https://www.r-spatial.org/">r-spatial</a> - Edzer Pebesma</li>
-<li><a href="https://www.rspatial.org/">rspatial</a> - Robert Hijmans</li>
-</ul></li>
-<li>Libros R-Spatial
-<ul>
-<li><a href="http://gis.humboldt.edu/OLM/r/Spatial%20Analysis%20With%20R.pdf">Applied Spatial Data Analysis with R. Roger Bivand, Edzer Pebesma, Virgilio Gómez-Rubio.</a></li>
-<li><a href="https://geocompr.robinlovelace.net/">Geocomputation with R. Robin Lovelace, Jakub Nowosad, Jannes Muenchow</a></li>
-<li><a href="https://keen-swartz-3146c4.netlify.app/">Spatial Data Science</a>. Edzer Pebesma y Roger Bivand. Estado: en desarrollo</li>
-</ul></li>
-</ul>
+<ol start="8" type="1">
+<li>(30 pts) Seleccione las estaciones climáticas que se encuentran en la cuenca asignada. Asigne el resultado a “estaciones_cuenca”.</li>
+</ol>
+<ol start="9" type="1">
+<li>(30 pts) Una los dos raster en un raster multicapa en donde la primera capa sea precipitación y la segunda temperatura; asígnelo al objeto “prec_temp”.</li>
+</ol>
+<ol start="10" type="1">
+<li>(50 pts) Extraiga los valores de precipitación y temperatura en la ubicación de las estaciones. El resultado asignelo al objeto “prec_temp_ex”.</li>
+</ol>
+<ol start="11" type="1">
+<li>(40 pts) Cree buffers de 1000m para la estaciones que se encuentran en la cuenca, asignelo al objeto “buffer_estaciones”.</li>
+</ol>
+<ol start="12" type="1">
+<li>(20 pts) Guarde el raster cortado y enmascarado con el nombre “precipitacion_temperatura_cuenca_{nombre_cuenca}.tif”</li>
+</ol>
+<ol start="13" type="1">
+<li>(20pts) Guarde la cuenca seleccionada como “cuenca_{nombre_cuenca}.shp”</li>
+</ol>
+<ol start="14" type="1">
+<li>(20 pts) Guarde las estaciones seleccionadas como “estaciones_cuenca_{nombre_cuenca}.shp”</li>
+</ol>
+<ol start="15" type="1">
+<li>(20 pts) Guarde el buffer de las estaciones como “buffer_estaciones_cuenca_{nombre_cuenca}.shp”</li>
+</ol>
 </section>
 
 </main>
@@ -411,5 +372,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="index_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

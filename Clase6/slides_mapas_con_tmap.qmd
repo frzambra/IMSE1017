@@ -227,7 +227,7 @@ tm_shape(nz) +
 
 Los argumentos:  
 - `breaks` permite manualmente ajustar los `breaks`  
-- `n` define el numérp de bin en el cual la variable es categorizada  
+- `n` define el numéro de bin en el cual la variable es categorizada  
 - `palette` define el esquema de colores  
 
 ## 5. Configuración del color {.smaller .scrollable background-image="https://user-images.githubusercontent.com/3457131/78889069-479c5480-7a63-11ea-9d76-e8a0acc55c3f.png" background-position="97.5% 2.5%" background-size="7.5%"}

@@ -74,7 +74,7 @@ library(sf)
 install.packages("tibble")
 
 read_sf("lagos/Inventario_Lagos.shp")
-inventario_lagos <- read_sf("lagos/Inventario_Lagos.shp")
+inventario_lagos <- read_sf("Lagos/Inventario_Lagos.shp")
 
 #tipo de geometria
 inventario_lagos$geometry
@@ -147,7 +147,7 @@ plot(simpprimlago, main = "geometria simplificada")
 #4. Cargue la capa de Indice Calidad Aguas y realice lo siguiente:
 
 read_sf("Indice_calidad_aguas/ICA_Indice_Calidad_Aguas.shp")
-indice_calidad <- read_sf("Indice_calidad_aguas/ICA_Indice_Calidad_Aguas.shp")
+indice_calidad <- read_sf("Indice_Calidad_de_Aguas/ICA_Indice_Calidad_Aguas.shp")
 
 
 #(15pts) Seleccione las observaciones que se encuentran en la comuna de “Romeral”. ¿Cuántas puntos hay?
@@ -250,7 +250,7 @@ global(r,median)
 #6. Cargue el archivo dem_chile.tif en R e indique utilizando una función de R:
 
 library(terra)
-dem_chile <- rast ("data/dem_chile.tif")
+dem_chile <- rast ("dem_chile.tif")
 dem_chile
 
 #(5pts) clase del objeto
@@ -284,7 +284,7 @@ minmax(dem_chile)
 
 #7.Cargue el archivo imagen_copiapo.tif en R. Realice lo siguiente:
 
-im_copiapo <- rast ("data/imagen_copiapo.tif")
+im_copiapo <- rast ("imagen_copiapo.tif")
 im_copiapo
 
 #(15pts) cree un raster que corresponda a la suma de las cuatro capas.

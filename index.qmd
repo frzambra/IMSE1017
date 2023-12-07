@@ -65,20 +65,8 @@ II) Unidad 2: Manejo de datos espaciales en R
     + [Tipo 3](Evaluaciones/Eva1_2023/evaluacion1_forma3.html)
     + [Tipo 4](Evaluaciones/Eva1_2023/evaluacion1_forma4.html)
     + [Tipo 5](Evaluaciones/Eva1_2023/evaluacion1_forma5.html)
-
 2) [Evaluación 2](Evaluaciones/Eva2_2023/Eva2.html)
-
-<!--
-1) [Evaluación 1](Evaluaciones/Eva1/evaluacion1.html)
-2) [Evaluación 2](Evaluaciones/Eva2/evaluacion2.html)
-3) [Examen](Evaluaciones/Examen/examen.html)
--->
-## Ejercicios
-
-<!--
-1) [Ejercicios evaluación 1](Ejercicios/Ejercicios_eval1.html)
-2) [Ejercicios evaluación 2](Ejercicios/Ejercicios_eval2.html)
--->
+3) [Evaluación recuperativa](Evaluaciones/Eva_recu_2023/Eva_recu.html)
 
 ## Material
 
